@@ -675,23 +675,23 @@ main.startpage {
   display: flex;
   align-items: center;
   gap: 4px;
-
-  /* иконка глаза справа от текста */
-  background: none; /* сбрасываем предыдущий фон, если был */
-  padding: 0;       /* сбрасываем padding */
+  background: none;  /* убрали всё фоновое */
+  padding: 0;
+  position: relative; /* на всякий случай для ::before */
 }
 
-/* Отдельно добавим иконку глаза через псевдоэлемент */
+/* Иконка глаза перед текстом */
 .post-actions .views::before {
   content: "";
   display: inline-block;
   width: 16px;
   height: 16px;
-  margin-right: 8px;
-  background: url('../img/view icon.svg');
-  background-size: 16px;
+  margin-right: 6px;
+  background-image: url("../img/View Icon.svg"); /* путь без экранирования */
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
 }
-
 
 /* Правая колонка */
 .feed-sidebar {
