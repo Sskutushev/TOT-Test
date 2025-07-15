@@ -1,186 +1,204 @@
-/* 1) Переменные */
+/* Сброс */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Переменные */
 :root {
-  /* Main palette */
-  --color-main:        #FF2B00;
-  --color-main-light:  #FF7255;
-  --color-main-dark:   #AA1D00;
-
-  /* Greys */
-  --grey-1:            #C2C2C2;
-  --grey-2:            #E3E3E3;
-
-  /* Background */
-  --bg-light:          #F4F4F4;
-
-  /* Text */
-  --text-black:        #000;
-  --text-grey:         #868686;
-
-  /* Badge */
-  --badge-bg:          #FF2B00;
-  --badge-color:       #FFF;
+  --color-main: #ff2b00;
+  --color-main-light: #ff7255;
+  --color-bg: #f4f4f4;
+  --color-text: #000;
+  --font-sans: 'Open Sans', sans-serif;
+  --font-logo: 'Cera', sans-serif;
 }
 
-/* 2) Reset + базовые */
-* {
-  box-sizing: border-box;
-  margin: 0; padding: 0;
-}
-body {
-  display: flex;
-  min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
-  background: var(--bg-light);
-  color: var(--text-black);
+/* Базовые */
+html, body {
+  height:100%;
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
-/* 3) Sidebar */
-.sidebar {
-  width: 281px;
-  background: #FFF;
-  border-right: 1px solid var(--grey-2);
-}
+/* Сайдбар */
 .menupanel {
-  padding: 16px;
+  position: fixed;
+  top:16px; left:16px;
+  width:265px;
+  height: calc(100% - 32px);
+  background:#fff;
+  border-radius:25px;
+  display:flex;
+  flex-direction:column;
 }
 .totlogo {
-  display: block;
-  margin: 0 auto 24px;
-  width: 98px; height: 25px;
-}
-.menu-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 14px;
-  color: var(--text-grey);
-}
-.menu-item:hover {
-  background: var(--grey-2);
-}
-.menu-item.active {
-  background: var(--color-main-light);
-  color: #FFF;
-}
-.menu-item + hr {
-  margin: 20px 0;
-  border: 0;
-  border-top: 1px solid var(--grey-2);
+  position:absolute;
+  top:34px; left:83px;
+  width:98px; height:25px;
+  cursor:pointer;
 }
 
-/* Badge */
-.badge {
-  background: var(--badge-bg);
-  color: var(--badge-color);
-  border-radius: 12px;
-  padding: 0 6px;
-  font-size: 12px;
-  margin-left: auto;
+/* Навигация */
+.frame3944, .frame4689 {
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  padding:0 24px;
+}
+.frame3944 { margin-top:91px; }
+.frame4689 { margin-top:20px; }
+.frame3944 a,
+.frame4689 a,
+.frame31 {
+  display:flex; align-items:center;
+  height:38px;
+  border-radius:10px;
+  padding:10px 15px;
+  text-decoration:none;
+  color:#858585;
+}
+.frame3944 a.active,
+.frame3944 a:hover,
+.frame4689 a:hover,
+.frame31:hover {
+  background:#fff; color: var(--color-text);
+}
+.frame3944 a img,
+.frame4689 a img,
+.frame31 img {
+  margin-right:12px;
+  width:20px; height:20px;
+}
+.frame31 {
+  margin: 20px auto 0;
+  width: 217px;
+  height:38px;
+  margin-top: 20px;
+  padding:10px 15px;
 }
 
-/* 4) Main content */
-.main-content {
-  flex: 1;
-  overflow-y: auto;
-  padding: 54px;
+/* Делители */
+.line11, .line112 {
+  border:1px solid #e3e3e3;
+  width:217px;
 }
-
-/* Header (top panel) */
+.line11 { margin:16px 20px; }
+.line112 { margin:16px 20px; }
+/* Хэдер */
 .toppanel {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
+  position: fixed;
+  top:16px; left:297px; right:16px;
+  height:73px;
+  background: var(--color-bg);
+  padding:9px 54px 4px;
+  display:flex;
+  flex-direction:column;
 }
-.search input {
-  width: 300px;
-  padding: 8px 12px;
-  border: 1px solid var(--grey-2);
-  border-radius: 6px;
-  font-size: 14px;
+.frame6996 {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
-.btn-big {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--color-main);
-  color: #FFF;
-  border: none;
-  border-radius: 90px;
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
-}
-.btn-big:hover { background: var(--color-main-light); }
-.btn-big:active { background: var(--color-main-dark); }
-.notifications {
+.field-small-search {
   position: relative;
-  cursor: pointer;
+  width:440px; height:36px;
+  background: var(--color-bg);
+  border-radius:6px;
+  padding:0 12px;
+  display:flex;
+  align-items:center;
 }
-.notifications svg { fill: var(--text-grey); }
-.notifications .badge {
-  position: absolute;
-  top: -6px; right: -6px;
+.field-small-search .icon-search {
+  width:20px; height:20px;
+}
+.field-small-search .search-placeholder {
+  margin-left:10px;
+  font-size:14px;
+  color:#858585;
+}
+.button-small-withicon {
+  display:flex;
+  align-items:center;
+  background: var(--color-main);
+  color:#fff;
+  border:none;
+  border-radius:90px;
+  height:50px;
+  padding:13px 25px;
+  cursor:pointer;
+}
+.button-small-withicon .icon-plus {
+  margin-right:10px;
+  width:22px; height:22px;
+}
+.group435 {
+  position:relative;
+}
+.group308 {
+  position:relative;
+  width:50px; height:50px;
+}
+.ellipse7 {
+  position:absolute;
+  inset:0;
+  background:#fff;
+  border-radius:50%;
+}
+.icon-bell {
+  position:absolute;
+  top:12px; left:12px;
+  width:26px; height:26px;
+}
+.frame3949 {
+  position:absolute;
+  top:29px; left:175px;
+  background: var(--color-main);
+  border-radius:16px;
+  padding:3px 5px;
+}
+.badge-count {
+  color:#fff;
+  font-size:12px;
 }
 
-/* User */
-.user {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* Профиль в хэдере */
+.frame9 {
+  position:relative;
+  display:flex;
+  align-items:center;
+  background:#fff;
+  border-radius:90px;
+  padding:6px 7px;
+  cursor:pointer;
+}
+.frame3952 {
+  display:flex;
+  align-items:center;
 }
 .avatar {
-  width: 38px; height: 38px;
-  border-radius: 50%;
-  object-fit: cover;
+  width:38px; height:38px;
+  border-radius:50%;
+  margin-right:12px;
 }
-.user-name {
-  font-size: 14px;
+.иваниванов { font-size:12px; }
+.icon-dropdown { width:12px; height:12px; }
+
+/* Разделитель под хэдером */
+.line2 {
+  border-top:1px solid #e3e3e3;
+  margin-top:4px;
 }
 
-/* 5) Типографика */
-.heading-bold-1 { font-family: 'TT Travels Next', sans-serif; font-weight: 700; font-size: 32px; line-height: 35px; margin-bottom: 8px; }
-.heading-bold-2 { font-family: 'TT Travels Next', sans-serif; font-weight: 700; font-size: 24px; line-height: 28px; margin-bottom: 16px; }
-.body-text-1   { font-size: 18px; line-height: 28px; margin-bottom: 32px; }
-
-/* 6) Banners & sections */
-.welcome-banner {
-  margin-bottom: 48px;
-}
-.social-section {
-  margin-bottom: 48px;
-}
-.cards-row {
-  display: flex;
-  gap: 20px;
+/* Контент */
+.content,
+.лента {
+  margin:120px 16px 16px 297px;
+  padding:16px;
 }
 
-/* 7) Tabs */
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-.tab-button {
-  padding: 10px 20px;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  background: #FFF;
-  color: var(--text-black);
-  cursor: pointer;
-}
-.tab-button.active {
-  background: var(--color-main);
-  color: #FFF;
-}
-.tab-content {
-  display: block;
-}
-.tab-content[hidden] {
-  display: none;
+/* Специально для .лента */
+.лента {
+  background: var(--color-bg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }

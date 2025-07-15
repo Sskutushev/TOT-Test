@@ -2,104 +2,107 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>TOT — Стартовая</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- 1) Боковая панель -->
-  <aside class="sidebar">
-    <div class="menupanel">
-      <!-- Логотип -->
-      <img class="totlogo" src="data:image/png;base64,..." alt="TOT logo">
-      <!-- Добавили пункт Лента -->
-      <div class="menu-item active" id="menu-lenta">Лента</div>
-      <div class="menu-item" id="menu-marketplace">Маркетплейс</div>
-      <div class="menu-item" id="menu-persons">Персоны</div>
-      <div class="menu-item" id="menu-projects">Проекты</div>
-      <div class="menu-item" id="menu-streams">Трансляции</div>
-      <hr>
-      <div class="menu-item" id="menu-profile">Мой профиль</div>
-      <div class="menu-item" id="menu-desk">Рабочий стол</div>
-      <div class="menu-item" id="menu-messages">
-        Сообщения <span class="badge">100+</span>
-      </div>
-      <div class="menu-item" id="menu-favorites">Избранное</div>
-      <div class="menu-item" id="menu-calendar">Календарь</div>
-      <hr>
-      <div class="menu-item" id="menu-help">Помощь</div>
-    </div>
+  <!-- боковое меню -->
+  <aside class="menupanel">
+    <div class="rectangle7"></div>
+    <img id="totlogo" class="totlogo" src="img/лого=Черный (1).svg" alt="TOT Logo">
+
+    <nav class="frame3944">
+      <a href="timeline.html" class="frame10">
+        <img class="icon-newsline" src="img/news line.svg" alt="">
+        <span class="лента2">Лента</span>
+      </a>
+      <a href="marketplace.html" class="frame21">
+        <img class="icon-market" src="img/market.svg" alt="">
+        <span class="маркетплейс">Маркетплейс</span>
+      </a>
+      <a href="persons.html" class="frame14">
+        <img class="icon-persons" src="img/persons.svg" alt="">
+        <span class="персоны">Персоны</span>
+      </a>
+      <a href="projects.html" class="frame16">
+        <img class="icon-graduate" src="img/portfolio.svg" alt="">
+        <span class="школы">Проекты</span>
+      </a>
+      <a href="streams.html" class="frame19">
+        <img class="icon-stream" src="img/stream.svg" alt="">
+        <span class="трансляции">Трансляции</span>
+      </a>
+    </nav>
+
+    <hr class="line11">
+
+    <nav class="frame4689">
+      <a href="profile.html" class="frame30">
+        <img class="icon-user" src="img/user.svg" alt="">
+        <span class="мойпрофиль">Мой профиль</span>
+      </a>
+      <a href="desk.html" class="frame32">
+        <img class="icon-homework" src="img/Homework.svg" alt="">
+        <span class="рабочийстол">Рабочий стол</span>
+      </a>
+      <a href="messages.html" class="frame102">
+        <img class="icon-chat" src="img/chat.svg" alt="">
+        <span class="сообщения">Сообщения</span>
+        <div class="frame39492"><span class="-28">100+</span></div>
+      </a>
+      <a href="favorites.html" class="frame13">
+        <img class="icon-selective" src="img/selective.svg" alt="">
+        <span class="избранное">Избранное</span>
+      </a>
+      <a href="calendar.html" class="frame20">
+        <img class="icon-calendar" src="img/calendar.svg" alt="">
+        <span class="календарь">Календарь</span>
+      </a>
+    </nav>
+
+    <hr class="line112">
+
+    <a href="help.html" class="frame31">
+      <img class="icon-help" src="img/help.svg" alt="">
+      <span class="помощь">Помощь</span>
+    </a>
   </aside>
 
-  <!-- 2) Основной контент -->
-  <main class="main-content">
-
-    <!-- Верхняя панель -->
-    <header class="toppanel">
-      <div class="search">
-        <input type="text" placeholder="Поиск…" />
+  <!-- хэдер -->
+  <header class="toppanel">
+    <div class="frame6996">
+      <div class="field-small-search">
+        <img class="icon-search" src="img/icon-search.svg" alt="">
+        <span class="search-placeholder">Поиск...</span>
       </div>
-      <button class="btn-big">
-        Создать
-        <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#fff" d="M12 5v14m-7-7h14"/></svg>
+      <button class="button-small-withicon">
+        <img class="icon-plus" src="img/icon-plus.svg" alt="">
+        <span class="verb">Создать</span>
       </button>
-      <div class="notifications">
-        <svg width="24" height="24"><path fill="var(--text-grey)" d="M12 2a7 7 0 017 7v5h1a1 1 0 01.117 1.993L20 16h-1v1a3 3 0 01-5.995.176L13 17v-1h-2v1a3 3 0 01-5.995.176L5 17v-1H4a1 1 0 01-.117-1.993L4 11h1V6a7 7 0 017-7z"/></svg>
-        <span class="badge">14</span>
+      <div class="group435">
+        <div class="group308">
+          <div class="ellipse7"></div>
+          <img class="icon-bell" src="img/icon-bell.svg" alt="">
+        </div>
+        <div class="frame3949"><span class="badge-count">14</span></div>
       </div>
-      <div class="user">
-        <img class="avatar" src="avatar.jpg" alt="Иван Иванов">
-        <span class="user-name">Иван Иванов</span>
+      <div class="frame9">
+        <div class="frame3952">
+          <img class="avatar" src="img/avatar.jpg" alt="">
+          <span class="иваниванов">Иван Иванов</span>
+        </div>
+        <img class="icon-dropdown" src="img/icon-dropdown.svg" alt="">
       </div>
-    </header>
+    </div>
+    <hr class="line2">
+  </header>
 
-    <!-- Приветственный блок -->
-    <section class="welcome-banner">
-      <h1 class="heading-bold-1">Добро пожаловать</h1>
-      <p class="body-text-1">
-        Ознакомься с основными возможностями платформы и выбери то, что нужно именно тебе!
-      </p>
-    </section>
-
-    <!-- Социальная сеть -->
-    <section class="social-section">
-      <h2 class="heading-bold-2">Социальная сеть</h2>
-      <div class="cards-row">
-        <!-- ваши карточки -->
-      </div>
-    </section>
-
-    <!-- Образование -->
-    <section class="section" id="education-section">
-      <h2 class="heading-bold-2">Образование</h2>
-      <div class="tabs">
-        <button class="tab-button active" data-target="edu-student">Ученикам</button>
-        <button class="tab-button"       data-target="edu-teacher">Преподавателям</button>
-      </div>
-      <div id="edu-student" class="tab-content">
-        <!-- HTML для учеников -->
-      </div>
-      <div id="edu-teacher" class="tab-content" hidden>
-        <!-- HTML для преподавателей -->
-      </div>
-    </section>
-
-    <!-- Инвестиции -->
-    <section class="section" id="invest-section">
-      <h2 class="heading-bold-2">Инвестиции</h2>
-      <div class="tabs">
-        <button class="tab-button active" data-target="inv-investors">Инвесторам</button>
-        <button class="tab-button"       data-target="inv-traders">Трейдерам</button>
-      </div>
-      <div id="inv-investors" class="tab-content">
-        <!-- HTML для инвесторов -->
-      </div>
-      <div id="inv-traders" class="tab-content" hidden>
-        <!-- HTML для трейдеров -->
-      </div>
-    </section>
-
+  <!-- основной контент -->
+  <main class="content">
+    <h1>Добро пожаловать в TOT</h1>
+    <p>Это ваша стартовая страница. Нажмите на логотип, чтобы сюда вернуться.</p>
   </main>
 
   <script src="js/scripts.js"></script>
