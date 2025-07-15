@@ -427,3 +427,362 @@ main.startpage {
   .toppanel { left:16px; right:16px; }
   main.startpage { margin-left:16px; }
 }
+/* ========== Страница «Лента» ========== */
+.timeline {
+  margin: 109px 16px 16px 297px; /* тот же отступ, что и на стартовой */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow-x: hidden;
+}
+
+/* STORIES */
+.story-section {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+.story-list {
+  display: flex;
+  gap: 16px;
+  height: 180px;
+}
+.story-item {
+  flex: 0 0 105px;
+  text-align: center;
+}
+.story-thumb {
+  width: 105px; height: 105px;
+  border: 4px solid #ff7255;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+  background-position: center;
+}
+.story-item.your-story .story-thumb {
+  border-color: #ccc;
+}
+.story-name {
+  margin-top: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* BODY: флекс на контент + сайдбар */
+.timeline-body {
+  display: flex;
+  gap: 30px;
+}
+/* Левая колонка */
+.feed-col {
+  flex: 1 1 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* composer */
+.post-compose {
+  background: #fff;
+  border-radius: 20px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.compose-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #ccc;            /* фон-заглушка на случай пустого image */
+  background-position: center;       /* центрируем картинку */
+  background-size: cover;            /* масштабируем, обрезая по краям */
+  background-repeat: no-repeat;      /* не тасуем плиткой */
+}
+.compose-input {
+  flex: 1;
+  border: none; outline: none;
+  font-size: 16px;
+}
+.compose-actions .icon-btn {
+  border-radius: 50%;
+  width: 32px; height: 32px;
+  padding: 2px;
+  background-size: calc(100% - 4px);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none; cursor: pointer;
+  opacity: .7;
+}
+.compose-actions .photo { background-image: url('../img/Group 15.svg'); }
+.compose-actions .video { background-image: url('../img/Group 14.svg'); }
+.compose-actions .attach { background-image: url('../img/Group 13.svg'); }
+
+/* сам контейнер табов */
+.feed-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+/* кнопки */
+.feed-tabs .tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background .2s, border-color .2s, color .2s;
+}
+
+/* иконка внутри кнопки */
+.feed-tabs .tab .tab-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* активный таб */
+.feed-tabs .tab.active {
+  background: #ff7255;
+  color: #fff;
+  border-color: #ff7255;
+}
+
+.tab-content {
+  display: none;
+}
+
+
+/* пост-карточка */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.post-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.avatar-sm {
+  width: 46px;
+  height: 46px;
+
+  /* делаем фон-картинку основным содержимым */
+  background-color: #ccc;              /* на случай, если нет картинки */
+  background-image: var(--avatar-url); /* или прямо url(...) */
+  background-repeat: no-repeat;
+  background-size: cover;              /* масштабируем, чтобы заполнить всю область */
+  background-position: center;         /* центрируем по контейнеру */
+
+  border-radius: 50%;                  /* круглая форма */
+}
+.user-meta .user-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+.user-meta .post-date {
+  font-size: 12px;
+  color: #858585;
+}
+.more-btn {
+  width: 32px;
+  height: 32px;
+
+  /* серый фон */
+  background-color: #F4F4F4;
+
+  /* ваша иконка */
+  background-image: url("../img/menu2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+
+  /* скругляем в круг */
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.post-image {
+  width: 100%;
+  padding-top: 100%; /* квадрат */
+  background-size: cover;
+  background-position: center;
+}
+.post-text {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: #858585;
+  line-height: 1.4;
+}
+.post-actions {
+  display: flex;
+  align-items: center;
+  padding: 0 24px 16px;
+  gap: 16px;
+}
+
+/* Общие стили для кнопок действий */
+.post-actions .action {
+  background: #f4f4f4;
+  border-radius: 90px;
+  border: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  
+  /* отступ слева под иконку */
+  padding: 8px 8px 8px 30px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  background-size: 16px;
+}
+
+/* Иконки для каждой кнопки */
+.post-actions .action.like {
+  background-image: url('../img/Action Icon.svg') ;
+}
+.post-actions .action.repost {
+  background-image: url('../img/Action\ Icon\ \(1\).svg');
+}
+.post-actions .action.comment {
+  background-image: url('../img/Action\ Icon\ \(2\).svg');
+}
+
+/* Счётчик просмотров */
+.post-actions .views {
+  margin-left: auto;
+  font-size: 14px;
+  color: #858585;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  /* иконка глаза справа от текста */
+  background: none; /* сбрасываем предыдущий фон, если был */
+  padding: 0;       /* сбрасываем padding */
+}
+
+/* Отдельно добавим иконку глаза через псевдоэлемент */
+.post-actions .views::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background: url('../img/view icon.svg');
+  background-size: 16px;
+}
+
+
+/* Правая колонка */
+.feed-sidebar {
+  flex: 0 0 375px;
+  position: sticky;
+  top: 100px;
+  height: 780px;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.feed-sidebar .filter-block {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  column-gap: 12px;
+  row-gap: 12px;
+}
+.feed-sidebar .filter-block label,
+.feed-sidebar .filter-block .filter-header {
+  font-size: 14px;
+  font-weight: bold;
+}
+.feed-sidebar select,
+.feed-sidebar input[type="search"] {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+  outline: none;
+}
+.feed-sidebar .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.feed-sidebar .tag {
+  padding: 6px 12px;
+  background: #f4f4f4;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.feed-sidebar .tag.active {
+  background: #ff7255;
+  color: #fff;
+}
+.filter-block .filter-header {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+/* Грид применяем только к .filter-options */
+.filter-block .filter-options {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  column-gap: 12px;
+  row-gap: 12px;
+}
+
+/* Стили для самих label остаются прежними */
+.filter-block label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* Адаптив */
+@media (max-width: 1200px) {
+  .timeline {
+    margin-right: 16px;
+  }
+  .feed-sidebar {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .timeline-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .story-list { gap: 8px; }
+  .story-item { flex: 0 0 80px; }
+  .story-name { font-size: 12px; }
+}

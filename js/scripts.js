@@ -36,4 +36,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   initTabs('.education-section');
   initTabs('.investment-section');
-});
+
+  const tabs = document.querySelectorAll('.feed-tabs .tab');
+  const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // 1) снять active со всех
+        tabs.forEach(t => t.classList.remove('active'));
+        // 2) поставить active на кликнутый
+        tab.classList.add('active');
+  
+        // 3) переключить контент
+        const targetId = tab.dataset.tab;
+        contents.forEach(c => {
+          c.style.display = c.id === targetId ? 'block' : 'none';
+        });
+      });
+    });
+  });

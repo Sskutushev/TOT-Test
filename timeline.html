@@ -96,14 +96,234 @@
 </div>
   <hr>
   </header> <div class="header-divider"></div>
-  
+
   <!-- контент ЛЕНТЫ -->
-  <main class="лента">
-    <!-- сюда вставьте ваш HTML-блок ленты -->
-    <div id="лента" class="лента">
-      <!-- … -->
+  <main class="timeline">
+  <!-- Stories -->
+  <section class="story-section">
+    <div class="story-list">
+      <div class="story-item your-story">
+        <div class="story-thumb" style="background-image:url('img/Ellipse\ 146.svg')"></div>
+        <div class="story-name">Ваша история</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image.svg')"></div>
+        <div class="story-name">Иван Иванов</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image\ \(1\).svg')"></div>
+        <div class="story-name">Вера Петрова</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image\ \(2\).svg')"></div>
+        <div class="story-name">Григорий Пупкин</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image\ \(3\).svg')"></div>
+        <div class="story-name">Ванесса Маринака</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image.svg')"></div>
+        <div class="story-name">Дональд Док</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image\ \(1\).svg')"></div>
+        <div class="story-name">Асман Хмумсейн</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image\ \(2\).svg')"></div>
+        <div class="story-name">Рыжий из Иванушек</div>
+      </div>
+      <div class="story-item">
+        <div class="story-thumb" style="background-image:url('img/Story\ Image\ \(3\).svg')"></div>
+        <div class="story-name">Жень Шань</div>
+      </div>
+      <!-- … остальные сторис … -->
     </div>
-  </main>
+  </section>
+
+  <!-- Content + Sidebar -->
+  <div class="timeline-body">
+    <!-- Левая колонка -->
+    <div class="feed-col">
+      <!-- Post composer -->
+      <div class="post-compose">
+        <div class="compose-avatar" style="background-image:url('img/Ellipse\ 146.svg')"></div>
+        <input type="text" placeholder="Поделитесь новостью…" class="compose-input">
+        <div class="compose-actions">
+          <button class="icon-btn photo"></button>
+          <button class="icon-btn video"></button>
+          <button class="icon-btn attach"></button>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="feed-tabs">
+  <button class="tab active" data-tab="all">
+    <img src="img/Filter Icon.svg" alt="" class="tab-icon">
+    Все
+  </button>
+  <button class="tab" data-tab="subscriptions">
+    <img src="img/subscribtions1.svg" alt="" class="tab-icon">
+    Подписки
+  </button>
+  <button class="tab" data-tab="recommendations">
+    <img src="img/Filter Icon (2).svg" alt="" class="tab-icon">
+    Рекомендации
+  </button>
+  <button class="tab" data-tab="popular">
+    <img src="img/Filter Icon (3).svg" alt="" class="tab-icon">
+    Популярное
+  </button>
+</div>
+
+      <!-- Список постов -->
+      <div class="post-list">
+        <article class="post-card">
+          <div class="post-header">
+            <div class="user-info">
+              <div class="avatar-sm" style="background-image:url('img/Ellipse\ 149.svg')"></div>
+              <div class="user-meta">
+                <div class="user-name">Рухмадуджон Ляколбигдаев</div>
+                <div class="post-date">24 мая 2025</div>
+              </div>
+            </div>
+            <button class="more-btn"></button>
+          </div>
+          <div class="post-image" style="background-image:url('img/img1.akspic.ru-astronomicheskij_obekt-mir-kosmos-atmosfera-kosmicheskoe_prostranstvo-2880x1800\ 1.png')"></div>
+          <div class="post-text">
+            Превратите свой смартфон в источник пассивного дохода с DexPoint! …
+          </div>
+          <div class="post-actions">
+            <button class="action like">52</button>
+            <button class="action repost">114</button>
+            <button class="action comment">14</button>
+            <div class="views">1,1K</div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="post-header">
+            <div class="user-info">
+              <div class="avatar-sm" style="background-image:url('img/Story\ Image\ \(1\).svg')"></div>
+              <div class="user-meta">
+                <div class="user-name">Вера Петрова</div>
+                <div class="post-date">21 мая 2025</div>
+              </div>
+            </div>
+            <button class="more-btn"></button>
+          </div>
+          <div class="post-image" style="background-image:url('img/Frame\ 7160.svg')"></div>
+          <div class="post-text">
+            Превратите свой смартфон в источник пассивного дохода с DexPoint! …
+          </div>
+          <div class="post-actions">
+            <button class="action like">559</button>
+            <button class="action repost">698</button>
+            <button class="action comment">7,52K</button>
+            <div class="views">53,21K</div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="post-header">
+            <div class="user-info">
+              <div class="avatar-sm" style="background-image:url('img/Story\ Image\ \(2\).svg')"></div>
+              <div class="user-meta">
+                <div class="user-name">Григорий Пупкин</div>
+                <div class="post-date">20 мая 2025</div>
+              </div>
+            </div>
+            <button class="more-btn"></button>
+          </div>
+          <div class="post-image" style="background-image:url('img/i\ \(1\)\ 1.png')"></div>
+          <div class="post-text">
+            Превратите свой смартфон в источник пассивного дохода с DexPoint! …
+          </div>
+          <div class="post-actions">
+            <button class="action like">150,62K</button>
+            <button class="action repost">29,73K</button>
+            <button class="action comment">83,61K</button>
+            <div class="views">1,1M</div>
+          </div>
+        </article>
+        <article class="post-card">
+          <div class="post-header">
+            <div class="user-info">
+              <div class="avatar-sm" style="background-image:url('img/Story\ Image\ \(3\).svg')"></div>
+              <div class="user-meta">
+                <div class="user-name">Ванесса Маринака</div>
+                <div class="post-date">11 мая 2025</div>
+              </div>
+            </div>
+            <button class="more-btn"></button>
+          </div>
+          <div class="post-image" style="background-image:url('img/1672306520_kalix-club-p-kosmos-zastavka-na-aifon-krasivo-49\ 1.svg')"></div>
+          <div class="post-text">
+            Превратите свой смартфон в источник пассивного дохода с DexPoint! …
+          </div>
+          <div class="post-actions">
+            <button class="action like">329</button>
+            <button class="action repost">4,55K</button>
+            <button class="action comment">987</button>
+            <div class="views">5,35K</div>
+          </div>
+        </article>
+        <!-- … ещё пост-карточки … -->
+      </div>
+    </div>
+
+    <!-- Правая колонка (фильтры) -->
+    <aside class="feed-sidebar">
+      <div class="filter-block">
+        <label>Сортировать</label>
+        <select>
+          <option>Сначала новые</option>
+          <option>Сначала старые</option>
+          <option>По лайкам</option>
+          <option>По репостам</option>
+          <!-- … -->
+        </select>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-header">Хештеги</div>
+        <input type="search" placeholder="Поиск хештега">
+        <div class="tag-list">
+          <span class="tag active">Аналитика</span>
+          <span class="tag active">Обучение</span>
+          <span class="tag active">Трейдинг</span>
+          
+          <!-- … -->
+        </div>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-header">Популярные</div>
+        <div class="tag-list">
+          <span class="tag">Аналитика</span>
+          <span class="tag">Статистика</span>
+          <span class="tag">Обучение</span>
+          <span class="tag">Трейдинг</span>
+          <span class="tag">Инвестиции</span>
+          <span class="tag">Наставничество</span>
+          <span class="tag">Бесплатно</span>
+          <!-- … -->
+        </div>
+      </div>
+
+      <div class="filter-block">
+  <div class="filter-header">Вложения</div>
+  <div class="filter-options">
+    <label><input type="checkbox" checked> Фото</label>
+    <label><input type="checkbox"> Видео</label>
+    <label><input type="checkbox"> Опросы</label>
+    <label><input type="checkbox"> Документы</label>
+    <label><input type="checkbox"> Без вложений</label>
+  </div>
+</div>
+    </aside>
+  </div>
+</main>
+
 
   <script src="js/scripts.js"></script>
 </body>
