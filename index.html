@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TOT — Стартовая</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- 1) Боковая панель -->
+  <aside class="sidebar">
+    <div class="menupanel">
+      <!-- Логотип -->
+      <img class="totlogo" src="data:image/png;base64,..." alt="TOT logo">
+      <!-- Добавили пункт Лента -->
+      <div class="menu-item active" id="menu-lenta">Лента</div>
+      <div class="menu-item" id="menu-marketplace">Маркетплейс</div>
+      <div class="menu-item" id="menu-persons">Персоны</div>
+      <div class="menu-item" id="menu-projects">Проекты</div>
+      <div class="menu-item" id="menu-streams">Трансляции</div>
+      <hr>
+      <div class="menu-item" id="menu-profile">Мой профиль</div>
+      <div class="menu-item" id="menu-desk">Рабочий стол</div>
+      <div class="menu-item" id="menu-messages">
+        Сообщения <span class="badge">100+</span>
+      </div>
+      <div class="menu-item" id="menu-favorites">Избранное</div>
+      <div class="menu-item" id="menu-calendar">Календарь</div>
+      <hr>
+      <div class="menu-item" id="menu-help">Помощь</div>
+    </div>
+  </aside>
+
+  <!-- 2) Основной контент -->
+  <main class="main-content">
+
+    <!-- Верхняя панель -->
+    <header class="toppanel">
+      <div class="search">
+        <input type="text" placeholder="Поиск…" />
+      </div>
+      <button class="btn-big">
+        Создать
+        <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#fff" d="M12 5v14m-7-7h14"/></svg>
+      </button>
+      <div class="notifications">
+        <svg width="24" height="24"><path fill="var(--text-grey)" d="M12 2a7 7 0 017 7v5h1a1 1 0 01.117 1.993L20 16h-1v1a3 3 0 01-5.995.176L13 17v-1h-2v1a3 3 0 01-5.995.176L5 17v-1H4a1 1 0 01-.117-1.993L4 11h1V6a7 7 0 017-7z"/></svg>
+        <span class="badge">14</span>
+      </div>
+      <div class="user">
+        <img class="avatar" src="avatar.jpg" alt="Иван Иванов">
+        <span class="user-name">Иван Иванов</span>
+      </div>
+    </header>
+
+    <!-- Приветственный блок -->
+    <section class="welcome-banner">
+      <h1 class="heading-bold-1">Добро пожаловать</h1>
+      <p class="body-text-1">
+        Ознакомься с основными возможностями платформы и выбери то, что нужно именно тебе!
+      </p>
+    </section>
+
+    <!-- Социальная сеть -->
+    <section class="social-section">
+      <h2 class="heading-bold-2">Социальная сеть</h2>
+      <div class="cards-row">
+        <!-- ваши карточки -->
+      </div>
+    </section>
+
+    <!-- Образование -->
+    <section class="section" id="education-section">
+      <h2 class="heading-bold-2">Образование</h2>
+      <div class="tabs">
+        <button class="tab-button active" data-target="edu-student">Ученикам</button>
+        <button class="tab-button"       data-target="edu-teacher">Преподавателям</button>
+      </div>
+      <div id="edu-student" class="tab-content">
+        <!-- HTML для учеников -->
+      </div>
+      <div id="edu-teacher" class="tab-content" hidden>
+        <!-- HTML для преподавателей -->
+      </div>
+    </section>
+
+    <!-- Инвестиции -->
+    <section class="section" id="invest-section">
+      <h2 class="heading-bold-2">Инвестиции</h2>
+      <div class="tabs">
+        <button class="tab-button active" data-target="inv-investors">Инвесторам</button>
+        <button class="tab-button"       data-target="inv-traders">Трейдерам</button>
+      </div>
+      <div id="inv-investors" class="tab-content">
+        <!-- HTML для инвесторов -->
+      </div>
+      <div id="inv-traders" class="tab-content" hidden>
+        <!-- HTML для трейдеров -->
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>

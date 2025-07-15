@@ -1,0 +1,186 @@
+/* 1) Переменные */
+:root {
+  /* Main palette */
+  --color-main:        #FF2B00;
+  --color-main-light:  #FF7255;
+  --color-main-dark:   #AA1D00;
+
+  /* Greys */
+  --grey-1:            #C2C2C2;
+  --grey-2:            #E3E3E3;
+
+  /* Background */
+  --bg-light:          #F4F4F4;
+
+  /* Text */
+  --text-black:        #000;
+  --text-grey:         #868686;
+
+  /* Badge */
+  --badge-bg:          #FF2B00;
+  --badge-color:       #FFF;
+}
+
+/* 2) Reset + базовые */
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-black);
+}
+
+/* 3) Sidebar */
+.sidebar {
+  width: 281px;
+  background: #FFF;
+  border-right: 1px solid var(--grey-2);
+}
+.menupanel {
+  padding: 16px;
+}
+.totlogo {
+  display: block;
+  margin: 0 auto 24px;
+  width: 98px; height: 25px;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-grey);
+}
+.menu-item:hover {
+  background: var(--grey-2);
+}
+.menu-item.active {
+  background: var(--color-main-light);
+  color: #FFF;
+}
+.menu-item + hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid var(--grey-2);
+}
+
+/* Badge */
+.badge {
+  background: var(--badge-bg);
+  color: var(--badge-color);
+  border-radius: 12px;
+  padding: 0 6px;
+  font-size: 12px;
+  margin-left: auto;
+}
+
+/* 4) Main content */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 54px;
+}
+
+/* Header (top panel) */
+.toppanel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.search input {
+  width: 300px;
+  padding: 8px 12px;
+  border: 1px solid var(--grey-2);
+  border-radius: 6px;
+  font-size: 14px;
+}
+.btn-big {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-main);
+  color: #FFF;
+  border: none;
+  border-radius: 90px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-big:hover { background: var(--color-main-light); }
+.btn-big:active { background: var(--color-main-dark); }
+.notifications {
+  position: relative;
+  cursor: pointer;
+}
+.notifications svg { fill: var(--text-grey); }
+.notifications .badge {
+  position: absolute;
+  top: -6px; right: -6px;
+}
+
+/* User */
+.user {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-name {
+  font-size: 14px;
+}
+
+/* 5) Типографика */
+.heading-bold-1 { font-family: 'TT Travels Next', sans-serif; font-weight: 700; font-size: 32px; line-height: 35px; margin-bottom: 8px; }
+.heading-bold-2 { font-family: 'TT Travels Next', sans-serif; font-weight: 700; font-size: 24px; line-height: 28px; margin-bottom: 16px; }
+.body-text-1   { font-size: 18px; line-height: 28px; margin-bottom: 32px; }
+
+/* 6) Banners & sections */
+.welcome-banner {
+  margin-bottom: 48px;
+}
+.social-section {
+  margin-bottom: 48px;
+}
+.cards-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* 7) Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tab-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background: #FFF;
+  color: var(--text-black);
+  cursor: pointer;
+}
+.tab-button.active {
+  background: var(--color-main);
+  color: #FFF;
+}
+.tab-content {
+  display: block;
+}
+.tab-content[hidden] {
+  display: none;
+}
