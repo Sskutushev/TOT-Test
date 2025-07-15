@@ -40,7 +40,6 @@ html, body {
 
 /* Навигация */
 .frame3944, .frame4689 {
-  margin-top: 15px;
   display: flex; flex-direction:column; gap:15px;
   padding: 0 24px;
 }
@@ -97,7 +96,7 @@ hr {
 /* ========== HEADER ========== */
 .toppanel {
   position: fixed;
-  top: 16px;
+  top: 0px;
   left: 297px;
   right: 16px;
   height: 73px;
