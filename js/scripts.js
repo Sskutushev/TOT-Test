@@ -1,39 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Логотип ↔ index.html
-  const logo = document.getElementById('totlogo');
-  if (logo) {
-    logo.addEventListener('click', () => {
-      window.location.href = 'index.html';
-    });
-  }
+  // Логотип → index.html
+  document.getElementById('totlogo')?.addEventListener('click', () => {
+    window.location.href = 'index.html';
+  });
 
   // Подсветка активного пункта меню
   const current = window.location.pathname.split('/').pop();
-  document.querySelectorAll('.frame3944 a').forEach(link => {
-    if (link.getAttribute('href') === current) {
-      link.classList.add('active');
-    }
-  });
-});
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.querySelector('.field-small-search input.search-input');
-  if (!searchInput) return;
-
-  // при фокусе убираем placeholder
-  searchInput.addEventListener('focus', function() {
-    this.placeholder = '';
+  document.querySelectorAll('.frame3944 a').forEach(a => {
+    if (a.getAttribute('href') === current) a.classList.add('active');
   });
 
-  // при потере фокуса — возвращаем, если поле пустое
-  searchInput.addEventListener('blur', function() {
-    if (!this.value) {
-      this.placeholder = 'Поиск…';
-    }
-  });
+  // Поисковая строка
+  const searchInput = document.querySelector('.field-small-search .search-input');
+  if (searchInput) {
+    searchInput.addEventListener('focus', function() { this.placeholder = ''; });
+    searchInput.addEventListener('blur', function() {
+      if (!this.value) this.placeholder = 'Поиск…';
+    });
+    document.querySelector('.field-small-search')
+      .addEventListener('click', () => searchInput.focus());
+  }
 
-  // чтобы можно было кликнуть по любому месту контейнера и сфокусить инпут
-  const searchContainer = document.querySelector('.field-small-search');
-  searchContainer.addEventListener('click', () => {
-    searchInput.focus();
-  });
+  // Tabs
+  function initTabs(containerSelector) {
+    const root = document.querySelector(containerSelector);
+    if (!root) return;
+    const tabs = root.querySelectorAll('.tab');
+    const panes = root.querySelectorAll('.tab-content');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.toggle('active', t === tab));
+        panes.forEach(p => p.classList.toggle('active', p.id === tab.dataset.target));
+      });
+    });
+  }
+  initTabs('.education-section');
+  initTabs('.investment-section');
 });

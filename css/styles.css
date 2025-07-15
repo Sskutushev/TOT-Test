@@ -7,8 +7,8 @@
   --color-main-light: #ff7255;
   --color-bg: #f4f4f4;
   --color-text: #000;
-  --font-sans: 'Open Sans', sans-serif;
-  --font-logo: 'Cera', sans-serif;
+  --font-sans: 'Open Sans',sans-serif;
+  --font-logo: 'Cera',sans-serif;
 }
 
 /* Базовые */
@@ -17,42 +17,44 @@ html, body {
   font-family: var(--font-sans);
   background: var(--color-bg);
   color: var(--color-text);
+  overflow-x:hidden;
 }
 
 /* Сайдбар */
 .menupanel {
   position: fixed;
   top:16px; left:16px;
-  width:265px;
-  height: calc(100% - 32px);
+  width:265px; bottom:16px;
   background:#fff;
   border-radius:25px;
   display:flex;
   flex-direction:column;
+  padding-bottom:16px;
+  overflow:auto;
 }
 .totlogo {
-  position:absolute;
-  top:34px; left:83px;
+  margin:34px auto 20px;
   width:98px; height:25px;
   cursor:pointer;
 }
 
 /* Навигация */
 .frame3944, .frame4689 {
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  padding:0 24px;
+  margin-top: 15px;
+  display: flex; flex-direction:column; gap:15px;
+  padding: 0 24px;
 }
-.frame3944 { margin-top:91px; }
-.frame4689 { margin-top:20px; }
+.frame3944 { margin-top:24px; }
+.frame4689 { margin-top:14px; }
+.frame31 { margin-top:14px; }
 .frame3944 a,
 .frame4689 a,
 .frame31 {
   display:flex; align-items:center;
+  gap:12px;
   height:38px;
   border-radius:10px;
-  padding:10px 15px;
+  padding:0 12px;
   text-decoration:none;
   color:#858585;
 }
@@ -60,187 +62,369 @@ html, body {
 .frame3944 a:hover,
 .frame4689 a:hover,
 .frame31:hover {
-  background:#fff; color: var(--color-text);
+  background:#f0f0f0; color: var(--color-text);
 }
 .frame3944 a img,
 .frame4689 a img,
 .frame31 img {
-  margin-right:12px;
   width:20px; height:20px;
 }
+hr {
+  border: none;
+  height:1px;
+  background:#e3e3e3;
+  margin:16px 0;
+}
 .frame31 {
-  margin: 20px auto 0;
-  width: 217px;
-  height:38px;
-  margin-top: 20px;
-  padding:10px 15px;
+  margin: 0;                /* убираем все внешние отступы */
+  width: auto;              /* возвращаем авто-ширину */
+  padding: 0 35px;          /* точно такие же горизонтальные паддинги, как у ссылок в .frame3944 и .frame4689 */
+  height: 38px;             /* чтобы совпадало по высоте */
+  display: flex;
+  align-items: center;
+  gap: 12px;                /* расстояние между иконкой и текстом */
+  border-radius: 10px;
+  text-decoration: none;
+  color: #858585;
+  transition: background 0.2s, color 0.2s;
+}
+/* Ховер-эффект */
+.frame31:hover {
+  background: #f0f0f0;
+  color: var(--color-text);
 }
 
-/* Делители */
-.line11, .line112 {
-  border:1px solid #e3e3e3;
-  width:217px;
-}
-.line11 { margin:16px 20px; }
-.line112 { margin:16px 20px; }
 /* ========== HEADER ========== */
 .toppanel {
   position: fixed;
-  top: 16px; left: 297px; right: 16px;
+  top: 16px;
+  left: 297px;
+  right: 16px;
   height: 73px;
   background: var(--color-bg);
-  padding: 9px 54px 4px;
+  padding: 9px 0 4px;
   display: flex;
-  align-items: center;            /* теперь одноуровневый flex */
+  align-items: center;
+  z-index: 10;
 }
-
-/* обёртка для всего контента header */
 .frame6996 {
-  display: flex;
-  align-items: center;
   width: 100%;
-}
-
-/* контейнер правых кнопок */
-.header-actions {
-  margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 15px;   /* расстояние между кнопками */
+  justify-content: space-between; 
 }
 
-/* ----- Поисковая строка ----- */
 .field-small-search {
-  position: relative;
-  width: 440px;
+  width: 440px; 
   height: 36px;
-  background: var(--color-bg);
-  border: 1px solid #E3E3E3;      /* серая рамка */
+  background: #fff;
+  border: 1px solid #E3E3E3;
   border-radius: 6px;
   padding: 0 12px;
   display: flex;
   align-items: center;
 }
-
-/* сам input */
-.field-small-search input.search-input {
-  flex: 1;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  font-family: Open Sans, sans-serif;
-  color: var(--color-text);
-  background: transparent;
+.field-small-search img {
+  width:20px; height:20px; margin-right:8px;
 }
-
-/* иконка лупы */
-.field-small-search .icon-search {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  margin-right: 10px;
+.field-small-search input {
+  flex:1; border:none; outline:none;
+  font-size:14px;
 }
-
-/* ----- Кнопка «Создать» ----- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;               /* ровно 15px между кнопками */
+}
 .button-small-withicon {
+  width: 130px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 130px;                   /* фиксированная ширина */
-  height: 50px;                   /* фиксированная высота */
   background: var(--color-main);
   color: #fff;
   border: none;
-  border-radius: 90px;            /* 90px радиус */
+  border-radius: 90px;
   cursor: pointer;
 }
-
-/* плюсик внутри */
-.button-small-withicon .icon-plus {
-  width: 22px;
-  height: 22px;
-  margin-right: 10px;
-}
-
-/* ----- Кнопка «Уведомления» ----- */
+.button-small-withicon img { width:22px; height:22px; margin-right: 10px;}
 .button-bell {
   position: relative;
   width: 50px;
   height: 50px;
   background: #fff;
   border: none;
-  border-radius: 50%;             /* кругленькая */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-
-.button-bell .icon-bell {
-  width: 26px;
-  height: 26px;
-}
-
-/* счётчик */
+.button-bell img { width:26px; height:26px; }
 .button-bell .badge-count {
-  position: absolute;
-  top: 2px;
-  right: 2px;
-  background: var(--color-main);
-  color: #fff;
-  font-size: 12px;
-  border-radius: 16px;
-  padding: 3px 5px;
+  margin-right: -10px;
+  position:absolute; top:4px; right:4px;
+  background:var(--color-main); color:#fff;
+  font-size:12px; padding:2px 6px;
+  border-radius:12px;
 }
-
-/* ----- Меню профиля ----- */
 .frame9 {
-  position: relative;
   display: flex;
   align-items: center;
-  width: 170px;                   /* фиксированная ширина */
-  height: 50px;                   /* фиксированная высота */
+  width: 170px;
+  height: 50px;
   background: #fff;
   border-radius: 90px;
   padding: 6px 7px;
   cursor: pointer;
 }
-
-/* внутри аватар + имя + стрелка */
-.frame9 .avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-right: 12px;
-}
-.frame9 .иваниванов {
-  font-size: 12px;
-  color: var(--color-text);
-  margin-right: auto;
-}
-.frame9 .icon-dropdown {
-  width: 12px;
-  height: 12px;
-}
-
-/* Разделитель под хэдером */
+.frame9 .avatar { width:38px; height:38px; border-radius:50%; }
+.frame9 span { font-size:14px; white-space:nowrap; margin-left: 10px; }
+.frame9 .icon-dropdown { width:12px; height:12px; margin-left: 5px;}
 .line2 {
-  border-top:1px solid #e3e3e3;
-  margin-top:4px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #E3E3E3;
+  z-index: 1125;
 }
 
-/* Контент */
-.content,
-.лента {
-  margin:120px 16px 16px 297px;
-  padding:16px;
+/* общий разделитель под хэдером */
+.toppanel + hr {
+  position:absolute;
+  bottom: -15px;; left:0; right:0;
 }
 
-/* Специально для .лента */
-.лента {
-  background: var(--color-bg);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+/* ========== стартовая секция ========== */
+main.startpage {
+  margin: 109px 16px 16px 297px;
+  padding-bottom:32px;
+  display:flex; flex-direction:column; gap:44px;
+}
+
+/* Top Row */
+.top-row {
+  display:flex; gap:16px; flex-wrap:wrap;
+}
+.banner {
+  flex:1 1 600px;
+  min-width:280px;
+  height:217px;
+  background: url('../img/Frame 5655.svg') center/cover no-repeat;
+  border-radius:20px;
+  display:flex; align-items:center;
+  padding:0 20px;
+}
+.banner-text {
+  max-width:465px;
+}
+.banner-text h1 {
+  font-family:"TT Travels Next",sans-serif;
+  font-size:32px; line-height:1.1; color:#fff;
+}
+.banner-text p {
+  margin-top:12px;
+  font-size:16px; line-height:1.2; color:#fff;
+}
+/* Ограничиваем картинку по ширине и прижимаем вправо */
+.banner-illustration {
+  margin-left: auto;      /* шлет весь оставшийся отступ слева */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* прижать содержимое вправо */
+}
+
+.banner-illustration img {
+  max-width: 500px;       /* не больше 480px */
+  width: auto;            /* но может ужаться под контейнер */
+  height: auto;           /* пропорции сохраняются */
+  display: block;
+}
+
+.help-card {
+  flex:0 1 300px;
+  min-width:240px;
+  height:217px;
+  background:#fff;
+  border-radius:20px;
+  padding:20px;
+  display:flex; flex-direction:column;
+  justify-content:space-between;
+}
+.help-card h2 { font-size:20px; }
+.help-card p  { font-size:14px; color:#858585; }
+.btn-outline {
+  border:1px solid var(--color-main);
+  border-radius:90px;
+  padding:10px 20px;
+  background:transparent;
+  color:var(--color-main);
+  font-size:14px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+/* Social Features */
+.social-features {
+  display:flex; flex-direction:column; gap:20px;
+}
+.social-features h2 {
+  font-size:20px; font-family:"TT Travels Next",sans-serif;
+}
+.cards-row {
+  display:flex; gap:16px; flex-wrap:wrap;
+}
+.card {
+  flex:1 1 240px;
+  background:var(--color-main-light);
+  color:#fff;
+  border-radius:10px;
+  display:flex; padding:16px; gap:12px;
+  min-width:220px;
+}
+.card .icon { flex:0 0 32px; width:32px; height:32px; margin-top: 35px; }
+.card .content {
+  display:flex; flex-direction:column; flex:1; overflow:hidden;
+}
+.card h3 { font-size:18px; margin-bottom:6px; }
+.card p  { font-size:14px; flex:1; margin-bottom:8px; }
+.card-btn {
+  background:none; border:none; color:#fff;
+  font-size:14px; cursor:pointer;
+  align-self:flex-start;
+}
+.two-btns { display:flex; gap:8px; }
+
+/* Tabs (Education & Investment) */
+.tabs-section {
+  display:flex; flex-direction:column; gap:45px;
+}
+.tabs-container {
+  display:flex; gap:20px; flex-wrap:wrap;
+}
+.tabs-block {
+  flex:1 1 300px;
+  display:flex; flex-direction:column; gap:12px;
+}
+.tabs {
+  display:flex; gap:8px; flex-direction:row; width: 155px; height: 35px;
+}
+.tab {
+  flex:1 1 auto;
+  padding:8px 12px;
+  background:#fff;
+  border:1px solid #e3e3e3;
+  border-radius:4px;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.tab.active {
+  background:var(--color-main-light);
+  color:#fff;
+  border-color:var(--color-main-light);
+}
+.tab-content {
+  display:none;
+}
+.tab-content.active {
+  display:flex; flex-direction:column; gap:16px;
+}
+.education-cards,
+.investment-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* сами большие карточки — базовый размер 260px, но растут и сжимаются */
+.education-cards .large-card,
+.investment-cards .large-card {
+/* при этом карточка сама может быть гибкой по ширине */
+  flex: 1 1 auto;
+  min-width: 240px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+}
+
+/* иконка */
+.icon-lg {
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+}
+
+/* текст внутри */
+.large-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.large-card p {
+  font-size: 14px;
+  flex: 1;
+  margin-bottom: 8px;
+}
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--color-main);
+  font-size: 14px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+/* планшет: два таб-блока в колонку */
+@media (max-width: 992px) {
+  .tabs-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* мобильник: карточки в одной колонке */
+@media (max-width: 600px) {
+  .education-cards,
+  .investment-cards {
+    flex-direction: column;
+  }
+}
+
+
+/* Updates */
+.updates {
+  display:flex; flex-direction:column; gap:20px;
+}
+.updates h2 {
+  font-size:20px; font-family:"TT Travels Next",sans-serif;
+}
+.updates-row {
+  display:flex; gap:16px; flex-wrap:wrap;
+}
+.upd-card {
+  flex:1 1 240px;
+  background:#fff; border-radius:10px;
+  display:flex; flex-direction:column; padding:16px;
+  min-width:220px;
+}
+.upd-card img {
+  width:100%; height:auto; border-radius:6px;
+  margin-bottom:10px;
+}
+.upd-card h3    { font-size:18px; margin-bottom:6px; }
+.upd-card .date { font-size:16px; color:#858585; margin-bottom:8px; }
+.upd-card p      { font-size:16px; flex:1; margin-bottom:10px; }
+.btn-text {
+  background:none; border:none; color:var(--color-main);
+  font-size:14px; cursor:pointer; align-self:flex-start;
+}
+
+/* Media Queries */
+@media (max-width:800px) {
+  .toppanel { left:16px; right:16px; }
+  main.startpage { margin-left:16px; }
 }
