@@ -68,11 +68,17 @@ html, body {
 .frame31 img {
   width:20px; height:20px;
 }
-hr {
+/* hr внутри боковой панели */
+.menupanel hr {
+  display: block;
+  width: 200px;
+  height: 1px;
+  background: #e3e3e3;
   border: none;
-  height:1px;
-  background:#e3e3e3;
-  margin:16px 0;
+  margin: 16px auto;
+}
+hr {
+  display: none;
 }
 .frame31 {
   margin: 0;                /* убираем все внешние отступы */
@@ -105,6 +111,8 @@ hr {
   display: flex;
   align-items: center;
   z-index: 10;
+  /* Вариант 1: простой бордер */
+  border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 .frame6996 {
   width: 100%;
@@ -181,20 +189,8 @@ hr {
 .frame9 .avatar { width:38px; height:38px; border-radius:50%; }
 .frame9 span { font-size:14px; white-space:nowrap; margin-left: 10px; }
 .frame9 .icon-dropdown { width:12px; height:12px; margin-left: 5px;}
-.line2 {
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  right: 0;
-  border-top: 1px solid #E3E3E3;
-  z-index: 1125;
-}
+/* линия сразу под хедером */
 
-/* общий разделитель под хэдером */
-.toppanel + hr {
-  position:absolute;
-  bottom: -15px;; left:0; right:0;
-}
 
 /* ========== стартовая секция ========== */
 main.startpage {
@@ -256,6 +252,7 @@ main.startpage {
 .help-card p  { font-size:14px; color:#858585; }
 .btn-outline {
   border:1px solid var(--color-main);
+  width: 140px;
   border-radius:90px;
   padding:10px 20px;
   background:transparent;
@@ -263,6 +260,7 @@ main.startpage {
   font-size:14px;
   cursor:pointer;
   white-space:nowrap;
+  justify-content:space-between;
 }
 
 /* Social Features */
@@ -290,6 +288,7 @@ main.startpage {
 .card h3 { font-size:18px; margin-bottom:6px; }
 .card p  { font-size:14px; flex:1; margin-bottom:8px; }
 .card-btn {
+  text-decoration: underline;
   background:none; border:none; color:#fff;
   font-size:14px; cursor:pointer;
   align-self:flex-start;
@@ -364,6 +363,7 @@ main.startpage {
   margin-bottom: 6px;
 }
 .large-card p {
+  color: #858585;
   font-size: 14px;
   flex: 1;
   margin-bottom: 8px;
