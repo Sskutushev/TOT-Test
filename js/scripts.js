@@ -15,3 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.querySelector('.field-small-search input.search-input');
+  if (!searchInput) return;
+
+  // при фокусе убираем placeholder
+  searchInput.addEventListener('focus', function() {
+    this.placeholder = '';
+  });
+
+  // при потере фокуса — возвращаем, если поле пустое
+  searchInput.addEventListener('blur', function() {
+    if (!this.value) {
+      this.placeholder = 'Поиск…';
+    }
+  });
+
+  // чтобы можно было кликнуть по любому месту контейнера и сфокусить инпут
+  const searchContainer = document.querySelector('.field-small-search');
+  searchContainer.addEventListener('click', () => {
+    searchInput.focus();
+  });
+});
