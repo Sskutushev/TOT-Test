@@ -97,7 +97,105 @@
   <hr>
   </header> <div class="header-divider"></div>
   <!-- контент сообщения -->
-  
+  <!-- ========== Секция «Сообщения» ========== -->
+<section class="messages-page">
+  <div class="messages-container">
+    <!-- Левая панель: список чатов -->
+    <aside class="messages-sidebar">
+      <!-- Заголовок + кнопка -->
+      <div class="ms-header">
+        <h2>Чаты</h2>
+        <button class="btn-text btn-create-group">
+          <img src="img/plus.svg" alt="" class="icon-plus"/>
+          Создать групповой чат
+        </button>
+      </div>
+
+      <!-- Поиск по чатам -->
+      <div class="ms-search">
+        <img src="img/search.svg" alt="" class="icon-search" />
+        <input type="text" placeholder="Поиск…" />
+      </div>
+
+      <!-- Фильтры вкладок -->
+      <div class="ms-tabs">
+        <button class="tab tab--active">
+          Все <span class="badge">12</span>
+        </button>
+        <button class="tab">
+          Личные <span class="badge">2</span>
+        </button>
+        <button class="tab">
+          Бизнес <span class="badge">10</span>
+        </button>
+      </div>
+
+      <!-- Список чатов -->
+      <ul class="chat-list">
+        <li class="chat-item">
+          <div class="ci-left">
+            <img src="img/avatar1.jpg" alt="" class="ci-avatar"/>
+            <div class="ci-info">
+              <strong>Иван</strong>
+              <small>Вы: Да, разумеется, Ива…</small>
+            </div>
+          </div>
+          <div class="ci-right">
+            <img src="img/message-read.svg" alt="" class="ci-status"/>
+            <time>10:04</time>
+            <span class="ci-unread">100</span>
+          </div>
+        </li>
+        <!-- ... повторять <li> для каждого чата ... -->
+      </ul>
+    </aside>
+
+    <!-- Правая панель: содержимое выбранного чата -->
+    <div class="messages-content">
+      <!-- Заголовок чата -->
+      <div class="mc-header">
+        <div class="mc-user">
+          <img src="img/avatar1.jpg" alt="" class="avatar"/>
+          <span class="username">Иван Иванов</span>
+        </div>
+        <button class="btn-more"><!-- три точки --></button>
+      </div>
+      <hr/>
+
+      <!-- Окно сообщений -->
+      <div class="mc-messages">
+        <!-- Сообщение от пользователя -->
+        <div class="message message--incoming">
+          <div class="msg-bubble">Приветствую, Иван! Вам понравился наш курс “Как поднять бабла ?”</div>
+          <div class="msg-meta">
+            <time>24 мая 2024, 10:02</time>
+            <img src="img/time.svg" alt="" class="icon-meta"/>
+          </div>
+        </div>
+        <!-- Сообщение от нас -->
+        <div class="message message--outgoing">
+          <div class="msg-bubble">Да, разумеется, Иван! Мы обязательно Вам сообщим об этом</div>
+          <div class="msg-meta">
+            <time>24 мая 2024, 10:02</time>
+            <img src="img/message-read.svg" alt="" class="icon-meta"/>
+          </div>
+        </div>
+        <!-- ... другие сообщения ... -->
+      </div>
+
+      <!-- Поле ввода нового сообщения -->
+      <div class="mc-input">
+        <div class="input-controls">
+          <button class="icon-btn"><img src="img/paperclip.svg" alt=""/></button>
+          <button class="icon-btn"><img src="img/smile.svg" alt=""/></button>
+        </div>
+        <input type="text" placeholder="Сообщение…"/>
+        <button class="icon-btn send"><img src="img/send.svg" alt=""/></button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <script src="js/scripts.js"></script>
 </body>
