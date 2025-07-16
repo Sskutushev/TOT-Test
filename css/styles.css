@@ -861,8 +861,8 @@ main.persons-page {
 .persons-grid {
   flex: 1;
   display: grid;
-  gap: 20px;
-  padding-left: 20px; /* отступ от левой панели */
+  gap: 10px;
+  padding-left: 0px; /* отступ от левой панели */
   grid-template-columns: repeat(4, minmax(275px, 1fr));
 }
 
