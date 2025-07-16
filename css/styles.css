@@ -1669,3 +1669,157 @@ main.projects-page {
   border: none;
   cursor: pointer;
 }
+/* ===== POPUP OVERLAY ===== */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.popup-overlay.active {
+  display: flex;
+}
+
+/* ===== БЕЛЫЙ КОНТЕЙНЕР ПОПАПА ===== */
+.popup-overlay .frame5843 {
+  background-color: #ffffff;       /* белый фон */
+  border-radius: 20px;             /* скругления */
+  padding: 45px;                   /* ваш отступ */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2); /* лёгкая тень */
+  max-width: 90%;                  /* чтобы не вылазил за экран */
+  max-height: 90%;                 /* фиксируем по высоте */
+  overflow-y: auto;                /* прокрутка, если контент большой */
+}
+/* делаем frame9 контейнером для абсолютного позиционирования */
+.frame9 {
+  position: relative;
+  cursor: pointer;
+}
+
+/* само выпадающее меню */
+.frame3953 {
+  display: none; /* по умолчанию скрыто */
+  position: absolute;
+  display: none !important; /* по умолчанию скрыто */
+  top: calc(100% + 8px); /* чуть ниже кнопки */
+  right: 0;
+  width: 271px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.15));
+  z-index: 1001; /* поверх всего */
+}
+
+/* когда .frame9 имеет класс open — показываем меню */
+.frame9.open .frame3953 {
+  display: flex !important;
+  flex-direction: column;
+}
+.frame3957,
+.frame3954,
+.frame3959,
+.frame3960,
+.frame3961 {
+  position: relative !important;  /* вместо absolute */
+  top: auto !important;
+  left: auto !important;
+
+  display: flex !important;
+  align-items: center !important;
+  gap: 13px !important;           /* ваш отступ между иконкой и текстом */
+  height: auto !important;        /* убираем жёсткую высоту */
+  width: auto !important;         /* убираем жёсткую ширину */
+}
+
+/* Обнуляем смещения для иконок и текстов, чтобы они стали на свои места */
+.frame3957 .icon-wallet,
+.frame3954 .icon-wheel,
+.frame3959 .icon-star-empty,
+.frame3960 .icon-communities,
+.frame3961 .icon-exit {
+  position: static !important;
+  margin: 0 !important;
+}
+
+/* Текстовые элементы тоже сбрасываем */
+.frame3957 .платежи,
+.frame3954 .настройкиаккаунта,
+.frame3959 .тарифы,
+.frame3960 .партнерскаяпрограмма,
+.frame3961 .выходизаккаунта {
+  position: static !important;
+  margin: 0 !important;
+  line-height: 1.2;
+}
+
+/* Если нужно, можно чуть сузить общий контейнер, чтобы он естественно подстроился */
+.frame3953 {
+  width: 250px !important;
+}
+/* Hover-эффект для пунктов дропдауна профиля */
+.frame3953 > div {
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.frame3953 > div:hover {
+  background-color: #f4f4f4; /* светло-серый фон при наведении */
+}
+
+/* Если хотите чуть подчёркивать текст или менять цвет текста/иконок: */
+.frame3953 > div:hover .платежи,
+.frame3953 > div:hover .настройкиаккаунта,
+.frame3953 > div:hover .тарифы,
+.frame3953 > div:hover .партнерскаяпрограмма,
+.frame3953 > div:hover .выходизаккаунта {
+  color: var(--color-main); /* цвет текста при наведении, можно любой */
+}
+
+/* иконки чуть ярче при наведении */
+.frame3953 > div:hover img {
+  opacity: 0.8;
+}
+/*родитель для абсолютного позиционирования дропдауна*/
+.notification-wrapper {
+  position: relative;
+}
+
+/* сам контейнер уведомлений — скрыт по-умолчанию */
+.notificationcontainer {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px); /* чуть ниже кнопки */
+  right: 0;
+  width: 425px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  flex-direction: column;
+  gap: 25px;
+  filter: drop-shadow(10px 9px 18px rgba(0,0,0,0.15));
+  z-index: 1001;
+  max-height: 90vh;       /* адаптивно по высоте */
+  overflow-y: auto;
+}
+
+/* при открытом состоянии — показать */
+.notification-wrapper.open .notificationcontainer {
+  display: flex;
+}
+
+/* hover-эффект на каждую карточку уведомления */
+.notificationcontainer > div[class^="notificationitem"] {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.notificationcontainer > div[class^="notificationitem"]:hover {
+  background-color: #f0f0f0;
+}

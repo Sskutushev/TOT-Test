@@ -69,3 +69,55 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  //  ——— POPUP «Создать» ———
+  const btnOpen  = document.querySelector('.button-small-withicon');
+  const overlay  = document.getElementById('popup-overlay');
+  const btnClose = document.getElementById('icon-close');
+
+  if (btnOpen && overlay) {
+    btnOpen.addEventListener('click', () => {
+      overlay.classList.add('active');
+    });
+  }
+  if (btnClose && overlay) {
+    btnClose.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+    // закрытие кликом по фону
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.classList.remove('active');
+    });
+  }
+  // Дропдаун-профиль
+const profileMenu = document.getElementById('profile-menu');
+const dropdown    = profileMenu.querySelector('.frame3953');
+
+profileMenu.addEventListener('click', e => {
+  e.stopPropagation();                 // не закрывать сразу
+  profileMenu.classList.toggle('open');
+});
+
+// клик вне меню — закрыть
+document.addEventListener('click', () => {
+  profileMenu.classList.remove('open');
+});
+// ——— Дропдаун УВЕДОМЛЕНИЙ ———
+  const notifWrapper = document.querySelector('.notification-wrapper');
+  const bellBtn     = notifWrapper.querySelector('.button-bell');
+  const notifBox    = notifWrapper.querySelector('.notificationcontainer');
+
+  // клик по колокольчику — переключаем класс open
+  bellBtn.addEventListener('click', e => {
+    e.stopPropagation();                   // чтобы этот клик не дошёл до document
+    notifWrapper.classList.toggle('open');
+  });
+
+  // клик в любой другой точке страницы — закрываем
+  document.addEventListener('click', () => {
+    notifWrapper.classList.remove('open');
+  });
+
+  // клик внутри самого выпадающего блока — не закрывать
+  notifBox.addEventListener('click', e => {
+    e.stopPropagation();
+  });
