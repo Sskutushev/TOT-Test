@@ -55,3 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+// Инициализация табов для messages (ms-tabs)
+  const msTabsContainer = document.querySelector('.ms-tabs');
+  if (msTabsContainer) {
+    const msTabs = msTabsContainer.querySelectorAll('.tab');
+    msTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // 1) снять active со всех
+        msTabs.forEach(t => t.classList.remove('tab--active'));
+        // 2) поставить active на кликнутый
+        tab.classList.add('tab--active');
+        // 3) тут можно добавить вашу логику подгрузки/фильтрации сообщений
+      });
+    });
+  }

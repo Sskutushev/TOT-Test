@@ -1534,18 +1534,21 @@ main.projects-page {
   align-items: center;
   gap: 8px;
 }
-.ci-status, .ci-unread {
-  width: 16px; height: 16px;
-}
+.ci-status,
 .ci-unread {
-  display: inline-block;
+  width: 37px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ci-unread {
   background: var(--color-main);
   color: #fff;
   font-size: 10px;
-  line-height: 16px;
-  text-align: center;
-  border-radius: 8px;
-  padding: 0 4px;
+  /* padding больше не нужен, т.к. мы центрируем flex-ом */
+  border-radius: 16px;
 }
 
 /* Правая панель */
