@@ -802,9 +802,8 @@ main.persons-page {
 
 /* Поисковая панель */
 .search-row {
-  position: sticky;
+  position: relative;
   top: 0;
-  z-index: 5;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -981,16 +980,16 @@ main.persons-page {
   gap: 10px;
   height: 46px;
   padding: 13px 25px;
-  /* не переносить текст */
   white-space: nowrap;
-  /* скрывать обрезавшиеся символы (если вдруг очень узко) */
   overflow: hidden;
-  /* адаптивный размер шрифта: от 12px до 14px, подстраивается по ширине окна */
   font-size: clamp(8px, 2vw, 12px);
   color: #858585;
   background: #f4f4f4;
   border: none;
   border-radius: 90px;
+  /* сюда добавьте ширину */
+  flex: 0 0 140px !important;
+  width: 200px !important;
   cursor: pointer;
   z-index: 500;
 }
@@ -1317,7 +1316,8 @@ main.projects-page {
   cursor: pointer;
 }
 .btn-subscribe img {
-  width: 20px; height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Фильтры справа */
@@ -1715,7 +1715,7 @@ main.projects-page {
   flex-direction: column;
   gap: 9px;
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.15));
-  z-index: 1001; /* поверх всего */
+  z-index: 100000; /* поверх всего */
 }
 
 /* когда .frame9 имеет класс open — показываем меню */
@@ -1808,6 +1808,7 @@ main.projects-page {
   z-index: 1001;
   max-height: 90vh;       /* адаптивно по высоте */
   overflow-y: auto;
+  z-index: 100;
 }
 
 /* при открытом состоянии — показать */
