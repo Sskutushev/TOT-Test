@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   initTabs('.education-section');
   initTabs('.investment-section');
+  initTabs('.popular.popular-education');
+  initTabs('.popular.popular-invest');
+
 
   const tabs = document.querySelectorAll('.feed-tabs .tab');
   const contents = document.querySelectorAll('.tab-content');
@@ -120,4 +123,18 @@ document.addEventListener('click', () => {
   // клик внутри самого выпадающего блока — не закрывать
   notifBox.addEventListener('click', e => {
     e.stopPropagation();
+  });
+  // === Marketplace: переключение вкладок ===
+  document.querySelectorAll('.popular').forEach(section => {
+    const tabs   = section.querySelectorAll('.popular-tabs .tab');
+    const panes  = section.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // подсветить активный таб
+        tabs.forEach(t => t.classList.toggle('tab--active', t === tab));
+        // показать нужную панель
+        panes.forEach(p => p.classList.toggle('active', p.id === tab.dataset.target));
+      });
+    });
   });

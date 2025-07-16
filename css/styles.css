@@ -156,6 +156,26 @@ hr {
   cursor: pointer;
 }
 .button-small-withicon img { width:22px; height:22px; margin-right: 10px;}
+/* Специфично только для кнопки в хэдере */
+.toppanel .button-small-withicon {
+  width: 130px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-main);
+  color: #fff;
+  border: none;
+  border-radius: 90px;
+  cursor: pointer;
+}
+
+/* Чтобы иконка внутри тоже не слетела */
+.toppanel .button-small-withicon img {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
 .button-bell {
   position: relative;
   width: 50px;
@@ -1823,4 +1843,314 @@ main.projects-page {
 }
 .notificationcontainer > div[class^="notificationitem"]:hover {
   background-color: #f0f0f0;
+}
+/* ========== Marketplace Section ========== */
+
+/* 0. Отступы внутри страницы */
+main.marketpage {
+  margin: calc(73px + 16px) 16px 16px 297px;
+  padding: 0 16px;
+  width: auto;
+}
+
+/* 1. Категории */
+.categories {
+  display: flex;
+  gap: 16px;
+  margin: 40px 0;
+}
+.category-card {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 140px;
+  width: 400px;
+}
+.category-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+.category-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8);
+}
+.category-text {
+  position: absolute;
+  top: 35px;
+  left: 16px;
+  z-index: 10;
+  color: #fff;
+}
+.category-text h2 {
+  flex-wrap: wrap;
+  width: 320px;
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+.category-text p {
+  flex-wrap: wrap;
+  width: 260px;
+  margin: 0;
+  font-size: 12px;
+}
+.category-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.category-img img {
+  display: block;
+  max-width: 100px;
+}
+
+/* 2+3. Популярное (общие) */
+.popular {
+  margin: 40px 0;
+}
+.popular-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.popular-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.btn-link {
+  font-size: 14px;
+  color: var(--color-main);
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn-link img {
+  width: 16px;
+  height: 16px;
+}
+
+/* вкладки */
+.popular-tabs-container {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+.popular-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.popular-tabs .tab {
+  background: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 12px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.popular-tabs .tab--active {
+  background: var(--color-main);
+  border-color: var(--color-main);
+  color: #fff;
+}
+
+/* контент вкладок */
+.popular .tab-content {
+  display: none;
+  margin-top: 16px;
+}
+.popular .tab-content.active {
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+/* списки карточек */
+.popular-list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+/* карточки обучения */
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  min-width: 260px;
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.card-image {
+  position: relative;
+}
+.card-image img {
+  width: 100%;
+  display: block;
+}
+.inf-rat_rew {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  padding: 4px 8px;
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+}
+.card-body {
+  padding: 12px;
+  flex-grow: 1;
+}
+.card-body h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.tag {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.tag--course { background: #75baef; color: #fff; }
+.tag--consult { background: #77bc57; color: #fff; }
+.tag--level,
+.tag--time { background: var(--color-bg); color: #555; }
+.card-body p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+.card-footer {
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+}
+.price {
+  font-size: 18px;
+  color: var(--color-main);
+}
+.button-withicon {
+  background: var(--color-bg);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.product-card--disabled {
+  opacity: 0.5;
+}
+.product-card--disabled .button-withicon {
+  cursor: default;
+}
+
+/* карточки инвестиций */
+.popular-list--invest .invest-card {
+  background: #fff;
+  border-radius: 8px;
+  min-width: 260px;
+  flex: 0 0 260px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.invest-header {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+}
+.label {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.label--opif { background: #75baef; color: #fff; }
+.label--etf  { background: #65cbbf; color: #fff; }
+.label--epif { background: #cc7f9f; color: #fff; }
+.currency,
+.asset {
+  background: var(--color-bg);
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: #555;
+}
+.growth {
+  position: relative;
+}
+.growth-value {
+  color: #25de85;
+  font-size: 20px;
+  font-weight: bold;
+}
+.growth-period {
+  font-size: 12px;
+  color: #555;
+}
+.growth-chart {
+  width: 100%;
+  height: 60px;
+  margin-top: 4px;
+}
+.invest-card .rating {
+  font-size: 12px;
+  color: #555;
+}
+.invest-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+.invest-info li {
+  margin-bottom: 4px;
+}
+.button-small-withicon {
+  background: var(--color-bg);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+/* адаптив */
+@media (max-width: 800px) {
+  .categories,
+  .popular {
+    margin: 20px 0;
+  }
+  .popular-list,
+  .popular-list--invest {
+    justify-content: flex-start;
+  }
 }
