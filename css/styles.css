@@ -439,7 +439,7 @@ main.startpage {
 /* STORIES */
 .story-section {
   overflow-x: auto;
-  padding-bottom: 10px;
+  margin-bottom: -75px;
 }
 .story-list {
   display: flex;
