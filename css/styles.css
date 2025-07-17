@@ -2448,11 +2448,7 @@ main.profile-page {
   border-radius: 8px;
   display: block;
 }
-/*
-====================================
-========== СТРАНИЦА ТРАНСЛЯЦИЙ ==========
-====================================
-*/
+/*==== СТРАНИЦА ТРАНСЛЯЦИЙ ===*/
 
 /* --- Основной контейнер страницы --- */
 main.streams-page {
@@ -2825,11 +2821,36 @@ main.streams-page {
   width: 14px;
   height: 14px;
 }
-/* --- Общий стиль для сеток 4х2 на странице трансляций --- */
+/* --- Единственное правило для сеток 4x2 --- */
 .stream-grid-wrapping,
 .stream-grid-horizontal {
+  overflow-x: auto;
+  padding-bottom: 15px; 
   display: grid;
-  /* Создаем ровно 4 колонки, которые занимают равное пространство */
   grid-template-columns: repeat(4, minmax(360px, 1fr));
   gap: 30px;
+}
+/* Контейнер для тегов внизу карточки */
+.stream-tags-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+/* Стиль для тега "Запись" */
+.record-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-main);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.record-tag img {
+  width: 14px;
+  height: 14px;
 }
