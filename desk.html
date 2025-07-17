@@ -386,7 +386,130 @@
     </div>
   </div>
   <!-- контент рабочий стол -->
-  
+  <main class="desk-page">
+    <nav class="desk-main-tabs">
+      <a href="#" class="desk-tab active" data-tab-target="education-pane">Обучение</a>
+      <a href="#" class="desk-tab" data-tab-target="investments-pane">Инвестиции</a>
+    </nav>
+    <div class="desk-content">
+      <div id="education-pane" class="desk-tab-pane active">
+        
+        <section class="desk-section">
+          <div class="section-header">
+            <h2>Курсы</h2>
+            <a href="#" class="btn-link">Смотреть все <img src="img/arrow-right-orange.svg" alt="→"></a>
+          </div>
+          <div class="desk-filters">
+            <button class="filter-chip active">В процессе <span class="chip-badge">12</span></button>
+            <button class="filter-chip">Новые <span class="chip-badge new">2</span></button>
+            <button class="filter-chip">Завершенные <span class="chip-badge">2</span></button>
+          </div>
+          <div class="desk-grid">
+            <article class="course-card" style="background-image: url('img/course-bg-1.jpg');">
+              <div class="card-overlay"></div>
+              <div class="course-card-content">
+                <header class="course-header">
+                  <div class="progress-info">
+                    <div class="progress-bar"><div class="progress-bar-inner" style="width: 56%;"></div></div>
+                    <span>Пройдено 56%</span>
+                  </div>
+                  <button class="card-menu-btn" title="Опции"></button>
+                </header>
+                <h3 class="course-title">Умный инвестор в криптовалютах</h3>
+                <footer class="course-footer">
+                  <div class="course-stats">
+                    <span><strong>5/10</strong> модулей</span>
+                    <span><strong>10/40</strong> уроков</span>
+                  </div>
+                  <a href="#" class="course-continue-btn">Продолжить <img src="img/arrow-right.svg" alt="→"></a>
+                </footer>
+              </div>
+            </article>
+            <article class="course-card" style="background-image: url('img/course-bg-2.jpg');">
+               <div class="card-overlay"></div>
+               <div class="course-card-content">
+                <header class="course-header">
+                  <div class="progress-info">
+                    <div class="progress-bar"><div class="progress-bar-inner" style="width: 80%;"></div></div>
+                    <span>Пройдено 80%</span>
+                  </div>
+                  <button class="card-menu-btn" title="Опции"></button>
+                </header>
+                <h3 class="course-title">Основы графического дизайна для начинающих</h3>
+                <footer class="course-footer">
+                  <div class="course-stats">
+                    <span><strong>8/10</strong> модулей</span>
+                    <span><strong>32/40</strong> уроков</span>
+                  </div>
+                  <a href="#" class="course-continue-btn">Продолжить <img src="img/arrow-right.svg" alt="→"></a>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="desk-section">
+          <div class="section-header">
+            <h2>Вебинары и лекции</h2>
+             <a href="#" class="btn-link">Смотреть все <img src="img/arrow-right-orange.svg" alt="→"></a>
+          </div>
+          <div class="desk-grid-webinars">
+              <article class="webinar-card">
+                  <header class="webinar-header">
+                      <div class="webinar-tags">
+                          <span class="tag-chip type-webinar">Вебинар</span>
+                          <div class="webinar-author">
+                              <img src="img/avatar-1.jpg" alt="Аватар">
+                              <span>Иван Иванов</span>
+                          </div>
+                      </div>
+                      <button class="card-menu-btn" title="Опции"></button>
+                  </header>
+                  <h3 class="webinar-title">Самые прибыльные стратегии трейдинга на 2025 год</h3>
+                  <footer class="webinar-footer">
+                      <div class="webinar-date">
+                          <img src="img/calendar-orange.svg" alt="Календарь">
+                          <span>25.05.2024</span>
+                          <div class="separator"></div>
+                          <span>18:25</span>
+                      </div>
+                      <a href="#" class="webinar-watch-btn">Смотреть <img src="img/arrow-right.svg" alt="→"></a>
+                  </footer>
+              </article>
+          </div>
+        </section>
+
+        <section class="desk-section">
+          <div class="section-header">
+            <h2>Материалы и инструменты</h2>
+            <a href="#" class="btn-link">Смотреть все <img src="img/arrow-right-orange.svg" alt="→"></a>
+          </div>
+          <div class="desk-filters">
+            <button class="filter-chip active">Все <span class="chip-badge">12</span></button>
+            <button class="filter-chip">Гайды <span class="chip-badge new">2</span></button>
+            <button class="filter-chip">Чек-листы <span class="chip-badge">2</span></button>
+            <button class="filter-chip">Софт <span class="chip-badge">2</span></button>
+          </div>
+          <div class="desk-grid-files">
+            <article class="file-card">
+              <div class="file-card-thumbnail"></div>
+              <div class="file-card-body">
+                <h3 class="file-card-title">Гайд по умным инвестициям в криптовалюты</h3>
+                <footer class="file-card-footer">
+                  <a href="#" class="download-btn">Скачать <img src="img/arrow-right.svg" alt="→"></a>
+                  <button class="card-menu-btn" title="Опции"></button>
+                </footer>
+              </div>
+            </article>
+            </div>
+        </section>
+
+      </div>
+      <div id="investments-pane" class="desk-tab-pane">
+          <h2 style="text-align: center; color: #858585; padding: 50px;">Раздел "Инвестиции" находится в разработке</h2>
+      </div>
+    </div>
+  </main>
 
   <script src="js/scripts.js"></script>
 </body>
