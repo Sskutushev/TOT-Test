@@ -138,3 +138,44 @@ document.addEventListener('click', () => {
       });
     });
   });
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Находим главный скроллящийся элемент на странице
+    const scrollableElement = document.querySelector('main');
+
+    // Если на странице нет тега <main>, ничего не делаем
+    if (!scrollableElement) {
+        return;
+    }
+
+    // --- Функция восстановления скролла ---
+    const restoreScroll = () => {
+        const scrollPos = sessionStorage.getItem('scrollPosition');
+        if (scrollPos) {
+            // Прокручиваем сам элемент <main>, а не window
+            scrollableElement.scrollTop = parseInt(scrollPos, 10);
+            sessionStorage.removeItem('scrollPosition');
+        }
+    };
+
+    // --- Сохранение позиции ---
+    // Сохраняем позицию, когда пользователь уходит со страницы
+    window.addEventListener('beforeunload', () => {
+        // Получаем позицию скролла у элемента <main>, а не у window
+        sessionStorage.setItem('scrollPosition', scrollableElement.scrollTop);
+    });
+
+    // --- Восстановление позиции ---
+    // Пытаемся восстановить позицию сразу
+    restoreScroll();
+    
+    // И на всякий случай, если контент грузится динамически,
+    // следим за изменениями внутри <main>
+    const observer = new MutationObserver(restoreScroll);
+    observer.observe(scrollableElement, {
+        childList: true, // следить за добавлением/удалением элементов
+        subtree: true    // следить во всех вложенных элементах
+    });
+
+    // Чтобы наблюдатель не работал вечно, его можно отключить через некоторое время
+    setTimeout(() => observer.disconnect(), 2000); // Отключаем через 2 секунды
+});
