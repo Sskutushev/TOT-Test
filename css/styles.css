@@ -1959,8 +1959,8 @@ main.marketpage {
   transition: background .2s, border-color .2s, color .2s;
 }
 .popular-tabs .tab--active {
-  background: var(--color-main);
-  border-color: var(--color-main);
+  background: var(--color-main-light);
+  border-color: var(--color-main-light);
   color: #fff;
 }
 
