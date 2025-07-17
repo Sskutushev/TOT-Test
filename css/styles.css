@@ -110,7 +110,7 @@ hr {
   padding: 9px 0 4px;
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 20;
   /* Вариант 1: простой бордер */
   border-bottom: 2px solid rgba(0,0,0,0.1);
 }
@@ -958,7 +958,7 @@ main.persons-page {
   cursor: pointer;
 }
 .person-card .card-body {
-  margin-top: 20px;
+  margin-top: 5px;
   flex: 1;
 }
 .person-card .name {
@@ -985,12 +985,13 @@ main.persons-page {
   background: #898fd7;
 }
 .person-card .description {
+  width: 150px;
   margin-top: 12px;
   font: 12px/1.4 sans-serif;
   color: #858585;
 }
 .person-card .card-footer {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -999,7 +1000,7 @@ main.persons-page {
   align-items: center;
   gap: 10px;
   height: 46px;
-  padding: 13px 25px;
+  padding: 13px 10px;
   white-space: nowrap;
   overflow: hidden;
   font-size: clamp(8px, 2vw, 12px);
@@ -1011,7 +1012,6 @@ main.persons-page {
   flex: 0 0 140px !important;
   width: 200px !important;
   cursor: pointer;
-  z-index: 500;
 }
 .person-card .btn-subscribe.subscribed {
   background: #eeeeee;

@@ -69,25 +69,140 @@
     </a>
   </aside>
 
-  <!-- хэдер -->
+ <!-- хэдер -->
   <header class="toppanel">
     <div class="frame6996">
-  <!-- Левый край: поиск -->
-  <div class="field-small-search">
-    <img src="img/search.svg" class="icon-search" alt="">
-    <input type="text" class="search-input" placeholder="Поиск…">
+      <div class="field-small-search">
+        <img src="img/search.svg" alt="">
+        <input type="text" class="search-input" placeholder="Поиск…">
+      </div>
+      <div class="header-actions">
+        <button class="button-small-withicon">
+          <img src="img/plus.svg" alt="">Создать
+        </button>
+        <div class="notification-wrapper">
+  <button class="button-bell">
+    <img src="img/bell.svg" alt="Уведомления">
+    <span class="badge-count">14</span>
+  </button>
+
+  <div id="notificationcontainer" class="notificationcontainer">
+    <!-- Заголовок -->
+    <div class="headercontainer">
+      <div class="headertitle">Уведомления</div>
+      <div class="settingsicon">
+        <img src="img/settings.svg" alt="Настройки">
+      </div>
+    </div>
+
+    <!-- Список уведомлений -->
+    <div class="notificationlist">
+
+      <!-- 1-е уведомление -->
+      <div class="notificationitem">
+        <div class="notificationmeta">
+          <div class="ellipse124"></div>
+          <div class="timeago">1 день назад</div>
+          <div class="line90"></div>
+          <div class="date">25 Сент 2024</div>
+        </div>
+        <div class="notificationcontent">
+          <button class="button-more">
+            <div class="ellipse19"></div>
+            <img class="icon-chat" src="img/icon-comment.svg" alt="Иконка комментария">
+          </button>
+          <div class="notificationtextcontainer">
+            <div class="notificationtitle">Новый комментарий</div>
+            <div class="notificationdescription">
+              Кто-то оставил новый комментарий к вашему <a href="#">посту</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2-е уведомление -->
+      <div class="notificationitem2">
+        <div class="notificationmeta2">
+          <div class="ellipse1242"></div>
+          <div class="timeago2">1 день назад</div>
+          <div class="line902"></div>
+          <div class="date2">25 Сент 2024</div>
+        </div>
+        <div class="notificationcontent2">
+          <button class="button-more2">
+            <div class="ellipse192"></div>
+            <img class="icon-reply" src="img/icon-reply.svg" alt="Иконка ответа">
+          </button>
+          <div class="notificationtextcontainer2">
+            <div class="notificationtitle2">Новый ответ</div>
+            <div class="notificationdescription2">
+              Кто-то ответил на ваш комментарий к <a href="#">посту</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3-е уведомление -->
+      <div class="notificationitem3">
+        <div class="notificationmeta3">
+          <div class="ellipse1243"></div>
+          <div class="timeago3">1 день назад</div>
+          <div class="line903"></div>
+          <div class="date3">25 Сент 2024</div>
+        </div>
+        <div class="notificationcontent3">
+          <button class="button-more3">
+            <div class="ellipse193"></div>
+            <img class="icon-notification_1" src="img/icon-mention.svg" alt="Иконка упоминания">
+          </button>
+          <div class="notificationtextcontainer3">
+            <div class="notificationtitle3">Вас упомянули</div>
+            <div class="notificationdescription3">
+              Кто-то упомянул вас в <a href="#">посте</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-е уведомление -->
+      <div class="notificationitem4">
+        <div class="notificationmeta4">
+          <div class="ellipse1244"></div>
+          <div class="timeago4">1 день назад</div>
+          <div class="line904"></div>
+          <div class="date4">25 Сент 2024</div>
+        </div>
+        <div class="notificationcontent4">
+          <button class="button-more4">
+            <div class="ellipse194"></div>
+            <img class="icon-notification_12" src="img/icon-mention.svg" alt="Иконка упоминания">
+          </button>
+          <div class="notificationtextcontainer4">
+            <div class="notificationtitle4">Вас упомянули</div>
+            <div class="notificationdescription4">
+              Кто-то упомянул вас в комментарии к <a href="#">посту</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Кнопка «Смотреть все уведомления» -->
+    <button class="button-text">
+      <div class="кнопка">Смотреть все уведомления</div>
+      <img class="icon-arrow" src="img/arrow-right.svg" alt="→">
+    </button>
+
+    <!-- Ползунок прокрутки -->
+    <div class="scrollindicator">
+      <div class="rectangle9027"></div>
+      <div class="rectangle9028"></div>
+    </div>
   </div>
-      <!-- Правые кнопки -->
-  <div class="header-actions">
-    <button class="button-small-withicon">
-      <img src="img/plus.svg" class="icon-plus" alt="">
-      Создать
-    </button>
-    <button class="button-bell">
-      <img src="img/bell.svg" class="icon-bell" alt="">
-      <span class="badge-count">14</span>
-    </button>
-    <div class="frame9" id="profile-menu">
+</div>
+
+        <div class="frame9" id="profile-menu">
   <img src="img/Ellipse 146.svg" alt="" class="avatar">
   <span>Иван Иванов</span>
   <img src="img/Vector 2 (Stroke).svg" alt="" class="icon-dropdown">
@@ -102,19 +217,19 @@
     </div>
     <div id="frame3954" class="frame3954">
       <div id="icon-wheel" class="icon-wheel">
-        <img src="img/settings.svg" id="group12" class="group12" alt="">
+        <img src="img/wheel.svg" id="group12" class="group12" alt="">
       </div>
       <div id="настройкиаккаунта" class="настройкиаккаунта">Настройки аккаунта</div>
     </div>
     <div id="frame3959" class="frame3959">
       <div id="icon-star-empty" class="icon-star-empty">
-        <img src="img/star.svg" alt="">
+        <img src="img/empty.svg" alt="">
       </div>
       <div id="тарифы" class="тарифы">Тарифы</div>
     </div>
     <div id="frame3960" class="frame3960">
       <div id="icon-communities" class="icon-communities">
-        <img src="img/partner.svg" alt="">
+        <img src="img/communities.svg" alt="">
       </div>
       <div id="партнерскаяпрограмма" class="партнерскаяпрограмма">
         Партнёрская программа
@@ -122,7 +237,7 @@
     </div>
     <div id="frame3961" class="frame3961">
       <div id="icon-exit" class="icon-exit">
-        <img src="img/exit.svg" id="union2" class="union2" alt="">
+        <img src="img/Union1.svg" id="union2" class="union2" alt="">
       </div>
       <div id="выходизаккаунта" class="выходизаккаунта">
         Выход из аккаунта
@@ -130,9 +245,9 @@
     </div>
   </div>
 </div>
-  </div>
-</div>
-  <hr>
+      </div>
+    </div>
+    <hr>
   </header> <div class="header-divider"></div>
   <!-- === POPUP «СОЗДАТЬ» === -->
   <div id="popup-overlay" class="popup-overlay">
