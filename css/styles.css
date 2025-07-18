@@ -3900,3 +3900,222 @@ main.calendar-page {
   cursor: pointer;
   flex-shrink: 0; /* Запрещаем кнопкам сжиматься */
 }
+/*
+====================================
+========== СТРАНИЦА ПОМОЩЬ ==========
+====================================
+*/
+
+main.help-page {
+  margin: calc(73px + 24px) 16px 32px 297px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* --- Поиск по базе знаний --- */
+.help-search-bar {
+  background: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+.help-search-bar .search-input-wrapper input {
+  width: 100%;
+}
+.help-search-bar .search-select {
+  width: 280px;
+}
+
+/* --- Верхняя секция (Категории + Контакты) --- */
+.help-top-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.help-categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.help-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 21px;
+}
+.help-category-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 28px 23px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--color-text);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.help-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.help-category-card img {
+  width: 50px;
+  height: 50px;
+  filter: invert(41%) sepia(85%) saturate(2256%) hue-rotate(334deg) brightness(101%) contrast(100%);
+}
+.help-category-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.help-category-card span {
+  font-size: 14px;
+  color: #858585;
+}
+
+.help-contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-card {
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+.contact-card.support {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.contact-illustration {
+  flex-shrink: 0;
+}
+.contact-card-content {
+  position: relative;
+  z-index: 2;
+}
+.contact-card h3 {
+  font-size: 20px;
+  font-family: 'TT Travels Next', sans-serif;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.contact-card p {
+  font-size: 14px;
+  color: #858585;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+.contact-buttons {
+  display: flex;
+  gap: 16px;
+}
+.contact-buttons .button-small-withicon { height: 46px; width: auto; padding: 0 25px; }
+.contact-buttons .btn-outline { height: 46px; width: auto; padding: 0 25px; }
+
+.contact-card.start {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-card.start .card-overlay {
+  background: linear-gradient(90deg, rgba(255, 113, 85, 1) 0%, rgba(255, 43, 0, 1) 100%);
+}
+.contact-card.start p { color: #fff; }
+.contact-card.start .course-continue-btn { background: rgba(255,255,255,0.9); }
+.start-icon {
+  width: 50px;
+  height: 50px;
+  opacity: 0.8;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Секция "Видеоинструкции" --- */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+.video-card {
+  text-decoration: none;
+  color: var(--color-text);
+}
+.video-thumbnail {
+  width: 100%;
+  height: 135px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 14px;
+  background-color: var(--color-bg);
+}
+.video-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.video-duration {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #858585;
+}
+.video-duration img {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Секция "Обновления" --- */
+.updates-list {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+.update-item {
+  display: flex;
+  gap: 30px;
+  text-decoration: none;
+  color: var(--color-text);
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 25px;
+}
+.updates-list .update-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.update-item img {
+  width: 130px;
+  height: 130px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.update-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.update-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+.update-date {
+  font-size: 12px;
+  color: #858585;
+}
