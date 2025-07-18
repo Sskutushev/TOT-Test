@@ -390,10 +390,8 @@
     
     <div class="calendar-controls">
       <div class="month-selector">
-        <button class="nav-arrow"><img src="img/arrow-left-dark.svg" alt="Назад"></button>
         <select class="month-select"><option>Октябрь</option></select>
         <select class="year-select"><option>2024</option></select>
-        <button class="nav-arrow"><img src="img/arrow-right-dark.svg" alt="Вперед"></button>
       </div>
       <button class="button-small-withicon schedule-btn"><img src="img/calendar.svg" alt="">Запланировать</button>
       <div class="calendar-tabs">
@@ -401,7 +399,9 @@
         <a href="#" class="calendar-tab" data-tab-target="events-calendar">Календарь событий</a>
       </div>
     </div>
-
+<div class="calendar-view-wrapper">
+  
+  <button class="nav-arrow calendar-nav-prev"><img src="img/arrow back.svg" alt="Назад"></button>
     <div class="calendar-content">
 
       <div id="my-schedule" class="calendar-tab-pane active">
@@ -419,7 +419,7 @@
                   <button class="card-menu-btn small"></button>
                 </div>
                 <p class="event-title">Поговорим о крипте вместе с экспертами</p>
-                <div class="event-time"><img src="img/time-grey.svg" alt="">10:00-12:00</div>
+                <div class="event-time"><img src="img/time.svg" alt="">10:00-12:00</div>
               </div>
               <div class="event-card stream">
                 <div class="event-card-header">
@@ -427,7 +427,7 @@
                   <button class="card-menu-btn small"></button>
                 </div>
                 <p class="event-title">Поговорим о крипте вместе с экспертами</p>
-                <div class="event-time"><img src="img/time-grey.svg" alt="">15:00</div>
+                <div class="event-time"><img src="img/time.svg" alt="">15:00</div>
               </div>
             </div>
           </div>
@@ -440,7 +440,7 @@
                   <button class="card-menu-btn small"></button>
                 </div>
                 <p class="event-title">Частная консультация по торговле криптовалютой на бирже Binance</p>
-                <div class="event-time"><img src="img/time-grey.svg" alt="">11:00-12:00</div>
+                <div class="event-time"><img src="img/time.svg" alt="">11:00-12:00</div>
               </div>
             </div>
           </div>
@@ -460,15 +460,24 @@
           </div>
           <div class="day-column">
              <header class="day-header"><strong>18</strong><div class="day-indicator"></div><span>Пт</span></header>
-             <div class="day-events"></div>
+             <div class="day-events empty">
+                  <p>У вас нет запланированных событий на этот день</p>
+                  <button class="add-event-btn">+</button>
+              </div>
           </div>
           <div class="day-column">
              <header class="day-header"><strong>19</strong><div class="day-indicator"></div><span>Сб</span></header>
-             <div class="day-events"></div>
+             <div class="day-events empty">
+                  <p>У вас нет запланированных событий на этот день</p>
+                  <button class="add-event-btn">+</button>
+              </div>
           </div>
            <div class="day-column">
              <header class="day-header"><strong>20</strong><div class="day-indicator"></div><span>Вс</span></header>
-             <div class="day-events"></div>
+             <div class="day-events empty">
+                  <p>У вас нет запланированных событий на этот день</p>
+                  <button class="add-event-btn">+</button>
+              </div>
           </div>
         </div>
       </div>
@@ -484,18 +493,18 @@
                   <div class="summary-count">3 события</div>
                 </header>
                 <ul class="summary-card-participants">
-                  <li><img src="img/avatar-1.jpg" alt="Аватар"><span>Иван Иванов</span></li>
-                  <li><img src="img/avatar-2.jpg" alt="Аватар"><span>Рушан Джаголияев</span></li>
-                  <li><img src="img/avatar-3.jpg" alt="Аватар"><span>Антон Инфоцыганов</span></li>
+                  <li><img src="img/Ellipse 146.svg" alt="Аватар"><span>Иван Иванов</span></li>
+                  <li><img src="img/Ellipse 148.svg" alt="Аватар"><span>Рушан Джаголияев</span></li>
+                  <li><img src="img/Ellipse 149 (1).svg" alt="Аватар"><span>Антон Инфоцыганов</span></li>
                 </ul>
               </article>
               <article class="events-summary-card">
                 <header class="summary-card-header">
-                  <div class="summary-time"><img src="img/time-grey.svg" alt="">15:00</div>
+                  <div class="summary-time"><img src="img/time.svg" alt="">15:00</div>
                   <div class="summary-count">1 событие</div>
                 </header>
                 <ul class="summary-card-participants">
-                  <li><img src="img/avatar-4.jpg" alt="Аватар"><span>Егор Потанин</span></li>
+                  <li><img src="img/Ellipse 149.svg" alt="Аватар"><span>Егор Потанин</span></li>
                 </ul>
               </article>
             </div>
@@ -503,6 +512,15 @@
           <div class="day-column">
             <header class="day-header"><strong>15</strong><div class="day-indicator"></div><span>Вт</span></header>
              <div class="day-events">
+              <article class="events-summary-card">
+                <header class="summary-card-header">
+                  <div class="summary-time"><img src="img/time.svg" alt="">15:00</div>
+                  <div class="summary-count">1 событие</div>
+                </header>
+                <ul class="summary-card-participants">
+                  <li><img src="img/Ellipse 149.svg" alt="Аватар"><span>Егор Потанин</span></li>
+                </ul>
+              </article>
               </div>
           </div>
           <div class="day-column">
@@ -514,23 +532,49 @@
           <div class="day-column">
              <header class="day-header"><strong>17</strong><div class="day-indicator"></div><span>Чт</span></header>
              <div class="day-events"></div>
+             <article class="events-summary-card">
+                <header class="summary-card-header">
+                  <div class="summary-time"><img src="img/time-grey.svg" alt="">10:00</div>
+                  <div class="summary-count">3 события</div>
+                </header>
+                <ul class="summary-card-participants">
+                  <li><img src="img/Ellipse 146.svg" alt="Аватар"><span>Иван Иванов</span></li>
+                  <li><img src="img/Ellipse 148.svg" alt="Аватар"><span>Рушан Джаголияев</span></li>
+                  <li><img src="img/Ellipse 149 (1).svg" alt="Аватар"><span>Антон Инфоцыганов</span></li>
+                </ul>
+              </article>
           </div>
           <div class="day-column">
              <header class="day-header"><strong>18</strong><div class="day-indicator"></div><span>Пт</span></header>
-             <div class="day-events"></div>
+             <div class="day-events empty">
+                <p>На этот день не назначено событий</p>
+             </div>
           </div>
            <div class="day-column">
              <header class="day-header"><strong>19</strong><div class="day-indicator"></div><span>Сб</span></header>
-             <div class="day-events"></div>
+             <div class="day-events empty">
+                <p>На этот день не назначено событий</p>
+             </div>
           </div>
            <div class="day-column">
              <header class="day-header"><strong>20</strong><div class="day-indicator"></div><span>Вс</span></header>
              <div class="day-events"></div>
+             <article class="events-summary-card">
+                <header class="summary-card-header">
+                  <div class="summary-time"><img src="img/time-grey.svg" alt="">10:00</div>
+                  <div class="summary-count">3 события</div>
+                </header>
+                <ul class="summary-card-participants">
+                  <li><img src="img/Ellipse 146.svg" alt="Аватар"><span>Иван Иванов</span></li>
+                  <li><img src="img/Ellipse 148.svg" alt="Аватар"><span>Рушан Джаголияев</span></li>
+                  <li><img src="img/Ellipse 149 (1).svg" alt="Аватар"><span>Антон Инфоцыганов</span></li>
+                </ul>
+              </article>
           </div>
         </div>
       </div>
-
     </div>
+    <button class="nav-arrow calendar-nav-next"><img src="img/arrow-right.svg" alt="Вперед"></button>
   </main>
 
   <script src="js/scripts.js"></script>

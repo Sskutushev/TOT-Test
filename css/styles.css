@@ -3648,11 +3648,11 @@ main.calendar-page {
 .year-select { width: 116px; }
 
 .schedule-btn {
-  background-color: var(--color-bg);
+  background-color: #E3E3E3;
   color: var(--color-text);
   font-weight: 600;
   height: 46px;
-  width: auto;
+  width: 180px;
   padding: 0 25px;
 }
 .schedule-btn img {
@@ -3831,6 +3831,7 @@ main.calendar-page {
 /* --- Стили для вкладки "Календарь событий" --- */
 
 .events-summary-card {
+  position: relative;
   background-color: #F8F8F8;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
@@ -3848,12 +3849,14 @@ main.calendar-page {
 .summary-time {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
+  gap: 5px;
+  font-size: 12px;
   color: #858585;
 }
 .summary-count {
-  font-size: 12px;
+  width: 100px;
+  margin-left: 5px;
+  font-size: 14px;
   font-weight: 600;
   color: #000;
 }
@@ -3874,4 +3877,26 @@ main.calendar-page {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+}
+/* --- Контейнер для календаря и боковых стрелок --- */
+.calendar-view-wrapper {
+  display: flex;
+  align-items: center; /* Выравнивает стрелки по центру календаря */
+  gap: 15px; /* Отступ между стрелками и календарем */
+}
+
+.calendar-content {
+  flex-grow: 1; /* Заставляет календарь занять все доступное пространство */
+}
+
+/* Стили для самих кнопок-стрелок (если нужно подправить) */
+.nav-arrow {
+  margin-top: -440px;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #e3e3e3;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-shrink: 0; /* Запрещаем кнопкам сжиматься */
 }
