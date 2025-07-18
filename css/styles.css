@@ -2958,20 +2958,23 @@ main.desk-page {
 
 /* --- Сетка для карточек --- */
 .desk-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
-  gap: 24px;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 /* --- Карточка курса --- */
 .course-card {
   height: 250px;
+  width: 500px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
   position: relative;
-  overflow: hidden;
   color: #fff;
+  cursor: pointer;
 }
 .card-overlay {
   position: absolute;
@@ -3023,12 +3026,13 @@ main.desk-page {
   background-position: center;
 }
 .course-title {
+  width: 480px;
   font-size: 24px;
   font-family: 'TT Travels Next', sans-serif;
   font-weight: 600;
   margin-top: auto; /* Прижимает заголовок к футеру */
   margin-bottom: 12px;
-  line-height: 1.25;
+  line-height: 1;
 }
 .course-footer {
   display: flex;
@@ -3062,9 +3066,11 @@ main.desk-page {
 
 /* --- Карточка вебинара --- */
 .desk-grid-webinars {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
 }
 
 .webinar-card {
@@ -3085,8 +3091,16 @@ main.desk-page {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding-right: 35px;
+  padding-left: 15px;
 }
 .tag-chip.type-webinar {
+  width: 100px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
   background-color: #EF756E;
   color: #fff;
 }
@@ -3131,9 +3145,12 @@ main.desk-page {
 /* --- Секция Материалы и инструменты --- */
 .desk-grid-files {
   display: grid;
-  /* Адаптивная сетка, минимум 240px для карточки */
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: 240px;
+  grid-template-rows: repeat(2, auto);
   gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
 .file-card {
@@ -3174,7 +3191,12 @@ main.desk-page {
   justify-content: space-between;
   align-items: center;
 }
-
+/* --- Стили для картинки в карточке файла --- */
+.file-card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Это самое важное свойство */
+}
 .download-btn {
   background: var(--color-bg);
   text-decoration: none;
