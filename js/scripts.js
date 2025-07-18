@@ -217,3 +217,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// --- СКРИПТ ДЛЯ СТРАНИЦЫ "КАЛЕНДАРЬ" ---
+document.addEventListener('DOMContentLoaded', () => {
+  const calendarTabs = document.querySelectorAll('.calendar-tab');
+  const calendarPanes = document.querySelectorAll('.calendar-tab-pane');
+
+  if (calendarTabs.length > 0) {
+    calendarTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        calendarTabs.forEach(t => t.classList.remove('active'));
+        calendarPanes.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetPaneId = tab.dataset.tabTarget;
+        document.getElementById(targetPaneId)?.classList.add('active');
+      });
+    });
+  }
+});
