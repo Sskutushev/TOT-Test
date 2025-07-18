@@ -751,8 +751,275 @@
 
       </div>
       <div id="investments-pane" class="desk-tab-pane">
-          <h2 style="text-align: center; color: #858585; padding: 50px;">Раздел "Инвестиции" находится в разработке</h2>
+  
+  <section class="balance-bar">
+    <div class="balance-info">
+      <div class="balance-item">
+        <span class="balance-label">Общий баланс</span>
+        <div class="balance-value">
+          <span class="balance-amount">$ 6 000.34</span>
+          <span class="balance-change positive">+ 15%</span>
+        </div>
       </div>
+      <div class="balance-separator"></div>
+      <div class="balance-item">
+        <span class="balance-label">Свободные деньги</span>
+        <div class="balance-value">
+          <span class="balance-amount">$ 2 000.34</span>
+        </div>
+      </div>
+    </div>
+    <div class="balance-actions">
+      <select class="currency-select">
+        <option>Доллар США (USD)</option>
+        <option>Евро (EUR)</option>
+        <option>Российский рубль (RUB)</option>
+      </select>
+      <button class="btn-outline">Вывести</button>
+      <button class="button-small-withicon">Пополнить</button>
+    </div>
+  </section>
+
+  <div class="desk-filters">
+      <button class="filter-chip">Фонды <span class="chip-badge new">2</span></button>
+      <button class="filter-chip active">Автоследование <span class="chip-badge">12</span></button>
+      <button class="filter-chip">Портфель <span class="chip-badge new">2</span></button>
+      <button class="filter-chip">ИИ-Агент <span class="chip-badge new">2</span></button>
+    </div>
+
+  <div class="analytics-widgets">
+    <div class="widget pnl-widget">
+      <div class="section-header">
+        <h2>PNL по всем стратегиям</h2>
+        <a href="#" class="btn-link">Подробная аналитика <img src="img/arrow.svg" alt="→"></a>
+      </div>
+      <div class="pnl-content">
+        <div class="pnl-chart">
+          <img src="img/Group 1006.svg" alt="Диаграмма PNL">
+          <div class="pnl-center-text">
+            <strong>42,19 %</strong>
+            <span>Общий PNL</span>
+          </div>
+        </div>
+        <ul class="pnl-legend">
+          <li><span class="legend-color" style="background-color: #75BAEF;"></span><div class="legend-text"><strong>Андрей Плавин</strong><span>$ 1600</span></div><span class="legend-value positive">+ 42.2%</span></li>
+          <li><span class="legend-color" style="background-color: #898FD7;"></span><div class="legend-text"><strong>Семен Коволев</strong><span>$ 2700</span></div><span class="legend-value positive">+ 14.7%</span></li>
+          <li><span class="legend-color" style="background-color: #CC7F9F;"></span><div class="legend-text"><strong>Егор Барахматников</strong><span>$ 1700</span></div><span class="legend-value negative">- 14.7%</span></li>
+          <li><span class="legend-color" style="background-color: #EF756E;"></span><div class="legend-text"><strong>Руман Мустафаев</strong><span>$ 700</span></div><span class="legend-value negative">- 2.7%</span></li>
+          <li><span class="legend-color" style="background-color: #65CBBF;"></span><div class="legend-text"><strong>Остальные</strong><span>$ 2700</span></div><span class="legend-value negative">- 14.7%</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="widget profit-chart-widget">
+       <div class="section-header">
+        <h2>График прибыли</h2>
+        <div class="profit-chart-filters">
+           <select class="currency-select small">
+            <option>Общая по всем</option>
+            <option>Активные</option>
+            <option>Остановленые</option>
+          </select>
+           <select class="currency-select small">
+            <option>За день</option>
+            <option>За неделю</option>
+            <option>За месяц</option>
+            <option>За год</option>
+          </select>
+        </div>
+      </div>
+      <div class="profit-chart-content">
+        <img src="img/Chart.svg" alt="График прибыли" style="width: 100%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+  <section class="desk-section">
+    <div class="section-header">
+      <h2>Стратегии автоследования</h2>
+      <a href="#" class="btn-link">Смотреть все <img src="img/arrow.svg" alt="→"></a>
+    </div>
+    <div class="desk-filters">
+      <button class="filter-chip active">Активно <span class="chip-badge">12</span></button>
+      <button class="filter-chip">Остановлено <span class="chip-badge new">2</span></button>
+    </div>
+    <div class="desk-grid-trading">
+      <article class="trading-card">
+        <header class="trading-card-header">
+          <h3>Бизнес Россия про</h3>
+          <button class="card-menu-btn" title="Опции"></button>
+        </header>
+        <div class="trading-card-tags">
+          <span class="tag-chip type-active">Активно</span>
+          <span class="tag-chip type-currency">EUR</span>
+        </div>
+        <div class="trading-card-chart">
+           <img src="img/Group 828.svg" alt="График стратегии">
+        </div>
+        <div class="trading-card-info">
+        <div class="info-balance">
+            <span class="balance-label">Баланс</span>
+            <div class="balance-value-wrapper">
+            <span class="balance-amount">167 090.78</span>
+            <span class="tag-chip type-currency small">USD</span>
+            </div>
+        </div>
+
+        <div class="info-manager">
+            <img src="img/Ellipse 146.svg" alt="Аватар управляющего">
+            <div>
+            <span class="balance-label">Управляющий</span>
+            <span class="manager-name">Виктор Алексеенко</span>
+            </div>
+        </div>
+        </div>
+        <footer class="trading-card-footer">
+          <div class="footer-stats">
+            <div class="stat-item">
+              <span class="stat-value positive">80%</span>
+              <span class="stat-label">Прибыль</span>
+            </div>
+             <div class="stat-item">
+              <span class="stat-value positive">+ 15 %</span>
+              <span class="stat-label">24 часа</span>
+            </div>
+          </div>
+          <a href="#" class="webinar-watch-btn">Подробнее <img src="img/arrow1.svg" alt="→"></a>
+        </footer>
+      </article>
+      <article class="trading-card">
+        <header class="trading-card-header">
+          <h3>Бизнес Россия про</h3>
+          <button class="card-menu-btn" title="Опции"></button>
+        </header>
+        <div class="trading-card-tags">
+          <span class="tag-chip type-active">Активно</span>
+          <span class="tag-chip type-currency">EUR</span>
+        </div>
+        <div class="trading-card-chart">
+           <img src="img/Group 828.svg" alt="График стратегии">
+        </div>
+        <div class="trading-card-info">
+            <div class="info-balance">
+                <span class="balance-label">Баланс</span>
+                <div class="balance-value-wrapper">
+                <span class="balance-amount">167 090.78</span>
+                <span class="tag-chip type-currency small">USD</span>
+                </div>
+            </div>
+
+            <div class="info-manager">
+                <img src="img/Ellipse 148.svg" alt="Аватар управляющего">
+                <div>
+                <span class="balance-label">Управляющий</span>
+                <span class="manager-name">Виктор Алексеенко</span>
+                </div>
+            </div>
+        </div>
+        <footer class="trading-card-footer">
+          <div class="footer-stats">
+            <div class="stat-item">
+              <span class="stat-value positive">80%</span>
+              <span class="stat-label">Прибыль</span>
+            </div>
+             <div class="stat-item">
+              <span class="stat-value positive">+ 15 %</span>
+              <span class="stat-label">24 часа</span>
+            </div>
+          </div>
+          <a href="#" class="webinar-watch-btn">Подробнее <img src="img/arrow1.svg" alt="→"></a>
+        </footer>
+      </article>
+      <article class="trading-card">
+        <header class="trading-card-header">
+          <h3>Бизнес Россия про</h3>
+          <button class="card-menu-btn" title="Опции"></button>
+        </header>
+        <div class="trading-card-tags">
+          <span class="tag-chip type-active">Активно</span>
+          <span class="tag-chip type-currency">EUR</span>
+        </div>
+        <div class="trading-card-chart">
+           <img src="img/Group 828.svg" alt="График стратегии">
+        </div>
+        <div class="trading-card-info">
+            <div class="info-balance">
+                <span class="balance-label">Баланс</span>
+                <div class="balance-value-wrapper">
+                <span class="balance-amount">167 090.78</span>
+                <span class="tag-chip type-currency small">USD</span>
+                </div>
+            </div>
+
+            <div class="info-manager">
+                <img src="img/Ellipse 149.svg" alt="Аватар управляющего">
+                <div>
+                <span class="balance-label">Управляющий</span>
+                <span class="manager-name">Виктор Алексеенко</span>
+                </div>
+            </div>
+        </div>
+        <footer class="trading-card-footer">
+          <div class="footer-stats">
+            <div class="stat-item">
+              <span class="stat-value positive">80%</span>
+              <span class="stat-label">Прибыль</span>
+            </div>
+             <div class="stat-item">
+              <span class="stat-value positive">+ 15 %</span>
+              <span class="stat-label">24 часа</span>
+            </div>
+          </div>
+          <a href="#" class="webinar-watch-btn">Подробнее <img src="img/arrow1.svg" alt="→"></a>
+        </footer>
+      </article>
+      <article class="trading-card">
+        <header class="trading-card-header">
+          <h3>Бизнес Россия про</h3>
+          <button class="card-menu-btn" title="Опции"></button>
+        </header>
+        <div class="trading-card-tags">
+          <span class="tag-chip type-active">Активно</span>
+          <span class="tag-chip type-currency">EUR</span>
+        </div>
+        <div class="trading-card-chart">
+           <img src="img/Group 828.svg" alt="График стратегии">
+        </div>
+        <div class="trading-card-info">
+            <div class="info-balance">
+                <span class="balance-label">Баланс</span>
+                <div class="balance-value-wrapper">
+                <span class="balance-amount">167 090.78</span>
+                <span class="tag-chip type-currency small">USD</span>
+                </div>
+            </div>
+
+            <div class="info-manager">
+                <img src="img/Ellipse 149 (1).svg" alt="Аватар управляющего">
+                <div>
+                <span class="balance-label">Управляющий</span>
+                <span class="manager-name">Виктор Алексеенко</span>
+                </div>
+            </div>
+        </div>
+        <footer class="trading-card-footer">
+          <div class="footer-stats">
+            <div class="stat-item">
+              <span class="stat-value positive">80%</span>
+              <span class="stat-label">Прибыль</span>
+            </div>
+             <div class="stat-item">
+              <span class="stat-value positive">+ 15 %</span>
+              <span class="stat-label">24 часа</span>
+            </div>
+          </div>
+          <a href="#" class="webinar-watch-btn">Подробнее <img src="img/arrow1.svg" alt="→"></a>
+        </footer>
+      </article>
+      
+      </div>
+  </section>
+
+</div>
     </div>
   </main>
 

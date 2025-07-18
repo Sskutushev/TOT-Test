@@ -197,3 +197,23 @@ document.addEventListener('click', () => {
       });
     });
   }
+  // --- СКРИПТ ДЛЯ СТРАНИЦЫ "ИЗБРАННОЕ" ---
+document.addEventListener('DOMContentLoaded', () => {
+  const favoritesTabs = document.querySelectorAll('.favorites-tab');
+  const favoritesPanes = document.querySelectorAll('.favorites-tab-pane');
+
+  if (favoritesTabs.length > 0) {
+    favoritesTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        favoritesTabs.forEach(t => t.classList.remove('active'));
+        favoritesPanes.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetPaneId = tab.dataset.tabTarget;
+        document.getElementById(targetPaneId)?.classList.add('active');
+      });
+    });
+  }
+});

@@ -3209,3 +3209,397 @@ main.desk-page {
   align-items: center;
   gap: 10px;
 }
+/*=== РАБОЧИЙ СТОЛ: ИНВЕСТИЦИИ ===*/
+
+/* --- Верхняя панель баланса --- */
+.balance-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+.balance-info {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.balance-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.balance-label {
+  font-size: 14px;
+  color: #858585;
+}
+.balance-value {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+.balance-amount {
+  width: 120px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.balance-change.positive {
+  font-size: 25px;
+  font-weight: 600;
+  color: #25DE85;
+}
+.balance-separator {
+  width: 1px;
+  height: 60px;
+  background-color: #e3e3e3;
+}
+.balance-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.currency-select {
+  height: 60px;
+  width: 220px;
+  background-color: var(--color-bg);
+  border: none;
+  border-radius: 6px;
+  padding: 0 20px 0 20px;
+  font-size: 18px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+.currency-select.small {
+  height: 46px;
+  width: auto;
+  font-size: 16px;
+}
+.balance-actions .btn-outline {
+  height: 60px;
+  font-size: 18px;
+  padding: 0 35px;
+}
+.balance-actions .button-small-withicon {
+  height: 60px;
+  font-size: 18px;
+  padding: 0 35px;
+  border-radius: 90px;
+  background-color: var(--color-main);
+}
+
+/* --- Виджеты аналитики --- */
+.analytics-widgets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.widget {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+.widget h2 {
+    font-size: 18px;
+}
+.widget .section-header {
+  display: flex;
+  justify-content: space-between; /* Распределяет элементы по краям */
+  align-items: center;          /* Выравнивает по вертикали */
+}
+.pnl-content {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.pnl-chart {
+  position: relative;
+  flex-shrink: 0;
+}
+.pnl-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.pnl-center-text strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+.pnl-center-text span {
+  font-size: 12px;
+  color: #858585;
+}
+.pnl-legend {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.pnl-legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.legend-color {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.legend-text {
+  flex-grow: 1;
+}
+.legend-text strong {
+  width: 130px;
+  font-size: 14px;
+  display: block;
+}
+.legend-text span {
+  font-size: 12px;
+  color: #858585;
+}
+.legend-value {
+  width: 75px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.legend-value.positive { color: #25DE85; }
+.legend-value.negative { color: var(--color-main); }
+
+.profit-chart-filters {
+  display: flex;
+  gap: 10px;
+}
+.profit-chart-content {
+  margin-top: 50px;
+}
+
+/* --- Сетка карточек стратегий --- */
+.desk-grid-trading {
+  display: flex; /* Используем flex для расположения в один ряд */
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  gap: 24px;
+  padding-bottom: 15px; /* Место для скроллбара */
+}
+
+/* --- Карточка стратегии --- */
+.trading-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Увеличил отступ для лучшего вида */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  width: 490px;      /* Задаем фиксированную ширину карточки */
+  flex-shrink: 0;    /* Запрещаем карточке сжиматься */
+}
+
+.trading-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trading-card-header h3 {
+  font-size: 20px;
+  font-family: 'TT Travels Next', sans-serif;
+  font-weight: 600;
+}
+
+.trading-card-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.tag-chip.type-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 90px;
+  background-color: #77BC57;
+  color: #fff;
+}
+
+.tag-chip.type-currency {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border-radius: 90px;
+  background-color: var(--color-bg);
+  color: #858585;
+}
+
+/* --- График --- */
+.trading-card-chart {
+  height: 100px;
+  width: 100%;
+}
+
+/* --- Блок с балансом и управляющим (ИСПРАВЛЕННЫЙ) --- */
+.trading-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.info-balance {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.balance-value-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.balance-label {
+  font-size: 14px;
+  color: #858585;
+}
+
+.balance-amount {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tag-chip.type-currency.small {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding: 6px 10px;
+  background-color: var(--color-text);
+  color: #ffffff;
+  border-radius: 30px;
+}
+
+.info-manager {
+  padding-left: 70px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.info-manager img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.info-manager .manager-name {
+  padding-left: 3px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* --- Футер карточки --- */
+.trading-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.footer-stats {
+  display: flex;
+  gap: 5px;
+}
+
+.stat-item {
+  background-color: var(--color-bg);
+  border-radius: 10px;
+  padding: 11px 14px;
+  width: 130px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.stat-value.positive {
+  color: #25DE85;
+}
+
+.stat-label {
+  font-size: 12px;
+}
+/*
+====================================
+========== СТРАНИЦА ИЗБРАННОЕ ==========
+====================================
+*/
+
+main.favorites-page {
+  margin: calc(73px + 24px) 16px 32px 297px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- Вкладки (табы) --- */
+.favorites-tabs {
+  display: flex;
+  gap: 6px;
+  align-self: flex-start;
+}
+.favorites-tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--color-text);
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+.favorites-tab.active {
+  background-color: var(--color-main-light);
+  color: #fff;
+}
+
+/* --- Контент вкладок --- */
+.favorites-tab-pane {
+  display: none; /* Скрываем все панели */
+}
+.favorites-tab-pane.active {
+  /* Активная панель становится flex-контейнером для сетки и фильтров */
+  display: flex; 
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.favorites-tab-pane .persons-grid {
+  flex-grow: 1; /* Сетка карточек занимает основное пространство */
+}
+
+/* Заглушка для пустых вкладок */
+.placeholder-title {
+  text-align: center;
+  color: #858585;
+  padding: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  flex-grow: 1; /* Заглушка тоже должна занимать все место */
+}
+.content-placeholder {
+  flex-grow: 1;
+}
