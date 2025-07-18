@@ -179,3 +179,21 @@ document.addEventListener('click', () => {
     // Чтобы наблюдатель не работал вечно, его можно отключить через некоторое время
     setTimeout(() => observer.disconnect(), 2000); // Отключаем через 2 секунды
 });
+// --- СКРИПТ ДЛЯ РАБОЧЕГО СТОЛА ---
+  const mainTabs = document.querySelectorAll('.desk-tab');
+  const mainPanes = document.querySelectorAll('.desk-tab-pane');
+
+  if (mainTabs.length > 0) {
+    mainTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault(); // Отменяем стандартное поведение ссылки
+
+        mainTabs.forEach(t => t.classList.remove('active'));
+        mainPanes.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetPaneId = tab.dataset.tabTarget;
+        document.getElementById(targetPaneId)?.classList.add('active');
+      });
+    });
+  }
