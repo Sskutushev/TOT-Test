@@ -4153,3 +4153,194 @@ main.help-page {
   white-space: nowrap;      /* Запрещает перенос текста на новую строку */
   justify-content: center;  /* Центрирует текст и иконку внутри кнопки */
 }
+/*
+========================================
+========== АДАПТИВНЫЕ СТИЛИ ==========
+========================================
+*/
+
+/* =======================================
+   ПЛАНШЕТЫ (до 1279px)
+======================================= */
+@media (max-width: 1279px) {
+
+  /* --- Общие изменения для всех страниц --- */
+  .menupanel {
+    display: none; /* Скрываем боковое меню */
+  }
+
+  .toppanel {
+    left: 0;
+    right: 0;
+    padding: 9px 16px 4px;
+    border-radius: 0;
+  }
+  
+  /* Все основные контейнеры страниц теперь занимают всю ширину */
+  main.startpage,
+  main.timeline,
+  main.profile-page,
+  main.streams-page,
+  main.desk-page,
+  main.favorites-page,
+  main.calendar-page,
+  main.help-page,
+  main.persons-page {
+    margin: calc(73px + 24px) 16px 32px 16px;
+  }
+  
+  /* Скрываем большие боковые панели фильтров */
+  .feed-sidebar,
+  .filters-panel,
+  .profile-sidebar,
+  .messages-sidebar {
+    display: none;
+  }
+  
+  .content-wrapper {
+    padding: 0;
+  }
+
+  /* --- Страница "Персоны" --- */
+  .persons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .search-row {
+    max-width: 100%;
+  }
+
+  /* --- Страница "Профиль" --- */
+  .profile-intro, .profile-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    padding-left: 0;
+  }
+  .profile-actions {
+    justify-content: center;
+  }
+
+  /* --- Страница "Трансляции" --- */
+  .help-top-section, .analytics-widgets {
+    grid-template-columns: 1fr; /* Перестраиваем в одну колонку */
+  }
+  .stream-grid-wrapping {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+  .trading-card {
+    width: auto;
+  }
+
+  /* --- Страница "Рабочий стол" --- */
+  .desk-grid, .desk-grid-webinars, .desk-grid-files {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =======================================
+   МОБИЛЬНЫЕ УСТРОЙСТВА (до 799px)
+======================================= */
+@media (max-width: 799px) {
+
+  /* --- Общие изменения --- */
+  .header-actions .button-small-withicon {
+    width: 44px; /* Оставляем только иконку */
+    height: 44px;
+    font-size: 0; /* Прячем текст */
+  }
+  .header-actions .button-small-withicon img {
+    margin: 0;
+  }
+  .field-small-search {
+    max-width: 250px;
+  }
+  .frame9 { /* Профиль в шапке */
+    width: 50px;
+    height: 50px;
+  }
+  .frame9 span, .frame9 .icon-dropdown {
+    display: none;
+  }
+  .frame9 .avatar {
+      margin: 0 auto;
+  }
+  h1 { font-size: 28px !important; }
+  h2 { font-size: 20px !important; }
+  
+  /* --- Страница "Персоны" и "Избранное" (с персонами) --- */
+  .persons-grid {
+    grid-template-columns: 1fr; /* Одна карточка в ряд */
+  }
+  .search-row {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  /* --- Страница "Профиль" --- */
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+  }
+  .profile-info h1 { font-size: 24px !important; }
+
+  /* --- Страница "Трансляции" --- */
+  .streams-hero {
+    flex-direction: column;
+  }
+  .stream-grid-wrapping, .desk-grid-trading {
+    grid-template-columns: 1fr;
+  }
+  
+  /* --- Страница "Рабочий стол" --- */
+  .desk-main-tabs {
+    flex-wrap: wrap; /* Разрешаем перенос вкладок */
+  }
+  .balance-bar, .balance-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .balance-separator { display: none; }
+  .analytics-widgets {
+    grid-template-columns: 1fr;
+  }
+  .pnl-content {
+    flex-direction: column;
+  }
+  .trading-card-footer {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+  }
+  .footer-stats {
+      justify-content: space-between;
+  }
+  
+  /* --- Страница "Календарь" --- */
+  .calendar-controls {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+  }
+  .calendar-tabs {
+      margin-left: 0;
+      width: 100%;
+  }
+  .calendar-tab { flex: 1; }
+  .calendar-view-wrapper { display: block; }
+  .calendar-view-wrapper .nav-arrow { display: none; } /* Скрываем боковые стрелки */
+  .schedule-grid {
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 15px;
+  }
+  .day-column {
+      flex: 0 0 200px; /* Фиксированная ширина дня */
+  }
+}
