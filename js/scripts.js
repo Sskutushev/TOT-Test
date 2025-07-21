@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Дропдаун-меню профиля ---
   const profileMenu = document.getElementById('profile-menu');
   if (profileMenu) {
-      profileMenu.addEventListener('click', e => {
+    profileMenu.addEventListener('click', e => {
       e.stopPropagation();
       profileMenu.classList.toggle('open');
     });
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const notifWrapper = document.querySelector('.notification-wrapper');
   if (notifWrapper) {
     const bellBtn = notifWrapper.querySelector('.button-bell');
-    const notifBox = notifWrapper.querySelector('.notificationcontainer');
+    const notifBox = notifWrapper.querySelector('.notification-dropdown'); // Убедись, что используешь новый класс
     
     if (bellBtn) {
         bellBtn.addEventListener('click', e => {
@@ -48,6 +48,25 @@ document.addEventListener('DOMContentLoaded', () => {
     notifWrapper?.classList.remove('open');
   });
 
+  // --- POPUP «Создать» (ПЕРЕНЕСЕНО ВНУТРЬ) ---
+  const btnOpen  = document.querySelector('.header-actions .button-small-withicon');
+  const overlay  = document.getElementById('popup-overlay');
+  const btnClose = document.getElementById('icon-close');
+
+  if (btnOpen && overlay) {
+    btnOpen.addEventListener('click', () => {
+      overlay.classList.add('active');
+    });
+  }
+  if (btnClose && overlay) {
+    btnClose.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+    // закрытие кликом по фону
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) overlay.classList.remove('active');
+    });
+  }
 
   // ==================== ЛОГИКА ДЛЯ КОНКРЕТНЫХ СТРАНИЦ ====================
 
@@ -73,10 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Инициализация вкладок для разных страниц
-  initTabs('.desk-tab', '.desk-tab-pane'); // Для Рабочего стола
-  initTabs('.favorites-tab', '.favorites-tab-pane'); // Для Избранного
-  initTabs('.calendar-tab', '.calendar-tab-pane'); // Для Календаря
-
+  initTabs('.desk-tab', '.desk-tab-pane');
+  initTabs('.favorites-tab', '.favorites-tab-pane');
+  initTabs('.calendar-tab', '.calendar-tab-pane');
 
   // --- Сохранение позиции скролла ---
   const scrollableElement = document.querySelector('main');
@@ -97,24 +115,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', restoreScroll);
   }
 
-});
-  //  ——— POPUP «Создать» ———
-  const btnOpen  = document.querySelector('.button-small-withicon');
-  const overlay  = document.getElementById('popup-overlay');
-  const btnClose = document.getElementById('icon-close');
-
-  if (btnOpen && overlay) {
-    btnOpen.addEventListener('click', () => {
-      overlay.classList.add('active');
-    });
-  }
-  if (btnClose && overlay) {
-    btnClose.addEventListener('click', () => {
-      overlay.classList.remove('active');
-    });
-    // закрытие кликом по фону
-    overlay.addEventListener('click', e => {
-      if (e.target === overlay) overlay.classList.remove('active');
-    });
-  }
-
+}); // <-- Вот здесь заканчивается главный обработчик

@@ -80,119 +80,121 @@
         <button class="button-small-withicon">
           <img src="img/plus.svg" alt="">Создать
         </button>
-        <div class="notification-wrapper">
+
+<div class="notification-wrapper">
   <button class="button-bell">
     <img src="img/bell.svg" alt="Уведомления">
     <span class="badge-count">14</span>
   </button>
 
-  <div id="notificationcontainer" class="notificationcontainer">
-    <!-- Заголовок -->
-    <div class="headercontainer">
-      <div class="headertitle">Уведомления</div>
-      <div class="settingsicon">
-        <img src="img/settings.svg" alt="Настройки">
-      </div>
+  <div id="notificationcontainer" class="notification-dropdown">
+    
+    <header class="notification-header">
+      <h3>Уведомления</h3>
+      <a href="#" class="settings-btn" title="Настройки уведомлений">
+        <img src="img/Settings Icon.svg" alt="Настройки">
+      </a>
+    </header>
+
+    <div class="notification-list">
+
+      <a href="#" class="notification-item new">
+        <div class="notification-icon comment">
+          <img src="img/_more_1.svg" alt="">
+        </div>
+        <div class="notification-text">
+          <h4>Новый комментарий</h4>
+          <p>Кто-то оставил новый комментарий к вашему <strong>посту</strong></p>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#" class="notification-item">
+        <div class="notification-icon reply">
+          <img src="img/_more_2.svg" alt="">
+        </div>
+        <div class="notification-text">
+          <h4>Новый ответ</h4>
+          <p>Кто-то ответил на ваш комментарий к <strong>посту</strong></p>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="notification-item">
+        <div class="notification-icon mention">
+          <img src="img/_more_3.svg" alt="">
+        </div>
+        <div class="notification-text">
+          <h4>Вас упомянули</h4>
+          <p>Кто-то упомянул вас в <strong>посте</strong></p>
+           <div class="notification-meta">
+            <span>2 дня назад</span>
+            <div class="separator"></div>
+            <span>24 Сент 2024</span>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#" class="notification-item new">
+        <div class="notification-icon comment">
+          <img src="img/_more_1.svg" alt="">
+        </div>
+        <div class="notification-text">
+          <h4>Новый комментарий</h4>
+          <p>Кто-то оставил новый комментарий к вашему <strong>посту</strong></p>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </a>
+      
+      <a href="#" class="notification-item">
+        <div class="notification-icon reply">
+          <img src="img/_more_2.svg" alt="">
+        </div>
+        <div class="notification-text">
+          <h4>Новый ответ</h4>
+          <p>Кто-то ответил на ваш комментарий к <strong>посту</strong></p>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="notification-item">
+        <div class="notification-icon mention">
+          <img src="img/_more_3.svg" alt="">
+        </div>
+        <div class="notification-text">
+          <h4>Вас упомянули</h4>
+          <p>Кто-то упомянул вас в <strong>посте</strong></p>
+           <div class="notification-meta">
+            <span>2 дня назад</span>
+            <div class="separator"></div>
+            <span>24 Сент 2024</span>
+          </div>
+        </div>
+      </a>
     </div>
 
-    <!-- Список уведомлений -->
-    <div class="notificationlist">
+    <footer class="notification-footer">
+      <a href="notifications.html" class="btn-link">Смотреть все уведомления <img src="img/arrow.svg" alt="→"></a>
+    </footer>
 
-      <!-- 1-е уведомление -->
-      <div class="notificationitem">
-        <div class="notificationmeta">
-          <div class="ellipse124"></div>
-          <div class="timeago">1 день назад</div>
-          <div class="line90"></div>
-          <div class="date">25 Сент 2024</div>
-        </div>
-        <div class="notificationcontent">
-          <button class="button-more">
-            <div class="ellipse19"></div>
-            <img class="icon-chat" src="img/icon-comment.svg" alt="Иконка комментария">
-          </button>
-          <div class="notificationtextcontainer">
-            <div class="notificationtitle">Новый комментарий</div>
-            <div class="notificationdescription">
-              Кто-то оставил новый комментарий к вашему <a href="#">посту</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2-е уведомление -->
-      <div class="notificationitem2">
-        <div class="notificationmeta2">
-          <div class="ellipse1242"></div>
-          <div class="timeago2">1 день назад</div>
-          <div class="line902"></div>
-          <div class="date2">25 Сент 2024</div>
-        </div>
-        <div class="notificationcontent2">
-          <button class="button-more2">
-            <div class="ellipse192"></div>
-            <img class="icon-reply" src="img/icon-reply.svg" alt="Иконка ответа">
-          </button>
-          <div class="notificationtextcontainer2">
-            <div class="notificationtitle2">Новый ответ</div>
-            <div class="notificationdescription2">
-              Кто-то ответил на ваш комментарий к <a href="#">посту</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3-е уведомление -->
-      <div class="notificationitem3">
-        <div class="notificationmeta3">
-          <div class="ellipse1243"></div>
-          <div class="timeago3">1 день назад</div>
-          <div class="line903"></div>
-          <div class="date3">25 Сент 2024</div>
-        </div>
-        <div class="notificationcontent3">
-          <button class="button-more3">
-            <div class="ellipse193"></div>
-            <img class="icon-notification_1" src="img/icon-mention.svg" alt="Иконка упоминания">
-          </button>
-          <div class="notificationtextcontainer3">
-            <div class="notificationtitle3">Вас упомянули</div>
-            <div class="notificationdescription3">
-              Кто-то упомянул вас в <a href="#">посте</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4-е уведомление -->
-      <div class="notificationitem4">
-        <div class="notificationmeta4">
-          <div class="ellipse1244"></div>
-          <div class="timeago4">1 день назад</div>
-          <div class="line904"></div>
-          <div class="date4">25 Сент 2024</div>
-        </div>
-        <div class="notificationcontent4">
-          <button class="button-more4">
-            <div class="ellipse194"></div>
-            <img class="icon-notification_12" src="img/icon-mention.svg" alt="Иконка упоминания">
-          </button>
-          <div class="notificationtextcontainer4">
-            <div class="notificationtitle4">Вас упомянули</div>
-            <div class="notificationdescription4">
-              Кто-то упомянул вас в комментарии к <a href="#">посту</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Кнопка «Смотреть все уведомления» -->
-    <button class="button-text">
-      <div class="кнопка">Смотреть все уведомления</div>
-      <img class="icon-arrow" src="img/arrow-right.svg" alt="→">
-    </button>
+  </div>
+</div>
 
     <!-- Ползунок прокрутки -->
     <div class="scrollindicator">

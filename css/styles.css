@@ -196,6 +196,8 @@ hr {
   font-size:12px; padding:2px 6px;
   border-radius:12px;
 }
+
+
 .frame9 {
   display: flex;
   align-items: center;
@@ -1902,42 +1904,158 @@ main.projects-page {
 .frame3953 > div:hover img {
   opacity: 0.8;
 }
-/*родитель для абсолютного позиционирования дропдауна*/
+/*=== ДРОПДАУН УВЕДОМЛЕНИЙ ===*/
+
+/* --- Родительский контейнер для позиционирования --- */
 .notification-wrapper {
   position: relative;
 }
 
-/* сам контейнер уведомлений — скрыт по-умолчанию */
-.notificationcontainer {
-  display: none;
+/* --- Контейнер для выпадающего списка --- */
+.notification-dropdown {
+  display: none; /* По умолчанию список СКРЫТ */
   position: absolute;
-  top: calc(100% + 8px); /* чуть ниже кнопки */
+  top: calc(100% + 8px);
   right: 0;
   width: 425px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 20px;
-  padding: 30px;
-  flex-direction: column;
-  gap: 25px;
-  filter: drop-shadow(10px 9px 18px rgba(0,0,0,0.15));
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   z-index: 1001;
-  max-height: 90vh;       /* адаптивно по высоте */
-  overflow-y: auto;
-  z-index: 100;
+  max-height: 80vh;
+  /* display: flex; <-- ЭТА СТРОКА УДАЛЕНА */
+  flex-direction: column;
 }
 
-/* при открытом состоянии — показать */
-.notification-wrapper.open .notificationcontainer {
+/* Когда JS добавляет класс .open, список ПОКАЗЫВАЕТСЯ */
+.notification-wrapper.open .notification-dropdown {
+  display: flex; /* <-- Свойство display:flex теперь находится здесь */
+}
+
+/* --- Заголовок --- */
+.notification-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e3e3e3;
+  flex-shrink: 0;
+}
+.notification-header h3 {
+  font-size: 20px;
+  font-family: 'TT Travels Next', sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+.settings-btn {
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.settings-btn:hover {
+  opacity: 1;
+}
+.settings-btn img {
+  width: 24px;
+  height: 24px;
 }
 
-/* hover-эффект на каждую карточку уведомления */
-.notificationcontainer > div[class^="notificationitem"] {
-  cursor: pointer;
+/* --- Основной список --- */
+.notification-list {
+  padding: 15px;
+  overflow-y: auto; /* Включаем прокрутку, если элементов много */
+  flex-grow: 1;
+}
+
+/* --- Карточка одного уведомления --- */
+.notification-item {
+  display: flex;
+  align-items: center; /* Выравниваем иконку по центру текста */
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-text);
+  position: relative;
+  background-color: #F4F4F4; /* Серый фон для карточки */
+  margin-bottom: 8px; /* Отступ между карточками */
   transition: background-color 0.2s;
 }
-.notificationcontainer > div[class^="notificationitem"]:hover {
-  background-color: #f0f0f0;
+.notification-list .notification-item:last-child {
+  margin-bottom: 0;
+}
+.notification-item:hover {
+  background-color: #e9e9e9; /* Чуть темнее при наведении */
+}
+
+/* "Новое" уведомление с точкой */
+.notification-item.new::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 10px; 
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+}
+
+.notification-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+
+.notification-icon img {
+  width: 52px;
+  height: 52px;
+}
+
+.notification-text h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.notification-text p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 12px;
+}
+.notification-text p strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+.notification-text p a {
+    color: var(--color-main);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.notification-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-family: 'Cera', sans-serif;
+  color: #858585;
+}
+.notification-meta .separator {
+  width: 1px;
+  height: 10px;
+  background-color: #c2c2c2;
+}
+
+/* --- Футер --- */
+.notification-footer {
+  padding: 20px 30px;
+  border-top: 1px solid #e3e3e3;
+  text-align: flex start;
+  flex-shrink: 0;
 }
 /* ========== Marketplace Section ========== */
 
