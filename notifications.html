@@ -77,8 +77,8 @@
         <input type="text" class="search-input" placeholder="Поиск…">
       </div>
       <div class="header-actions">
-        <button class="button-small-withicon">
-          <img src="img/plus.svg" alt="">Создать
+        <button class="button-small-withicon" data-popup-target="popup-overlay">
+            <img src="img/plus.svg" alt="">Создать
         </button>
 
 <div class="notification-wrapper">
@@ -260,7 +260,7 @@
         <h2>Создать</h2>
         <p>Здесь вы можете создавать различный контент и продукты</p>
       </div>
-      <button id="icon-close" class="popup-close-btn" title="Закрыть">
+      <button class="popup-close-btn" data-close-popup="popup-overlay" title="Закрыть">
         <img src="img/close.svg" alt="Закрыть">
       </button>
     </header>
@@ -354,7 +354,221 @@
   </div>
 </div>
   <!-- Контент уведомления -->
+<main class="notifications-page">
+    <header class="notifications-header">
+      <h1>Уведомления</h1>
+      <button class="button-withicon settings-btn-page">
+        <img src="img/wheel2.svg" alt="">
+        <span>Настройки</span>
+      </button>
+    </header>
 
+    <div class="notifications-list-full">
+      <div class="notification-card new">
+        <div class="notification-icon comment"><img src="img/_more_1.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Новый комментарий</h4>
+            <p>Кто-то оставил новый комментарий к вашему <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon reply"><img src="img/_more_2.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Новый ответ на ваш комментарий</h4>
+            <p>Кто-то ответил на ваш комментарий к <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon mention"><img src="img/_more_3.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Вас упомянули</h4>
+            <p>Кто-то упомянул вас в комментарии к <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>2 дня назад</span>
+            <div class="separator"></div>
+            <span>24 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon support"><img src="img/_more_5.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Ваше обращение отправлено</h4>
+            <p>Вы отправили обращение в техподдержку, мы уведомим вас об ответе.</p>
+            <a href="#" class="button-small-withicon" data-popup-target="appeal-popup-overlay">Читать обращение</a>
+          </div>
+          <div class="notification-meta">
+            <span>3 дня назад</span>
+            <div class="separator"></div>
+            <span>23 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card new">
+        <div class="notification-icon comment"><img src="img/_more_1.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Новый комментарий</h4>
+            <p>Кто-то оставил новый комментарий к вашему <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon reply"><img src="img/_more_2.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Новый ответ на ваш комментарий</h4>
+            <p>Кто-то ответил на ваш комментарий к <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon mention"><img src="img/_more_3.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Вас упомянули</h4>
+            <p>Кто-то упомянул вас в комментарии к <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>2 дня назад</span>
+            <div class="separator"></div>
+            <span>24 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon support"><img src="img/_more_5.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Ваше обращение отправлено</h4>
+            <p>Вы отправили обращение в техподдержку, мы уведомим вас об ответе.</p>
+            <a href="#" class="button-small-withicon" data-popup-target="appeal-popup-overlay">Читать обращение</a>
+          </div>
+          <div class="notification-meta">
+            <span>3 дня назад</span>
+            <div class="separator"></div>
+            <span>23 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card new">
+        <div class="notification-icon comment"><img src="img/_more_1.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Новый комментарий</h4>
+            <p>Кто-то оставил новый комментарий к вашему <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon reply"><img src="img/_more_2.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Новый ответ на ваш комментарий</h4>
+            <p>Кто-то ответил на ваш комментарий к <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>1 день назад</span>
+            <div class="separator"></div>
+            <span>25 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon mention"><img src="img/_more_3.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Вас упомянули</h4>
+            <p>Кто-то упомянул вас в комментарии к <strong>посту</strong></p>
+          </div>
+          <div class="notification-meta">
+            <span>2 дня назад</span>
+            <div class="separator"></div>
+            <span>24 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="notification-card">
+        <div class="notification-icon support"><img src="img/_more_5.svg" alt=""></div>
+        <div class="notification-details">
+          <div class="notification-text">
+            <h4>Ваше обращение отправлено</h4>
+            <p>Вы отправили обращение в техподдержку, мы уведомим вас об ответе.</p>
+            <a href="#" class="button-small-withicon" data-popup-target="appeal-popup-overlay">Читать обращение</a>
+          </div>
+          <div class="notification-meta">
+            <span>3 дня назад</span>
+            <div class="separator"></div>
+            <span>23 Сент 2024</span>
+          </div>
+        </div>
+      </div>
+      </div>
+  </main>
+  <div id="appeal-popup-overlay" class="popup-overlay">
+  <div class="popup-container">
+    
+    <header class="popup-header">
+      <div>
+        <h2>Обращение в поддержку</h2>
+        <div class="tag-chip type-active" style="margin-top: 15px;">
+            <img src="img/mark1.svg" alt="">Обработано
+        </div>
+      </div>
+      <button class="popup-close-btn" data-close-popup="appeal-popup-overlay" title="Закрыть">
+        <img src="img/close.svg" alt="Закрыть">
+      </button>
+    </header>
+
+    <div class="popup-content">
+      <div class="appeal-message-block">
+        <p class="appeal-timestamp">Ваше обращение. 24 мая 2024, 10:04</p>
+        <p class="appeal-message">
+          Текст вашего обращения будет здесь. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam congue nisl vitae consequat. In at iaculis est. Aliquam ut tristique enim odio.
+        </p>
+      </div>
+      <div class="appeal-message-block response">
+        <p class="appeal-timestamp">Ответ на ваш запрос. 24 мая 2024, 10:04</p>
+        <p class="appeal-message">
+          Ответ от службы поддержки будет здесь. Praesent nisi urna, ullamcorper volutpat posuere id, varius ut justo. Nam efficitur sapien volutpat convallis dictum. Aenean condimentum sem nec augue iaculis hendrerit quis vel lectus.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
   <script src="js/scripts.js"></script>
 </body>
 </html>

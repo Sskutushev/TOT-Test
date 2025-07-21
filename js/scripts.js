@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const notifWrapper = document.querySelector('.notification-wrapper');
   if (notifWrapper) {
     const bellBtn = notifWrapper.querySelector('.button-bell');
-    const notifBox = notifWrapper.querySelector('.notification-dropdown'); // Убедись, что используешь новый класс
+    const notifBox = notifWrapper.querySelector('.notification-dropdown');
     
     if (bellBtn) {
         bellBtn.addEventListener('click', e => {
@@ -48,25 +48,31 @@ document.addEventListener('DOMContentLoaded', () => {
     notifWrapper?.classList.remove('open');
   });
 
-  // --- POPUP «Создать» (ПЕРЕНЕСЕНО ВНУТРЬ) ---
-  const btnOpen  = document.querySelector('.header-actions .button-small-withicon');
-  const overlay  = document.getElementById('popup-overlay');
-  const btnClose = document.getElementById('icon-close');
+  // --- УНИВЕРСАЛЬНЫЙ КОД ДЛЯ ВСЕХ POPUP ОКОН ---
+  const openPopupButtons = document.querySelectorAll('[data-popup-target]');
+  const popupOverlays = document.querySelectorAll('.popup-overlay');
+  
+  // Открытие по клику на кнопку
+  openPopupButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault(); // На случай, если кнопка является ссылкой
+      const popupId = button.dataset.popupTarget;
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.classList.add('active');
+      }
+    });
+  });
 
-  if (btnOpen && overlay) {
-    btnOpen.addEventListener('click', () => {
-      overlay.classList.add('active');
-    });
-  }
-  if (btnClose && overlay) {
-    btnClose.addEventListener('click', () => {
-      overlay.classList.remove('active');
-    });
-    // закрытие кликом по фону
+  // Закрытие по клику на крестик ИЛИ на фон
+  popupOverlays.forEach(overlay => {
     overlay.addEventListener('click', e => {
-      if (e.target === overlay) overlay.classList.remove('active');
+      // Закрываем, если кликнули на сам фон ИЛИ на элемент с атрибутом data-close-popup
+      if (e.target === overlay || e.target.closest('[data-close-popup]')) {
+        overlay.classList.remove('active');
+      }
     });
-  }
+  });
 
   // ==================== ЛОГИКА ДЛЯ КОНКРЕТНЫХ СТРАНИЦ ====================
 
@@ -96,23 +102,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs('.favorites-tab', '.favorites-tab-pane');
   initTabs('.calendar-tab', '.calendar-tab-pane');
 
-  // --- Сохранение позиции скролла ---
-  const scrollableElement = document.querySelector('main');
-  if (scrollableElement) {
-    const restoreScroll = () => {
-      const scrollPos = sessionStorage.getItem('scrollPosition');
-      if (scrollPos) {
-        scrollableElement.scrollTop = parseInt(scrollPos, 10);
-        sessionStorage.removeItem('scrollPosition');
-      }
-    };
-
-    window.addEventListener('beforeunload', () => {
-      sessionStorage.setItem('scrollPosition', scrollableElement.scrollTop);
-    });
-    
-    // Пытаемся восстановить позицию после полной загрузки страницы
-    window.addEventListener('load', restoreScroll);
-  }
-
-}); // <-- Вот здесь заканчивается главный обработчик
+});

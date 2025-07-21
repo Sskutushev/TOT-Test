@@ -4557,3 +4557,126 @@ main.help-page {
       flex: 0 0 200px; /* Фиксированная ширина дня */
   }
 }
+/*=== СТРАНИЦА УВЕДОМЛЕНИЯ ===*/
+
+main.notifications-page {
+  margin: calc(73px + 24px) 16px 32px 297px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1050px;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notifications-header h1 {
+  font-size: 24px;
+  font-family: 'TT Travels Next', sans-serif;
+  font-weight: 600;
+}
+.settings-btn-page {
+  background-color: var(--color-main);
+  border-radius: 90px;
+  width: auto;
+  height: 46px;
+  padding: 0 25px;
+}
+.settings-btn-page img {
+  filter: invert(1);
+}
+
+.notifications-list-full {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+}
+/* "Новое" уведомление с точкой слева */
+.notification-card.new::before {
+  content: '';
+  position: absolute;
+  top: 27%;
+  left: 875px;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+}
+.notification-card .notification-icon {
+  background-color: var(--color-main-light);
+}
+.notification-card .notification-icon.support {
+    background-color: #77BC57;
+}
+
+.notification-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 20px;
+}
+.notification-details .notification-text {
+  flex-grow: 1;
+}
+.notification-details .notification-meta {
+  flex-shrink: 0; /* Не сжиматься */
+}
+.notification-text .button-small-withicon {
+    margin-top: 15px;
+    height: 40px;
+    width: auto;
+    padding: 0 25px;
+    font-size: 14px;
+    background-color: var(--color-main);
+}
+.notification-text .button-small-withicon img {
+    display: none; /* Скрываем иконку, если она не нужна */
+}
+/*=== POPUP "ОБРАЩЕНИЕ" ===*/
+
+/* --- Стили для контента внутри попапа обращения --- */
+.popup-header .tag-chip {
+    width: 135px;
+    font-size: 14px;
+    color: white;
+    height: 30px;
+    padding: 0 15px;
+}
+.popup-header .tag-chip img {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    color: white;
+}
+
+.appeal-message-block {
+  padding: 15px;
+  border-radius: 10px;
+}
+.appeal-message-block.response {
+  background-color: var(--color-bg); /* Серый фон для ответа */
+}
+.appeal-timestamp {
+  font-size: 12px;
+  color: #858585;
+  margin-bottom: 10px;
+}
+.appeal-message {
+  font-size: 14px;
+  line-height: 1.6;
+}
