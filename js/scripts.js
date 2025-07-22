@@ -48,14 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
     notifWrapper?.classList.remove('open');
   });
 
-  // --- УНИВЕРСАЛЬНЫЙ КОД ДЛЯ ВСЕХ POPUP ОКОН ---
+  // --- Универсальный код для всех POPUP ОКОН ---
   const openPopupButtons = document.querySelectorAll('[data-popup-target]');
   const popupOverlays = document.querySelectorAll('.popup-overlay');
   
-  // Открытие по клику на кнопку
   openPopupButtons.forEach(button => {
     button.addEventListener('click', (e) => {
-      e.preventDefault(); // На случай, если кнопка является ссылкой
+      e.preventDefault();
       const popupId = button.dataset.popupTarget;
       const popup = document.getElementById(popupId);
       if (popup) {
@@ -64,20 +63,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Закрытие по клику на крестик ИЛИ на фон
   popupOverlays.forEach(overlay => {
     overlay.addEventListener('click', e => {
-      // Закрываем, если кликнули на сам фон ИЛИ на элемент с атрибутом data-close-popup
       if (e.target === overlay || e.target.closest('[data-close-popup]')) {
         overlay.classList.remove('active');
       }
     });
   });
 
+
   // ==================== ЛОГИКА ДЛЯ КОНКРЕТНЫХ СТРАНИЦ ====================
 
-  // --- Универсальная функция для переключения вкладок ---
-  function initTabs(tabSelector, paneSelector) {
+  // --- Логика табов ТОЛЬКО для стартовой страницы (index.html) ---
+  // Находим оба блока с табами
+  const educationSection = document.querySelector('.education-section');
+  const investmentSection = document.querySelector('.investment-section');
+
+  // Функция для инициализации одного блока табов
+  function initializeTabIndex(section) {
+    if (!section) return; // Если блока на странице нет, выходим
+
+    const tabs = section.querySelectorAll('.tab');
+    const panes = section.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Убираем active со всех табов и панелей ВНУТРИ ЭТОГО БЛОКА
+        tabs.forEach(t => t.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+
+        // Добавляем active кликнутому табу и нужной панели
+        tab.classList.add('active');
+        const targetPaneId = tab.dataset.target;
+        section.querySelector(`#${targetPaneId}`)?.classList.add('active');
+      });
+    });
+  }
+  
+  // Запускаем функцию для каждого блока на стартовой странице
+  initializeTabIndex(educationSection);
+  initializeTabIndex(investmentSection);
+
+
+  // --- Универсальная функция для табов на ОСТАЛЬНЫХ страницах ---
+  function initOtherPagesTabs(tabSelector, paneSelector) {
     const tabs = document.querySelectorAll(tabSelector);
     const panes = document.querySelectorAll(paneSelector);
 
@@ -97,9 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Инициализация вкладок для разных страниц
-  initTabs('.desk-tab', '.desk-tab-pane');
-  initTabs('.favorites-tab', '.favorites-tab-pane');
-  initTabs('.calendar-tab', '.calendar-tab-pane');
+  // Инициализация вкладок для других страниц
+  initOtherPagesTabs('.desk-tab', '.desk-tab-pane');
+  initOtherPagesTabs('.favorites-tab', '.favorites-tab-pane');
+  initOtherPagesTabs('.calendar-tab', '.calendar-tab-pane');
 
 });

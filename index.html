@@ -56,7 +56,7 @@
         <input type="text" class="search-input" placeholder="Поиск…">
       </div>
       <div class="header-actions">
-        <button class="button-small-withicon">
+        <button class="button-small-withicon" data-popup-target="popup-overlay">
           <img src="img/plus.svg" alt="">Создать
         </button>
   
@@ -407,10 +407,10 @@
         <!-- Образование -->
         <div class="tabs-block education-section">
           <h2>Образование</h2>
-          <div class="tabs">
-            <button class="tab active" data-target="edu-student">Ученикам</button>
-            <button class="tab"        data-target="edu-teacher">Преподавателям</button>
-          </div>
+            <div class="tabs">
+              <button class="tab active" data-target="edu-student">Ученикам</button>
+              <button class="tab" data-target="edu-teacher">Преподавателям</button>
+            </div>
           <div class="tab-content active" id="edu-student">
             <div class="education-cards">
               <!-- Студентские карточки -->
