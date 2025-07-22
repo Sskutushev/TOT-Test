@@ -74,39 +74,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==================== ЛОГИКА ДЛЯ КОНКРЕТНЫХ СТРАНИЦ ====================
 
-  // --- Логика табов ТОЛЬКО для стартовой страницы (index.html) ---
-  // Находим оба блока с табами
-  const educationSection = document.querySelector('.education-section');
-  const investmentSection = document.querySelector('.investment-section');
-
-  // Функция для инициализации одного блока табов
-  function initializeTabIndex(section) {
-    if (!section) return; // Если блока на странице нет, выходим
+  // --- Логика для страниц с НЕСКОЛЬКИМИ независимыми блоками табов (Главная, Маркетплейс) ---
+  function initializeIndependentTabs(section) {
+    if (!section) return;
 
     const tabs = section.querySelectorAll('.tab');
     const panes = section.querySelectorAll('.tab-content');
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Убираем active со всех табов и панелей ВНУТРИ ЭТОГО БЛОКА
-        tabs.forEach(t => t.classList.remove('active'));
+        // Убираем active со всех табов и панелей ТОЛЬКО ВНУТРИ ЭТОГО БЛОКА
+        tabs.forEach(t => t.classList.remove('active', 'tab--active'));
         panes.forEach(p => p.classList.remove('active'));
 
         // Добавляем active кликнутому табу и нужной панели
-        tab.classList.add('active');
+        tab.classList.add('active', 'tab--active');
         const targetPaneId = tab.dataset.target;
         section.querySelector(`#${targetPaneId}`)?.classList.add('active');
       });
     });
   }
   
-  // Запускаем функцию для каждого блока на стартовой странице
-  initializeTabIndex(educationSection);
-  initializeTabIndex(investmentSection);
+  // Вызываем функцию для каждого независимого блока табов
+  document.querySelectorAll('.education-section, .investment-section, .popular--education, .popular--invest').forEach(section => {
+    initializeIndependentTabs(section);
+  });
 
 
-  // --- Универсальная функция для табов на ОСТАЛЬНЫХ страницах ---
-  function initOtherPagesTabs(tabSelector, paneSelector) {
+  // --- Универсальная функция для страниц с ОДНИМ блоком табов ---
+  function initSingleTabs(tabSelector, paneSelector) {
     const tabs = document.querySelectorAll(tabSelector);
     const panes = document.querySelectorAll(paneSelector);
 
@@ -127,8 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Инициализация вкладок для других страниц
-  initOtherPagesTabs('.desk-tab', '.desk-tab-pane');
-  initOtherPagesTabs('.favorites-tab', '.favorites-tab-pane');
-  initOtherPagesTabs('.calendar-tab', '.calendar-tab-pane');
+  initSingleTabs('.desk-tab', '.desk-tab-pane');
+  initSingleTabs('.favorites-tab', '.favorites-tab-pane');
+  initSingleTabs('.calendar-tab', '.calendar-tab-pane');
 
 });

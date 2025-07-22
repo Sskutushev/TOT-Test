@@ -2245,6 +2245,12 @@ main.marketpage {
 }
 .tag--course { background: #75baef; color: #fff; }
 .tag--consult { background: #77bc57; color: #fff; }
+.tag--webinar { background: #EF766F; color: #fff;}
+.tag--check { background: #CC809F; color: #fff;}
+.tag--guide { background: #8A8FD8; color: #fff;}
+.tag--soft { background: #EFA46F; color: #fff;}
+.tag--soft { background: #EFA46F; color: #fff;}
+.tag--soft { background: #EFA46F; color: #fff;}
 .tag--level,
 .tag--time { background: var(--color-bg); color: #555; }
 .card-body p {
@@ -4653,7 +4659,6 @@ main.notifications-page {
 .popup-header .tag-chip {
     width: 135px;
     font-size: 14px;
-    color: white;
     height: 30px;
     padding: 0 15px;
 }
@@ -4661,7 +4666,6 @@ main.notifications-page {
     width: 15px;
     height: 15px;
     margin-right: 8px;
-    color: white;
 }
 
 .appeal-message-block {
@@ -4679,4 +4683,83 @@ main.notifications-page {
 .appeal-message {
   font-size: 14px;
   line-height: 1.6;
+}
+/*
+====================================
+========== СТРАНИЦА МАРКЕТПЛЕЙС (ОБУЧЕНИЕ/ИНВЕСТИЦИИ) ==========
+====================================
+*/
+
+main.market-subpage {
+  margin: calc(73px + 24px) 16px 32px 297px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.page-header h1 {
+  font-size: 24px;
+  font-family: 'TT Travels Next', sans-serif;
+  font-weight: 600;
+}
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e3e3e3;
+  color: var(--color-text);
+  border: none;
+  border-radius: 90px;
+  padding: 10px 25px 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.back-button img {
+  width: 22px;
+  height: 22px;
+}
+
+.market-subpage .search-row {
+    margin-bottom: 0;
+}
+
+.market-subpage .content-wrapper {
+    gap: 30px;
+}
+
+.product-grid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  align-content: start;
+}
+
+/* Стили для табов внутри панели фильтров */
+.filter-tabs {
+  display: flex;
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  padding: 4px;
+}
+.filter-tab {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.filter-tab.active {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
