@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     notifWrapper?.classList.remove('open');
   });
 
-  // --- Универсальный код для всех POPUP ОКОН ---
+  // --- УНИВЕРСАЛЬНЫЙ КОД ДЛЯ ВСЕХ POPUP ОКОН ---
   const openPopupButtons = document.querySelectorAll('[data-popup-target]');
   const popupOverlays = document.querySelectorAll('.popup-overlay');
   
@@ -83,11 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
-        // Убираем active со всех табов и панелей ТОЛЬКО ВНУТРИ ЭТОГО БЛОКА
         tabs.forEach(t => t.classList.remove('active', 'tab--active'));
         panes.forEach(p => p.classList.remove('active'));
 
-        // Добавляем active кликнутому табу и нужной панели
         tab.classList.add('active', 'tab--active');
         const targetPaneId = tab.dataset.target;
         section.querySelector(`#${targetPaneId}`)?.classList.add('active');
@@ -95,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  // Вызываем функцию для каждого независимого блока табов
   document.querySelectorAll('.education-section, .investment-section, .popular--education, .popular--invest').forEach(section => {
     initializeIndependentTabs(section);
   });
@@ -126,5 +123,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initSingleTabs('.desk-tab', '.desk-tab-pane');
   initSingleTabs('.favorites-tab', '.favorites-tab-pane');
   initSingleTabs('.calendar-tab', '.calendar-tab-pane');
-
+  initSingleTabs('.product-tab', '.product-tab-pane'); // <-- ВОТ ЭТА СТРОКА ВСЁ ИСПРАВИТ
 });
