@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- Дропдаун-меню профиля ---
+  // --- Дропдауны и Попапы ---
   const profileMenu = document.getElementById('profile-menu');
   if (profileMenu) {
     profileMenu.addEventListener('click', e => {
@@ -23,8 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
       profileMenu.classList.toggle('open');
     });
   }
-
-  // --- Дропдаун уведомлений ---
   const notifWrapper = document.querySelector('.notification-wrapper');
   if (notifWrapper) {
     const bellBtn = notifWrapper.querySelector('.button-bell');
@@ -36,22 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
             notifWrapper.classList.toggle('open');
         });
     }
-
     if (notifBox) {
       notifBox.addEventListener('click', e => e.stopPropagation());
     }
   }
-
-  // Закрытие всех дропдаунов по клику вне их
   document.addEventListener('click', () => {
     profileMenu?.classList.remove('open');
     notifWrapper?.classList.remove('open');
   });
-
-  // --- УНИВЕРСАЛЬНЫЙ КОД ДЛЯ ВСЕХ POPUP ОКОН ---
   const openPopupButtons = document.querySelectorAll('[data-popup-target]');
   const popupOverlays = document.querySelectorAll('.popup-overlay');
-  
   openPopupButtons.forEach(button => {
     button.addEventListener('click', (e) => {
       e.preventDefault();
@@ -62,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
   popupOverlays.forEach(overlay => {
     overlay.addEventListener('click', e => {
       if (e.target === overlay || e.target.closest('[data-close-popup]')) {
@@ -71,10 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ==================== ЛОГИКА ДЛЯ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК ====================
 
-  // ==================== ЛОГИКА ДЛЯ КОНКРЕТНЫХ СТРАНИЦ ====================
-
-  // --- Логика для страниц с НЕСКОЛЬКИМИ независимыми блоками табов (Главная, Маркетплейс) ---
+  // --- Функция для страниц с НЕСКОЛЬКИМИ независимыми блоками табов (Главная, Маркетплейс) ---
   function initializeIndependentTabs(section) {
     if (!section) return;
 
@@ -93,35 +83,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
+  // Вызываем функцию для каждого независимого блока табов
   document.querySelectorAll('.education-section, .investment-section, .popular--education, .popular--invest').forEach(section => {
     initializeIndependentTabs(section);
   });
 
-
-  // --- Универсальная функция для страниц с ОДНИМ блоком табов ---
+  // --- Функция для страниц с ОДНИМ блоком табов ---
   function initSingleTabs(tabSelector, paneSelector) {
     const tabs = document.querySelectorAll(tabSelector);
     const panes = document.querySelectorAll(paneSelector);
+    if (tabs.length === 0) return;
 
-    if (tabs.length > 0 && panes.length > 0) {
-      tabs.forEach(tab => {
-        tab.addEventListener('click', (e) => {
-          e.preventDefault();
-
-          tabs.forEach(t => t.classList.remove('active'));
-          panes.forEach(p => p.classList.remove('active'));
-
-          tab.classList.add('active');
-          const targetPaneId = tab.dataset.tabTarget;
-          document.getElementById(targetPaneId)?.classList.add('active');
-        });
+    tabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        tabs.forEach(t => t.classList.remove('active'));
+        panes.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const targetPane = document.getElementById(tab.dataset.tabTarget);
+        if (targetPane) targetPane.classList.add('active');
       });
-    }
+    });
   }
 
-  // Инициализация вкладок для других страниц
+  // Инициализация вкладок для остальных страниц
   initSingleTabs('.desk-tab', '.desk-tab-pane');
   initSingleTabs('.favorites-tab', '.favorites-tab-pane');
   initSingleTabs('.calendar-tab', '.calendar-tab-pane');
-  initSingleTabs('.product-tab', '.product-tab-pane'); // <-- ВОТ ЭТА СТРОКА ВСЁ ИСПРАВИТ
+  initSingleTabs('.product-tab', '.product-tab-pane');
+  initSingleTabs('.invest-tab', '.invest-tab-pane');
 });
