@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import LandingPage from './pages/LandingPage';
@@ -20,10 +20,15 @@ import MarketInvestPage from './pages/MarketInvestPage';
 import EducationProductCoursePage from './pages/EducationProductCoursePage';
 import EducationProductConsultPage from './pages/EducationProductConsultPage';
 
-// Placeholder for pages to be created
-const PagePlaceholder = ({ name }) => <div style={{padding: "2rem"}}><h1>{name}</h1><p>Coming soon...</p></div>;
-
 function App() {
+  useEffect(() => {
+    if (navigator.language.startsWith('ru')) {
+      document.title = 'ТОТ';
+    } else {
+      document.title = 'TOT';
+    }
+  }, []);
+
   return (
     <Router>
       <Routes>
