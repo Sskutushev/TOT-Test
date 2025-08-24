@@ -20,9 +20,8 @@ import MarketInvestPage from './pages/MarketInvestPage';
 import EducationProductCoursePage from './pages/EducationProductCoursePage';
 import EducationProductConsultPage from './pages/EducationProductConsultPage';
 
-const PagePlaceholder = ({ name }) => <div style={{padding: "2rem"}}><h1>{name}</h1><p>Coming soon...</p></div>;
-
 function App() {
+  // Dynamic title logic (should be safe)
   useEffect(() => {
     if (navigator.language.startsWith('ru')) {
       document.title = 'ТОТ';
@@ -54,14 +53,8 @@ function App() {
         <Route path="/market_invest" element={<Layout><MarketInvestPage /></Layout>} />
         <Route path="/education_product_course" element={<Layout><EducationProductCoursePage /></Layout>} />
         <Route path="/education_product_consult" element={<Layout><EducationProductConsultPage /></Layout>} />
-
-        {/* Profile Menu Routes */}
-        <Route path="/payments" element={<Layout><PagePlaceholder name="Платежи" /></Layout>} />
-        <Route path="/account-settings" element={<Layout><PagePlaceholder name="Настройки аккаунта" /></Layout>} />
-        <Route path="/tariffs" element={<Layout><PagePlaceholder name="Тарифы" /></Layout>} />
-        <Route path="/partner-program" element={<Layout><PagePlaceholder name="Партнерская программа" /></Layout>} />
         
-        {/* Redirect any other nested route to /home for now */}
+        {/* Fallback for any other path, redirect to home */}
         <Route path="/*" element={<Navigate to="/home" />} />
       </Routes>
     </Router>

@@ -79,6 +79,21 @@ const CreatePopup = ({ onClose }) => {
         { title: 'Софт', description: 'Программное обеспечение' },
     ];
 
+    const popupItemStyle = {
+        backgroundColor: 'white',
+        border: '1px solid #E3E3E3', // Light gray border
+        borderRadius: '10px', // Rounded corners
+        padding: '1rem',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '1rem',
+        textAlign: 'left',
+        width: '100%', // Ensure they take full width in vertical layout
+        cursor: 'pointer',
+        boxShadow: 'none', // Remove default button shadow
+        color: '#333' // Default text color
+    };
+
     return createPortal(
         <>
             <div className="popup-overlay" onClick={onClose} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10000 }}>
@@ -90,21 +105,23 @@ const CreatePopup = ({ onClose }) => {
                         </div>
                         <button onClick={onClose} className="popup-close-btn" title="Закрыть"><img src="/img/close.svg" alt="Закрыть" /></button>
                     </header>
-                    <div className="popup-content" style={{display: 'flex', gap: '2rem'}}>
-                        <section className="popup-section" style={{flex: 1}}>
+                    <div className="popup-content" style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}> {/* Changed to column */}
+                        <section className="popup-section" style={{flex: 'none'}}> {/* flex: none to prevent stretching */}
                             <h3>Творчество</h3>
-                            {creativityActions.map(action => (
-                                <button key={action.title} className="popup-item" onClick={() => setShowTariffModal(true)}>
-                                    {/* Icon placeholder */}
-                                    <div className="popup-item-text"><h4>{action.title}</h4><p>{action.description}</p></div>
-                                </button>
-                            ))}
+                            <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}> {/* Ensure vertical layout for buttons */}
+                                {creativityActions.map(action => (
+                                    <button key={action.title} className="popup-item" style={popupItemStyle} onClick={() => setShowTariffModal(true)}>
+                                        {/* Icon placeholder */}
+                                        <div className="popup-item-text"><h4>{action.title}</h4><p>{action.description}</p></div>
+                                    </button>
+                                ))}
+                            </div>
                         </section>
-                        <section className="popup-section" style={{flex: 2}}>
+                        <section className="popup-section" style={{flex: 'none'}}> {/* flex: none to prevent stretching */}
                             <h3>Продукты</h3>
-                            <div className="popup-item-list" style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem'}}>
+                            <div className="popup-item-list" style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}> {/* Changed to column */}
                                 {productActions.map(action => (
-                                    <button key={action.title} className="popup-item" onClick={() => setShowTariffModal(true)}>
+                                    <button key={action.title} className="popup-item" style={popupItemStyle} onClick={() => setShowTariffModal(true)}>
                                         {/* Icon placeholder */}
                                         <div className="popup-item-text"><h4>{action.title}</h4><p>{action.description}</p></div>
                                     </button>

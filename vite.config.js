@@ -7,5 +7,8 @@ export default defineConfig(({ command }) => {
   return {
     plugins: [react()],
     base: base,
+    build: {
+      outDir: 'docs',
+    },
   };
 });
