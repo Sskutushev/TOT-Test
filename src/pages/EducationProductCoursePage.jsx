@@ -38,7 +38,7 @@ const EducationProductCoursePage = () => {
 
             <div className="product-layout">
                 <div className="product-main-content">
-                    <img src="/img/DALL·E 2024-08-06 15.01.41 - A modern and sophisticated image representing investment courses. The scene is set in a virtual classroom with a large, sleek computer screen at the c 1.svg" alt="Обложка курса" className="product-cover-image" />
+                    <img src="/img/investment-course-promo.svg" alt="Обложка курса" className="product-cover-image" />
                     <div className="product-info-body">
                         <div className="product-tags">
                             <span className="tag tag--course">Курс</span>

@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => (
 
 const MarketEducationPage = () => {
     const products = [
-        { id: 1, image: '/img/DALL·E 2024-08-06 15.01.41 - A modern and sophisticated image representing investment courses. The scene is set in a virtual classroom with a large, sleek computer screen at the c 1.svg', rating: 3.8, reviews: 100, title: 'Умный инвестор в криптовалютах', tagClass: 'tag--course', tagText: 'Курс', level: 'Нач', duration: '1 мес', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae porta sapien...', price: 567, link: '/education_product_course' },
+        { id: 1, image: '/img/investment-course-promo.svg', rating: 3.8, reviews: 100, title: 'Умный инвестор в криптовалютах', tagClass: 'tag--course', tagText: 'Курс', level: 'Нач', duration: '1 мес', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae porta sapien...', price: 567, link: '/education_product_course' },
         // ... more products
     ];
 

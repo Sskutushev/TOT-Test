@@ -9,7 +9,7 @@ const MarketplacePage = () => {
     <div className="popular-list">
       <div className="product-card">
         <div className="card-image">
-          <img src="/img/DALL·E 2024-08-06 15.01.41 - A modern and sophisticated image representing investment courses. The scene is set in a virtual classroom with a large, sleek computer screen at the c 1.svg" alt="" />
+          <img src="/img/investment-course-promo.svg" alt="" />
           <div className="inf-rat_rew"><span className="rating">3.8 ★</span><span className="reviews">100</span></div>
         </div>
         <div className="card-body">
