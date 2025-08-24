@@ -20,7 +20,28 @@ const LandingPage = () => {
 
   const navStyle = {
     display: 'flex',
+    alignItems: 'center',
     gap: '1rem',
+  };
+
+  const loginButtonStyle = {
+    backgroundColor: '#fff',
+    border: '1px solid #AA1D00',
+    color: '#AA1D00',
+    borderRadius: '90px',
+    padding: '0.5rem 1.5rem',
+    textDecoration: 'none',
+    fontWeight: 'bold'
+  };
+
+  const registerButtonStyle = {
+    backgroundColor: '#FF2B00',
+    borderColor: '#FF2B00',
+    color: '#fff',
+    borderRadius: '90px',
+    padding: '0.5rem 1.5rem',
+    textDecoration: 'none',
+    fontWeight: 'bold'
   };
 
   const mainContentStyle = {
@@ -37,14 +58,8 @@ const LandingPage = () => {
             <img src="/img/лого=Черный (1).svg" alt="TOT Logo" style={{ height: '40px' }} />
         </Link>
         <nav style={navStyle}>
-          <Link to="/home" className="btn btn-outline-primary">Войти</Link>
-          <Link 
-            to="/register" 
-            className="btn btn-primary" 
-            style={{ backgroundColor: '#FF7A00', borderColor: '#FF7A00', color: '#fff' }}
-          >
-            Регистрация
-          </Link>
+          <Link to="/home" className="btn" style={loginButtonStyle}>Войти</Link>
+          <Link to="/register" className="btn" style={registerButtonStyle}>Регистрация</Link>
         </nav>
       </header>
       <main style={mainContentStyle}>
