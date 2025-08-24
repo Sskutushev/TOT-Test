@@ -38,7 +38,13 @@ const LandingPage = () => {
         </Link>
         <nav style={navStyle}>
           <Link to="/home" className="btn btn-outline-primary">Войти</Link>
-          <Link to="/register" className="btn btn-primary">Регистрация</Link>
+          <Link 
+            to="/register" 
+            className="btn btn-primary" 
+            style={{ backgroundColor: '#FF7A00', borderColor: '#FF7A00', color: '#fff' }}
+          >
+            Регистрация
+          </Link>
         </nav>
       </header>
       <main style={mainContentStyle}>

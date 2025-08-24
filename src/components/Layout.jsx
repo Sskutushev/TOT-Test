@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   };
 
   return (
-    <div className="app-container" style={{ display: 'flex' }}>
+    <div className="app-container" style={{ display: 'flex', height: '100vh' }}>
       <aside className="menupanel">
         <div className="rectangle7"></div>
         <Link to="/home">
@@ -51,7 +51,14 @@ const Layout = ({ children }) => {
         </NavLink>
       </aside>
       
-      <div className="main-content-wrapper" style={{ width: '100%', overflow: 'auto' }}>
+      <div 
+        className="main-content-wrapper" 
+        style={{
+          flexGrow: 1,
+          overflowY: 'auto',
+          overflowX: 'hidden'
+        }}
+      >
         <TopPanel />
         {children}
       </div>
