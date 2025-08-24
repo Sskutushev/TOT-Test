@@ -1,10 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const TopPanel = () => {
     const [notificationsOpen, setNotificationsOpen] = useState(false);
     const [profileOpen, setProfileOpen] = useState(false);
-    const [createOpen, setCreateOpen] = useState(false);
+    const [createOpen, setCreateOpen] = useState(false); // This state is for the "Создать" popup, logic not implemented yet.
+
+    const notificationsRef = useRef(null);
+    const profileRef = useRef(null);
+
+    // Close dropdowns if clicked outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (notificationsRef.current && !notificationsRef.current.contains(event.target)) {
+                setNotificationsOpen(false);
+            }
+            if (profileRef.current && !profileRef.current.contains(event.target)) {
+                setProfileOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     const mockNotifications = [
         { id: 1, type: 'system', icon: '_more_5.svg', title: 'Подтвердите свой email', text: 'Чтобы завершить регистрацию, пожалуйста, перейдите по ссылке в письме...' },
@@ -31,27 +51,27 @@ const TopPanel = () => {
                     <input type="text" className="search-input" placeholder="Поиск…" />
                 </div>
                 <div className="header-actions">
-                    <button className="button-small-withicon" onClick={() => setCreateOpen(!createOpen)}>
+                    <button className="button-small-withicon">
                         <img src="/img/plus.svg" alt="create icon" />Создать
                     </button>
 
-                    <div className="notification-wrapper" style={{position: 'relative'}}>
-                        <button className="button-bell" onClick={() => setNotificationsOpen(!notificationsOpen)}>
+                    <div className="notification-wrapper" ref={notificationsRef}>
+                        <button className="button-bell" onClick={() => { setNotificationsOpen(!notificationsOpen); setProfileOpen(false); }}>
                             <img src="/img/bell.svg" alt="Уведомления" />
                             <span className="badge-count">14</span>
                         </button>
                         
                         {notificationsOpen && (
-                            <div id="notificationcontainer" className="notification-dropdown" style={{position: 'absolute', top: '100%', right: 0, zIndex: 10, width: '380px'}}>
+                            <div id="notificationcontainer" className="notification-dropdown">
                                 <header className="notification-header">
                                     <h3>Уведомления</h3>
-                                    <Link to="/notifications?settings=true" className="settings-btn" title="Настройки уведомлений">
+                                    <Link to="/notifications?settings=true" className="settings-btn" title="Настройки уведомлений" onClick={() => setNotificationsOpen(false)}>
                                         <img src="/img/Settings Icon.svg" alt="Настройки" />
                                     </Link>
                                 </header>
-                                <div className="notification-list" style={{maxHeight: '400px', overflowY: 'auto'}}>
+                                <div className="notification-list">
                                     {mockNotifications.map(n => (
-                                        <Link to="/notifications" key={n.id} className="notification-item new">
+                                        <Link to="/notifications" key={n.id} className="notification-item new" onClick={() => setNotificationsOpen(false)}>
                                             <div className="notification-icon">
                                                 <img src={`/img/${n.icon}`} alt="" />
                                             </div>
@@ -63,34 +83,26 @@ const TopPanel = () => {
                                     ))}
                                 </div>
                                 <footer className="notification-footer">
-                                    <Link to="/notifications" className="btn-link">Смотреть все уведомления <img src="/img/arrow.svg" alt="→" /></Link>
+                                    <Link to="/notifications" className="btn-link" onClick={() => setNotificationsOpen(false)}>Смотреть все уведомления <img src="/img/arrow.svg" alt="→" /></Link>
                                 </footer>
                             </div>
                         )}
                     </div>
 
-                    <div className="frame9" id="profile-menu" onClick={() => setProfileOpen(!profileOpen)} style={{position: 'relative', cursor: 'pointer'}}>
-                        <img src="/img/Ellipse 146.svg" alt="" className="avatar" />
-                        <span>Иван Иванов</span>
-                        <img src="/img/Vector 2 (Stroke).svg" alt="" className="icon-dropdown" />
+                    <div className="frame9" id="profile-menu" ref={profileRef}>
+                         <div onClick={() => { setProfileOpen(!profileOpen); setNotificationsOpen(false); }} style={{display: 'flex', alignItems: 'center', cursor: 'pointer'}}>
+                            <img src="/img/Ellipse 146.svg" alt="" className="avatar" />
+                            <span>Иван Иванов</span>
+                            <img src="/img/Vector 2 (Stroke).svg" alt="" className="icon-dropdown" />
+                        </div>
                         
                         {profileOpen && (
-                            <div className="frame3953" style={{position: 'absolute', top: '100%', right: 0, zIndex: 10, backgroundColor: 'white', border: '1px solid #eee', borderRadius: '8px', width: '250px'}}>
-                                <Link to="/payments" className="frame3957" style={{display: 'block', padding: '1rem', textDecoration: 'none', color: '#333'}}>
-                                    <div className="платежи">Платежи</div>
-                                </Link>
-                                <Link to="/account-settings" className="frame3954" style={{display: 'block', padding: '1rem', textDecoration: 'none', color: '#333'}}>
-                                    <div className="настройкиаккаунта">Настройки аккаунта</div>
-                                </Link>
-                                <Link to="/tariffs" className="frame3959" style={{display: 'block', padding: '1rem', textDecoration: 'none', color: '#333'}}>
-                                    <div className="тарифы">Тарифы</div>
-                                </Link>
-                                <Link to="/partner-program" className="frame3960" style={{display: 'block', padding: '1rem', textDecoration: 'none', color: '#333'}}>
-                                    <div className="партнерскаяпрограмма">Партнёрская программа</div>
-                                </Link>
-                                <Link to="/" className="frame3961" style={{display: 'block', padding: '1rem', textDecoration: 'none', color: 'white', backgroundColor: '#FF7A00', borderBottomLeftRadius: '8px', borderBottomRightRadius: '8px'}}>
-                                    <div className="выходизаккаунта">Выход из аккаунта</div>
-                                </Link>
+                            <div className="frame3953">
+                                <Link to="/payments" className="frame3957" onClick={() => setProfileOpen(false)}><div>Платежи</div></Link>
+                                <Link to="/account-settings" className="frame3954" onClick={() => setProfileOpen(false)}><div>Настройки аккаунта</div></Link>
+                                <Link to="/tariffs" className="frame3959" onClick={() => setProfileOpen(false)}><div>Тарифы</div></Link>
+                                <Link to="/partner-program" className="frame3960" onClick={() => setProfileOpen(false)}><div>Партнёрская программа</div></Link>
+                                <Link to="/" className="frame3961" onClick={() => setProfileOpen(false)}><div>Выход из аккаунта</div></Link>
                             </div>
                         )}
                     </div>
