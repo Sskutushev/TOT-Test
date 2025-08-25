@@ -6,7 +6,7 @@ const EducationProductConsultPage = () => {
     <main className="product-page">
       <div className="page-header">
         <Link to="/market_education" className="back-button">
-          <img src="/img/arrow back black.svg" alt="Назад" />
+          <img src="img/arrow back black.svg" alt="Назад" />
           <span>Вернуться</span>
         </Link>
         <h1>Консультация</h1>

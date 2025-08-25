@@ -20,7 +20,7 @@ const InvestStrategyCard = ({ strategy }) => (
                 <li><span>Количество инвесторов</span><span className="dot-separator"></span><strong>{strategy.investors}</strong></li>
             </ul>
         </div>
-        <div className="invest-card-footer"><Link to="#" className="button-withicon">Подробнее <img src="/img/arrow-right.svg" alt="" /></Link></div>
+        <div className="invest-card-footer"><Link to="#" className="button-withicon">Подробнее <img src="img/arrow-right.svg" alt="" /></Link></div>
     </div>
 );
 
@@ -28,7 +28,7 @@ const MarketInvestPage = () => {
     const [activeTab, setActiveTab] = useState('pane-strategies');
 
     const strategies = [
-        { id: 1, currency: 'EUR', growth: '+20,69%', chartImg: '/img/Chart Container.svg', rating: 3.8, reviews: 100, title: 'Название стратегии', manager: 'Виктор Алексеенко', risk: 'Низкий', investors: 154 },
+        { id: 1, currency: 'EUR', growth: '+20,69%', chartImg: 'img/Chart Container.svg', rating: 3.8, reviews: 100, title: 'Название стратегии', manager: 'Виктор Алексеенко', risk: 'Низкий', investors: 154 },
         // ... more strategies
     ];
 
@@ -52,7 +52,7 @@ const MarketInvestPage = () => {
         <main className="market-subpage">
             <div className="page-header">
                 <Link to="/marketplace" className="back-button">
-                    <img src="/img/arrow back black.svg" alt="Назад" />
+                    <img src="img/arrow back black.svg" alt="Назад" />
                     <span>Вернуться</span>
                 </Link>
                 <h1>Инвестиции</h1>

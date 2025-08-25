@@ -11,7 +11,7 @@ const DeskPage = () => {
       <section className="desk-section">
         <div className="section-header">
           <h2>Курсы</h2>
-          <Link to="#" className="btn-link">Смотреть все <img src="/img/arrow.svg" alt="" /></Link>
+          <Link to="#" className="btn-link">Смотреть все <img src="img/arrow.svg" alt="" /></Link>
         </div>
         <div className="desk-filters">
           <button onClick={() => setCourseFilter('in-progress')} className={`filter-chip ${courseFilter === 'in-progress' ? 'active' : ''}`}>В процессе <span className="chip-badge">12</span></button>
@@ -20,7 +20,7 @@ const DeskPage = () => {
         </div>
         <div className="desk-grid">
           {/* Course cards would be rendered here based on filter */}
-          <article className="course-card" style={{backgroundImage: "url('/img/BG.svg')"}}>
+          <article className="course-card" style={{backgroundImage: "url('img/BG.svg')"}}>
             {/* ... card content */}
           </article>
         </div>

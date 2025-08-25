@@ -10,8 +10,8 @@ const ChatListItem = ({ chat, onClick, isActive }) => (
       </div>
     </div>
     <div className="ci-right">
-      {chat.status === 'read' && <img src="/img/message_read.svg" alt="" className="ci-status"/>}
-      {chat.status === 'pending' && <img src="/img/time.svg" alt="" className="ci-status"/>}
+      {chat.status === 'read' && <img src="img/message_read.svg" alt="" className="ci-status"/>}
+      {chat.status === 'pending' && <img src="img/time.svg" alt="" className="ci-status"/>}
       <time>{chat.time}</time>
       {chat.unread > 0 && <span className="ci-unread">{chat.unread}</span>}
     </div>
@@ -23,8 +23,8 @@ const MessagesPage = () => {
   const [activeTab, setActiveTab] = useState('all');
 
   const chats = [
-    { id: 1, name: 'Иван', avatar: '/img/Story Image (2).svg', lastMessage: 'Иван: Благодарю! Скоро буде…', time: '10:05', unread: 0, status: 'sent' },
-    { id: 2, name: 'Анна', avatar: '/img/Story Image (3).svg', lastMessage: 'Анна: Емае, да ты шо…', time: '12:14', unread: 5, status: 'pending' },
+    { id: 1, name: 'Иван', avatar: 'img/Story Image (2).svg', lastMessage: 'Иван: Благодарю! Скоро буде…', time: '10:05', unread: 0, status: 'sent' },
+    { id: 2, name: 'Анна', avatar: 'img/Story Image (3).svg', lastMessage: 'Анна: Емае, да ты шо…', time: '12:14', unread: 5, status: 'pending' },
     // ... more chat data
   ];
 
@@ -37,12 +37,12 @@ const MessagesPage = () => {
           <div className="ms-header">
             <h2>Чаты</h2>
             <button className="btn-text btn-create-group">
-              <img src="/img/plus1.svg" alt="" className="icon-plus"/>
+              <img src="img/plus1.svg" alt="" className="icon-plus"/>
               Создать групповой чат
             </button>
           </div>
           <div className="ms-search">
-            <img src="/img/search.svg" alt="" className="icon-search" />
+            <img src="img/search.svg" alt="" className="icon-search" />
             <input type="text" placeholder="Поиск…" />
           </div>
           <div className="ms-tabs">
@@ -65,7 +65,7 @@ const MessagesPage = () => {
                 <img src={activeChat.avatar} alt="" className="avatar"/>
                 <span className="username">{activeChat.name}</span>
               </div>
-              <button className="btn-more"><img src="/img/menu2.svg" alt="" /></button>
+              <button className="btn-more"><img src="img/menu2.svg" alt="" /></button>
             </div>
             <hr/>
             <div className="mc-messages">
@@ -79,11 +79,11 @@ const MessagesPage = () => {
             </div>
             <div className="mc-input">
               <div className="input-controls">
-                <button className="icon-btn"><img src="/img/paper_clip.svg" alt=""/></button>
-                <button className="icon-btn"><img src="/img/smile.svg" alt=""/></button>
+                <button className="icon-btn"><img src="img/paper_clip.svg" alt=""/></button>
+                <button className="icon-btn"><img src="img/smile.svg" alt=""/></button>
               </div>
               <input type="text" placeholder="Сообщение…"/>
-              <button className="icon-btn send"><img src="/img/send.svg" alt=""/></button>
+              <button className="icon-btn send"><img src="img/send.svg" alt=""/></button>
             </div>
           </div>
         )}

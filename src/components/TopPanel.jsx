@@ -6,12 +6,6 @@ import ProfileDropdown from './ProfileDropdown';
 import { mockNotifications } from '../data/notifications';
 import { profileMenuItems } from '../data/profileMenu';
 import './TopPanel.css';
-import menu2 from '/img/menu2.svg';
-import search from '/img/search.svg';
-import plus from '/img/plus.svg';
-import bell from '/img/bell.svg';
-import ellipse146 from '/img/Ellipse 146.svg';
-import vector2 from '/img/Vector 2 (Stroke).svg';
 
 const TopPanel = ({ toggleSidebar }) => {
     const [openMenu, setOpenMenu] = useState(null);
@@ -46,20 +40,20 @@ const TopPanel = ({ toggleSidebar }) => {
             <header className="toppanel">
                 <div className="frame6996">
                     <div className="burger-menu" onClick={toggleSidebar}>
-                        <img src={menu2} alt="menu" />
+                        <img src="img/menu2.svg" alt="menu" />
                     </div>
                     <div className="field-small-search">
-                        <img src={search} alt="search icon" />
+                        <img src="img/search.svg" alt="search icon" />
                         <input type="text" className="search-input" placeholder="Поиск…" />
                     </div>
                     <div className="header-actions">
                         <button className="button-small-withicon" onClick={() => setCreateOpen(true)}>
-                            <img src={plus} alt="create icon" /><span>Создать</span>
+                            <img src="img/plus.svg" alt="create icon" /><span>Создать</span>
                         </button>
 
                         <div className="notification-wrapper" ref={notificationsRef}>
                             <button className="button-bell" onClick={(e) => toggleMenu(e, 'notifications')}>
-                                <img src={bell} alt="Уведомления" />
+                                <img src="img/bell.svg" alt="Уведомления" />
                                 <span className="badge-count">{mockNotifications.filter(n => n.isNew).length}</span>
                             </button>
                             
@@ -70,9 +64,9 @@ const TopPanel = ({ toggleSidebar }) => {
 
                         <div id="profile-menu" ref={profileRef}>
                             <div className="profile-menu-container" onClick={(e) => toggleMenu(e, 'profile')}>
-                                <img src={ellipse146} alt="" className="avatar" />
+                                <img src="img/Ellipse 146.svg" alt="" className="avatar" />
                                 <span>Иван Иванов</span>
-                                <img src={vector2} alt="" className="icon-dropdown" />
+                                <img src="img/Vector 2 (Stroke).svg" alt="" className="icon-dropdown" />
                             </div>
                             
                             {openMenu === 'profile' && (

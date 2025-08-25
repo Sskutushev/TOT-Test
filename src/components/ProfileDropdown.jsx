@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logout from '/img/logout.svg';
 
 const ProfileDropdown = ({ profileMenuItems, setOpenMenu }) => {
     return (
@@ -13,7 +12,7 @@ const ProfileDropdown = ({ profileMenuItems, setOpenMenu }) => {
                     </Link>
                 ))}
                 <a href="https://ssikutushev.github.io/TOT-Test/" className="profile-menu-item logout-link">
-                    <img src={logout} alt="" />
+                    <img src="img/logout.svg" alt="" />
                     <span>Выход из аккаунта</span>
                 </a>
             </div>

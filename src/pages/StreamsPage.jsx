@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const StreamCategory = ({ icon, name }) => (
   <Link to="#" className="category-item">
-    <div className="category-icon-bg"><img src={`/img/${icon}.svg`} alt="" /></div>
+    <div className="category-icon-bg"><img src={`img/${icon}.svg`} alt="" /></div>
     <span>{name}</span>
   </Link>
 );
@@ -12,7 +12,7 @@ const StreamCard = ({ stream }) => (
     <article className="stream-card">
         <Link to="#" className="stream-thumbnail-link">
             <img src={stream.thumbnail} alt="Обложка трансляции" className="stream-thumbnail" />
-            <div className="viewer-count"><img src="/img/persons.svg" alt="" /> {stream.viewers}</div>
+            <div className="viewer-count"><img src="img/persons.svg" alt="" /> {stream.viewers}</div>
         </Link>
         <div className="stream-card-body">
             <div className="stream-author-info">
@@ -24,9 +24,9 @@ const StreamCard = ({ stream }) => (
             </div>
             <div className="stream-tags-container">
                 {stream.isLive ? (
-                    <div className="live-tag"><img src="/img/stream1.svg" alt="" /> В эфире</div>
+                    <div className="live-tag"><img src="img/stream1.svg" alt="" /> В эфире</div>
                 ) : (
-                    <div className="record-tag"><img src="/img/save.svg" alt="" /> Запись</div>
+                    <div className="record-tag"><img src="img/save.svg" alt="" /> Запись</div>
                 )}
                 <div className="stream-category-tag">{stream.category}</div>
             </div>
@@ -42,11 +42,11 @@ const StreamsPage = () => {
     // ... more categories
   ];
   const liveStreams = [
-      { id: 1, thumbnail: '/img/-------------------------------------------------- (2) 2.svg', viewers: 125, authorAvatar: '/img/Ellipse 149 (1).svg', title: 'Разговоры о косметике из Кореи', authorName: 'Иван Иванов', isLive: true, category: 'Здоровье и фитнес' },
+      { id: 1, thumbnail: 'img/-------------------------------------------------- (2) 2.svg', viewers: 125, authorAvatar: 'img/Ellipse 149 (1).svg', title: 'Разговоры о косметике из Кореи', authorName: 'Иван Иванов', isLive: true, category: 'Здоровье и фитнес' },
       // ... more live streams
   ];
   const popularStreams = [
-      { id: 1, thumbnail: '/img/-------------------------------------------------- (2) 2 (1).svg', viewers: 1152, authorAvatar: '/img/Ellipse 146.svg', title: 'Как открыть свой бизнес', authorName: 'Егор Потанин', isLive: false, category: 'Коммерция и бизнес' },
+      { id: 1, thumbnail: 'img/-------------------------------------------------- (2) 2 (1).svg', viewers: 1152, authorAvatar: 'img/Ellipse 146.svg', title: 'Как открыть свой бизнес', authorName: 'Егор Потанин', isLive: false, category: 'Коммерция и бизнес' },
       // ... more popular streams
   ];
 
@@ -58,7 +58,7 @@ const StreamsPage = () => {
           <p>Веди прямые эфиры и делись своими знаниями и увлечениями с миром.</p>
           <button className="button-small-withicon create-stream-btn">
             <span>Создать трансляцию</span>
-            <img src="/img/arrow1.svg" alt="→" />
+            <img src="img/arrow1.svg" alt="→" />
           </button>
         </div>
         <div className="hero-help-card">
@@ -79,7 +79,7 @@ const StreamsPage = () => {
       <section className="stream-section">
         <div className="section-header">
           <h2>Сейчас в эфире</h2>
-          <Link to="#" className="btn-link">Смотреть все <img src="/img/arrow.svg" alt="" /></Link>
+          <Link to="#" className="btn-link">Смотреть все <img src="img/arrow.svg" alt="" /></Link>
         </div>
         <div className="stream-grid-horizontal">
             {liveStreams.map(s => <StreamCard key={s.id} stream={s} />)}
@@ -89,7 +89,7 @@ const StreamsPage = () => {
       <section className="stream-section">
         <div className="section-header">
           <h2>Самое популярное на этой неделе</h2>
-          <Link to="#" className="btn-link">Смотреть все <img src="/img/arrow.svg" alt="" /></Link>
+          <Link to="#" className="btn-link">Смотреть все <img src="img/arrow.svg" alt="" /></Link>
         </div>
         <div className="stream-grid-wrapping">
             {popularStreams.map(s => <StreamCard key={s.id} stream={s} />)}

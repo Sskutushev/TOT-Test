@@ -12,12 +12,12 @@ const TimelinePage = () => {
       <section className="story-section">
         <div className="story-list">
           <div className="story-item your-story">
-            <div className="story-thumb" style={{backgroundImage: "url('/img/Ellipse 146.svg')"}}></div>
+            <div className="story-thumb" style={{backgroundImage: "url('img/Ellipse 146.svg')"}}></div>
             <div className="story-name">Ваша история</div>
           </div>
           {/* Other stories would be mapped from data */}
           <div className="story-item">
-            <div className="story-thumb" style={{backgroundImage: "url('/img/Story Image.svg')"}}></div>
+            <div className="story-thumb" style={{backgroundImage: "url('img/Story Image.svg')"}}></div>
             <div className="story-name">Иван Иванов</div>
           </div>
         </div>
@@ -29,7 +29,7 @@ const TimelinePage = () => {
         <div className="feed-col">
           {/* Post composer */}
           <div className="post-compose">
-            <div className="compose-avatar" style={{backgroundImage: "url('/img/Ellipse 146.svg')"}}></div>
+            <div className="compose-avatar" style={{backgroundImage: "url('img/Ellipse 146.svg')"}}></div>
             <input type="text" placeholder="Поделитесь новостью…" className="compose-input" />
             <div className="compose-actions">
               <button className="icon-btn photo"></button>
@@ -41,11 +41,11 @@ const TimelinePage = () => {
           {/* Tabs */}
           <div className="feed-tabs">
             <button className={`tab ${activeTab === 'all' ? 'active' : ''}`} onClick={() => setActiveTab('all')}>
-              <img src="/img/Filter Icon.svg" alt="" className="tab-icon" />
+              <img src="img/Filter Icon.svg" alt="" className="tab-icon" />
               Все
             </button>
             <button className={`tab ${activeTab === 'subscriptions' ? 'active' : ''}`} onClick={() => setActiveTab('subscriptions')}>
-              <img src="/img/subscribtions1.svg" alt="" className="tab-icon" />
+              <img src="img/subscribtions1.svg" alt="" className="tab-icon" />
               Подписки
             </button>
             {/* Add other tabs here */}
@@ -56,7 +56,7 @@ const TimelinePage = () => {
             <article className="post-card">
               <div className="post-header">
                 <div className="user-info">
-                  <div className="avatar-sm" style={{backgroundImage: "url('/img/Ellipse 149.svg')"}}></div>
+                  <div className="avatar-sm" style={{backgroundImage: "url('img/Ellipse 149.svg')"}}></div>
                   <div className="user-meta">
                     <div className="user-name">Рухмадуджон Ляколбигдаев</div>
                     <div className="post-date">24 мая 2025</div>
@@ -64,7 +64,7 @@ const TimelinePage = () => {
                 </div>
                 <button className="more-btn"></button>
               </div>
-              <div className="post-image" style={{backgroundImage: "url('/img/img1.akspic.ru-astronomicheskij_obekt-mir-kosmos-atmosfera-kosmicheskoe_prostranstvo-2880x1800 1.png')"}}></div>
+              <div className="post-image" style={{backgroundImage: "url('img/img1.akspic.ru-astronomicheskij_obekt-mir-kosmos-atmosfera-kosmicheskoe_prostranstvo-2880x1800 1.png')"}}></div>
               <div className="post-text">
                 Превратите свой смартфон в источник пассивного дохода с DexPoint! …
               </div>

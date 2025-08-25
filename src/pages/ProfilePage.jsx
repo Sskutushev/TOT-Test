@@ -10,7 +10,7 @@ const ProfilePage = () => {
         return (
           <div className="profile-feed">
             <div className="post-compose">
-              <img src="/img/Ellipse 146.svg" alt="Аватар" className="compose-avatar" />
+              <img src="img/Ellipse 146.svg" alt="Аватар" className="compose-avatar" />
               <input type="text" className="compose-input" placeholder="Поделитесь новостью..." />
               <div className="compose-actions">
                 <button className="icon-btn photo" title="Добавить фото"></button>
@@ -35,10 +35,10 @@ const ProfilePage = () => {
   return (
     <main className="profile-page">
       <header className="profile-header">
-        <div className="profile-cover" style={{ backgroundImage: "url('/img/i (2) 1.svg')" }}></div>
+        <div className="profile-cover" style={{ backgroundImage: "url('img/i (2) 1.svg')" }}></div>
         <div className="profile-intro">
           <div className="profile-avatar-wrapper">
-            <img src="/img/Ellipse 146.svg" alt="Аватар пользователя" className="profile-avatar" />
+            <img src="img/Ellipse 146.svg" alt="Аватар пользователя" className="profile-avatar" />
             <div className="online-status"></div>
           </div>
           <div className="profile-details">
@@ -46,11 +46,11 @@ const ProfilePage = () => {
               <h1>Иван Иванов</h1>
               <div className="profile-tags-row">
                 <span className="profile-tag">
-                  <img src="/img/rupor.svg" alt="" />
+                  <img src="img/rupor.svg" alt="" />
                   Трейдер
                 </span>
                 <Link to="#" className="profile-more-link">
-                  <img src="/img/info icon.svg" alt="" />
+                  <img src="img/info icon.svg" alt="" />
                   Подробнее
                 </Link>
               </div>
@@ -60,11 +60,11 @@ const ProfilePage = () => {
             </div>
             <div className="profile-actions">
               <button className="button-withicon">
-                <img src="/img/wheel.svg" alt="" />
+                <img src="img/wheel.svg" alt="" />
                 <span>Управление профилем</span>
               </button>
               <button className="button-icon">
-                <img src="/img/Share Icon.svg" alt="Поделиться" />
+                <img src="img/Share Icon.svg" alt="Поделиться" />
               </button>
             </div>
           </div>

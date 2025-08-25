@@ -16,13 +16,13 @@ const FavoritesPage = () => {
             <p className="description">{person.description}</p>
         </div>
         <div className="card-footer">
-            <button className="btn-subscribe subscribed"><img src="/img/dropdown.svg" alt="" />Вы подписаны</button>
+            <button className="btn-subscribe subscribed"><img src="img/dropdown.svg" alt="" />Вы подписаны</button>
         </div>
     </article>
   );
 
   const favoritePersons = [
-      { id: 1, name: 'Иван Иванов', avatar: '/img/Ellipse 146.svg', subscribers: '124k подписчиков', profession: 'Трейдер', description: 'Трейдер от бога и просто хороший человек' },
+      { id: 1, name: 'Иван Иванов', avatar: 'img/Ellipse 146.svg', subscribers: '124k подписчиков', profession: 'Трейдер', description: 'Трейдер от бога и просто хороший человек' },
       // ... more favorite people
   ];
 

@@ -9,7 +9,7 @@ const MarketplacePage = () => {
     <div className="popular-list">
       <div className="product-card">
         <div className="card-image">
-          <img src="/img/investment-course-promo.svg" alt="" />
+          <img src="img/investment-course-promo.svg" alt="" />
           <div className="inf-rat_rew"><span className="rating">3.8 ★</span><span className="reviews">100</span></div>
         </div>
         <div className="card-body">
@@ -23,7 +23,7 @@ const MarketplacePage = () => {
         </div>
         <div className="card-footer">
           <span className="price">$ 567</span>
-          <button className="button-withicon">Подробнее <img src="/img/arrow-right.svg" alt="" /></button>
+          <button className="button-withicon">Подробнее <img src="img/arrow-right.svg" alt="" /></button>
         </div>
       </div>
       {/* Add more cards as needed */}
@@ -41,7 +41,7 @@ const MarketplacePage = () => {
             <div className="growth">
                 <span className="growth-value">+ 20,69%</span>
                 <span className="growth-period">Всё время</span>
-                <img src="/img/Chart Container.svg" alt="Рост" className="growth-img" />
+                <img src="img/Chart Container.svg" alt="Рост" className="growth-img" />
             </div>
             <div className="rating">
                 <span className="rating">3.8 ★</span>
@@ -52,7 +52,7 @@ const MarketplacePage = () => {
                 <li>Рекомендованный срок инвестирования: <strong>от 2 лет</strong></li>
                 <li>Уровень риска: <strong>Низкий</strong></li>
             </ul>
-            <button className="button-small-withicon">Подробнее <img src="/img/arrow-right.svg" alt="" /></button>
+            <button className="button-small-withicon">Подробнее <img src="img/arrow-right.svg" alt="" /></button>
         </div>
         {/* Add more cards as needed */}
     </div>
@@ -63,25 +63,25 @@ const MarketplacePage = () => {
       <section className="categories">
         <div className="category-card">
           <Link to="/market_education" className="category-link">
-            <div className="category-bg" style={{backgroundImage: "url('/img/Category card (1).svg')"}}></div>
+            <div className="category-bg" style={{backgroundImage: "url('img/Category card (1).svg')"}}></div>
             <div className="category-text">
               <h2>Обучение</h2>
               <p>Курсы, вебинары, консультации, чек-листы, гайды и др.</p>
             </div>
             <div className="category-img">
-              <img src="/img/Image Category.png" alt="" />
+              <img src="img/Image Category.png" alt="" />
             </div>
           </Link>
         </div>
         <div className="category-card">
           <Link to="/market_invest" className="category-link">
-            <div className="category-bg" style={{backgroundImage: "url('/img/Category card.svg')"}}></div>
+            <div className="category-bg" style={{backgroundImage: "url('img/Category card.svg')"}}></div>
             <div className="category-text">
               <h2>Инвестиции</h2>
               <p>Фонды, автоследование, ценные бумаги, валюты и др.</p>
             </div>
             <div className="category-img">
-              <img src="/img/Image Category.svg" alt="" />
+              <img src="img/Image Category.svg" alt="" />
             </div>
           </Link>
         </div>
@@ -91,7 +91,7 @@ const MarketplacePage = () => {
         <div className="popular-header">
           <h3>Популярное обучение:</h3>
           <Link to="/market_education" className="btn-link">
-            Перейти в раздел <img src="/img/arrow.svg" alt="" />
+            Перейти в раздел <img src="img/arrow.svg" alt="" />
           </Link>
         </div>
         <div className="popular-tabs">
@@ -110,7 +110,7 @@ const MarketplacePage = () => {
         <div className="popular-header">
           <h3>Популярные инвестиции:</h3>
           <Link to="/market_invest" className="btn-link">
-            Перейти в раздел <img src="/img/arrow.svg" alt="" />
+            Перейти в раздел <img src="img/arrow.svg" alt="" />
           </Link>
         </div>
         <div className="popular-tabs">

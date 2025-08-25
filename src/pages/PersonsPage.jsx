@@ -16,7 +16,7 @@ const PersonCard = ({ person }) => (
     </div>
     <div className="card-footer">
       <button className={`btn-subscribe ${person.isSubscribed ? 'subscribed' : ''}`}>
-        <img src={person.isSubscribed ? '/img/dropdown.svg' : '/img/goto.svg'} alt="" />
+        <img src={person.isSubscribed ? 'img/dropdown.svg' : 'img/goto.svg'} alt="" />
         {person.isSubscribed ? 'Вы подписаны' : 'Подписаться'}
       </button>
     </div>
@@ -26,8 +26,8 @@ const PersonCard = ({ person }) => (
 const PersonsPage = () => {
   // Mock data for demonstration
   const people = [
-    { id: 1, name: 'Иван Иванов', avatar: '/img/Ellipse 149.svg', status: 'online', subscribers: '124k подписчиков', profession: 'Трейдер', professionType: '', description: 'Трейдер от бога и просто хороший человек', isSubscribed: true },
-    { id: 2, name: 'Катя Васнецова', avatar: '/img/Story Image (1).svg', status: 'online', subscribers: '32k подписчиков', profession: 'Визажист', professionType: 'alt', description: 'Практика, курсы, наставничество и просто честный видеоблог', isSubscribed: false },
+    { id: 1, name: 'Иван Иванов', avatar: 'img/Ellipse 149.svg', status: 'online', subscribers: '124k подписчиков', profession: 'Трейдер', professionType: '', description: 'Трейдер от бога и просто хороший человек', isSubscribed: true },
+    { id: 2, name: 'Катя Васнецова', avatar: 'img/Story Image (1).svg', status: 'online', subscribers: '32k подписчиков', profession: 'Визажист', professionType: 'alt', description: 'Практика, курсы, наставничество и просто честный видеоблог', isSubscribed: false },
     // Add more people here...
   ];
 
@@ -35,7 +35,7 @@ const PersonsPage = () => {
     <main className="persons-page">
       <div className="search-row">
         <div className="search-container">
-          <img src="/img/search.svg" className="icon-search" alt="Поиск" />
+          <img src="img/search.svg" className="icon-search" alt="Поиск" />
           <input type="text" className="search-input" placeholder="Поиск…" />
         </div>
         <button className="btn-find">Найти</button>

@@ -18,14 +18,14 @@ const ProductCard = ({ product }) => (
         </div>
         <div className="card-footer">
             <span className="price">$ {product.price}</span>
-            <Link to={product.link} className="button-withicon">Подробнее <img src="/img/arrow-right.svg" alt="" /></Link>
+            <Link to={product.link} className="button-withicon">Подробнее <img src="img/arrow-right.svg" alt="" /></Link>
         </div>
     </div>
 );
 
 const MarketEducationPage = () => {
     const products = [
-        { id: 1, image: '/img/investment-course-promo.svg', rating: 3.8, reviews: 100, title: 'Умный инвестор в криптовалютах', tagClass: 'tag--course', tagText: 'Курс', level: 'Нач', duration: '1 мес', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae porta sapien...', price: 567, link: '/education_product_course' },
+        { id: 1, image: 'img/investment-course-promo.svg', rating: 3.8, reviews: 100, title: 'Умный инвестор в криптовалютах', tagClass: 'tag--course', tagText: 'Курс', level: 'Нач', duration: '1 мес', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae porta sapien...', price: 567, link: '/education_product_course' },
         // ... more products
     ];
 
@@ -33,7 +33,7 @@ const MarketEducationPage = () => {
         <main className="market-subpage">
             <div className="page-header">
                 <Link to="/marketplace" className="back-button">
-                    <img src="/img/arrow back black.svg" alt="Назад" />
+                    <img src="img/arrow back black.svg" alt="Назад" />
                     <span>Вернуться</span>
                 </Link>
                 <h1>Обучение</h1>

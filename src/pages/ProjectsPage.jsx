@@ -16,10 +16,10 @@ const ProjectCard = ({ project }) => (
     </div>
     <div className="card-footer">
       <button className="btn-subscribe">
-        <img src="/img/goto.svg" alt="" />
+        <img src="img/goto.svg" alt="" />
         Подписаться
       </button>
-      <button className="btn-more"><img src="/img/menu2.svg" alt="" /></button>
+      <button className="btn-more"><img src="img/menu2.svg" alt="" /></button>
     </div>
   </article>
 );
@@ -29,7 +29,7 @@ const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
-      image: '/img/Frame 7099.svg',
+      image: 'img/Frame 7099.svg',
       title: '360° Финансовый Мастер',
       tagClass: 'tag--school',
       tagText: 'Школа',
@@ -44,7 +44,7 @@ const ProjectsPage = () => {
     <main className="projects-page">
       <section className="search-row">
         <div className="search-container">
-          <img src="/img/search.svg" className="icon-search" alt="Поиск" />
+          <img src="img/search.svg" className="icon-search" alt="Поиск" />
           <input type="text" className="search-input" placeholder="Поиск…" />
         </div>
         <button className="btn-find">Найти</button>

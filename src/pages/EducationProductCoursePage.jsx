@@ -30,7 +30,7 @@ const EducationProductCoursePage = () => {
         <main className="product-page">
             <div className="page-header">
                 <Link to="/market_education" className="back-button">
-                    <img src="/img/arrow back black.svg" alt="Назад" />
+                    <img src="img/arrow back black.svg" alt="Назад" />
                     <span>Вернуться</span>
                 </Link>
                 <h1>Подробная информация</h1>
@@ -38,7 +38,7 @@ const EducationProductCoursePage = () => {
 
             <div className="product-layout">
                 <div className="product-main-content">
-                    <img src="/img/investment-course-promo.svg" alt="Обложка курса" className="product-cover-image" />
+                    <img src="img/investment-course-promo.svg" alt="Обложка курса" className="product-cover-image" />
                     <div className="product-info-body">
                         <div className="product-tags">
                             <span className="tag tag--course">Курс</span>
