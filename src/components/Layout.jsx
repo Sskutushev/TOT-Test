@@ -12,9 +12,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="app-container">
-      <div className="burger-menu" onClick={toggleSidebar}>
-        <img src="/img/menu2.svg" alt="menu" />
-      </div>
       <aside className={`menupanel ${isSidebarOpen ? 'open' : ''}`}>
         <div className="logo-container">
           <Link to="/home">
@@ -58,7 +55,7 @@ const Layout = ({ children }) => {
       </aside>
       
       <div className="main-content-wrapper">
-        <TopPanel />
+        <TopPanel toggleSidebar={toggleSidebar} />
         {children}
       </div>
     </div>

@@ -1,3 +1,42 @@
+.toppanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.toppanel .frame6996 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.field-small-search {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 90px;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .notification-wrapper {
     position: relative;
 }
@@ -133,4 +172,13 @@
 .logout-link {
     color: #FF7A00;
     background: #FFF5EC;
+}
+
+@media (max-width: 768px) {
+    .field-small-search {
+        min-width: 150px;
+    }
+    .header-actions .button-small-withicon span {
+        display: none;
+    }
 }

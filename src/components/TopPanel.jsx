@@ -7,7 +7,7 @@ import { mockNotifications } from '../data/notifications';
 import { profileMenuItems } from '../data/profileMenu';
 import './TopPanel.css';
 
-const TopPanel = () => {
+const TopPanel = ({ toggleSidebar }) => {
     const [openMenu, setOpenMenu] = useState(null);
     const [isCreateOpen, setCreateOpen] = useState(false);
 
@@ -39,13 +39,16 @@ const TopPanel = () => {
         <>
             <header className="toppanel">
                 <div className="frame6996">
+                    <div className="burger-menu" onClick={toggleSidebar}>
+                        <img src="/img/menu2.svg" alt="menu" />
+                    </div>
                     <div className="field-small-search">
                         <img src="/img/search.svg" alt="search icon" />
                         <input type="text" className="search-input" placeholder="Поиск…" />
                     </div>
                     <div className="header-actions">
                         <button className="button-small-withicon" onClick={() => setCreateOpen(true)}>
-                            <img src="/img/plus.svg" alt="create icon" />Создать
+                            <img src="/img/plus.svg" alt="create icon" /><span>Создать</span>
                         </button>
 
                         <div className="notification-wrapper" ref={notificationsRef}>
@@ -72,7 +75,6 @@ const TopPanel = () => {
                         </div>
                     </div>
                 </div>
-                <hr />
             </header>
             {isCreateOpen && <CreatePopup onClose={() => setCreateOpen(false)} />}
         </>
