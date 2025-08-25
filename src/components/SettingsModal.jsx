@@ -1,4 +1,5 @@
 import React from 'react';
+import close from '/img/close.svg';
 
 const ToggleSwitch = ({ label, description }) => (
     <div className="toggle-switch">
@@ -19,7 +20,7 @@ const SettingsModal = ({ onClose }) => (
             <header className="popup-header">
                 <h2>Настройки уведомлений</h2>
                 <button onClick={onClose} className="popup-close-btn" title="Закрыть">
-                    <img src="/img/close.svg" alt="Закрыть" />
+                    <img src={close} alt="Закрыть" />
                 </button>
             </header>
             <div className="popup-content">

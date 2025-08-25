@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
+import logo from '/img/лого=Черный (1).svg';
+import menu2 from '/img/menu2.svg';
 
 const LandingPage = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -13,10 +15,10 @@ const LandingPage = () => {
     <div>
       <header className="landing-header">
         <Link to="/" className="landing-logo">
-            <img src="/img/лого=Черный (1).svg" alt="TOT Logo" />
+            <img src={logo} alt="TOT Logo" />
         </Link>
         <div className="burger-menu-landing" onClick={toggleMenu}>
-            <img src="/img/menu2.svg" alt="menu" />
+            <img src={menu2} alt="menu" />
         </div>
         <nav className={`landing-nav ${isMenuOpen ? 'open' : ''}`}>
           <Link to="/home" className="btn login-button">Войти</Link>

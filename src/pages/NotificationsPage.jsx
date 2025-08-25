@@ -4,6 +4,7 @@ import NotificationCard from '../components/NotificationCard';
 import SettingsModal from '../components/SettingsModal';
 import { mockNotifications } from '../data/notifications';
 import './NotificationsPage.css';
+import settingsIcon from '/img/Settings Icon.svg';
 
 const NotificationsPage = () => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -25,7 +26,7 @@ const NotificationsPage = () => {
                 <header className="page-header">
                     <h1>Уведомления</h1>
                     <button className="button-withicon settings-button" onClick={() => setSearchParams({ settings: 'true' })}>
-                        <img src="/img/Settings Icon.svg" alt="" />
+                        <img src={settingsIcon} alt="" />
                         <span>Настройки</span>
                     </button>
                 </header>

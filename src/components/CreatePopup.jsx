@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { creativityActions, productActions } from '../data/createPopup';
 import './CreatePopup.css';
+import close from '/img/close.svg';
 
 const UnavailableModal = ({ onClose }) => {
     const modalRef = useRef();
@@ -55,7 +56,7 @@ const CreatePopup = ({ onClose }) => {
                             <h2>Создать</h2>
                             <p>Здесь вы можете создать различный контент и продукты</p>
                         </div>
-                        <button onClick={onClose} className="popup-close-btn" title="Закрыть"><img src="/img/close.svg" alt="Закрыть" /></button>
+                        <button onClick={onClose} className="popup-close-btn" title="Закрыть"><img src={close} alt="Закрыть" /></button>
                     </header>
                     <div className="popup-content">
                         <section className="popup-section">

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import settingsIcon from '/img/Settings Icon.svg';
+import arrowRight from '/img/arrow-right.svg';
 
 const NotificationDropdown = ({ mockNotifications, setOpenMenu }) => {
     return (
@@ -7,7 +9,7 @@ const NotificationDropdown = ({ mockNotifications, setOpenMenu }) => {
             <header className="notification-header">
                 <h3>Уведомления</h3>
                 <a href="https://ssikutushev.github.io/TOT-Test/#/notifications" className="settings-btn" title="Настройки">
-                    <img src="/img/Settings Icon.svg" alt="Настройки" />
+                    <img src={settingsIcon} alt="Настройки" />
                 </a>
             </header>
             <div className="notification-list">
@@ -22,7 +24,7 @@ const NotificationDropdown = ({ mockNotifications, setOpenMenu }) => {
                 ))}
             </div>
             <footer className="notification-footer">
-                <a href="https://ssikutushev.github.io/TOT-Test/#/notifications" className="btn-link">Смотреть все уведомления <img src="/img/arrow-right.svg" alt="" /></a>
+                <a href="https://ssikutushev.github.io/TOT-Test/#/notifications" className="btn-link">Смотреть все уведомления <img src={arrowRight} alt="" /></a>
             </footer>
         </div>
     );
