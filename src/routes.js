@@ -1,5 +1,3 @@
-import React from 'react';
-import Layout from './components/Layout';
 import LandingPage from './pages/LandingPage';
 import HomePage from './pages/HomePage';
 import TimelinePage from './pages/TimelinePage';
@@ -20,22 +18,22 @@ import EducationProductCoursePage from './pages/EducationProductCoursePage';
 import EducationProductConsultPage from './pages/EducationProductConsultPage';
 
 export const routes = [
-    { path: '/', element: <LandingPage />, exact: true },
-    { path: '/home', element: <HomePage />, layout: true },
-    { path: '/timeline', element: <TimelinePage />, layout: true },
-    { path: '/marketplace', element: <MarketplacePage />, layout: true },
-    { path: '/persons', element: <PersonsPage />, layout: true },
-    { path: '/projects', element: <ProjectsPage />, layout: true },
-    { path: '/streams', element: <StreamsPage />, layout: true },
-    { path: '/profile', element: <ProfilePage />, layout: true },
-    { path: '/desk', element: <DeskPage />, layout: true },
-    { path: '/messages', element: <MessagesPage />, layout: true },
-    { path: '/favorites', element: <FavoritesPage />, layout: true },
-    { path: '/calendar', element: <CalendarPage />, layout: true },
-    { path: '/help', element: <HelpPage />, layout: true },
-    { path: '/notifications', element: <NotificationsPage />, layout: true },
-    { path: '/market_education', element: <MarketEducationPage />, layout: true },
-    { path: '/market_invest', element: <MarketInvestPage />, layout: true },
-    { path: '/education_product_course', element: <EducationProductCoursePage />, layout: true },
-    { path: '/education_product_consult', element: <EducationProductConsultPage />, layout: true },
+    { path: '/', component: LandingPage },
+    { path: '/home', component: HomePage, layout: true },
+    { path: '/timeline', component: TimelinePage, layout: true },
+    { path: '/marketplace', component: MarketplacePage, layout: true },
+    { path: '/persons', component: PersonsPage, layout: true },
+    { path: '/projects', component: ProjectsPage, layout: true },
+    { path: '/streams', component: StreamsPage, layout: true },
+    { path: '/profile', component: ProfilePage, layout: true },
+    { path: '/desk', component: DeskPage, layout: true },
+    { path: '/messages', component: MessagesPage, layout: true },
+    { path: '/favorites', component: FavoritesPage, layout: true },
+    { path: '/calendar', component: CalendarPage, layout: true },
+    { path: '/help', component: HelpPage, layout: true },
+    { path: '/notifications', component: NotificationsPage, layout: true },
+    { path: '/market_education', component: MarketEducationPage, layout: true },
+    { path: '/market_invest', component: MarketInvestPage, layout: true },
+    { path: '/education_product_course', component: EducationProductCoursePage, layout: true },
+    { path: '/education_product_consult', component: EducationProductConsultPage, layout: true },
 ];

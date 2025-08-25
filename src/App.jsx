@@ -16,13 +16,16 @@ function App() {
   return (
     <Router>
       <Routes>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            element={route.layout ? <Layout>{route.element}</Layout> : route.element}
-          />
-        ))}
+        {routes.map((route, index) => {
+          const element = React.createElement(route.component);
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={route.layout ? <Layout>{element}</Layout> : element}
+            />
+          );
+        })}
         <Route path="/*" element={<Navigate to="/home" />} />
       </Routes>
     </Router>

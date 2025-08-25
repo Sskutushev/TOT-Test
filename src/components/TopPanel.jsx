@@ -60,7 +60,7 @@ const TopPanel = () => {
                         </div>
 
                         <div id="profile-menu" ref={profileRef}>
-                            <div onClick={(e) => toggleMenu(e, 'profile')} style={{display: 'flex', alignItems: 'center', cursor: 'pointer'}}>
+                            <div className="profile-menu-container" onClick={(e) => toggleMenu(e, 'profile')}>
                                 <img src="/img/Ellipse 146.svg" alt="" className="avatar" />
                                 <span>Иван Иванов</span>
                                 <img src="/img/Vector 2 (Stroke).svg" alt="" className="icon-dropdown" />
