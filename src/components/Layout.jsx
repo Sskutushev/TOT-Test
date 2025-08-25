@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import TopPanel from './TopPanel';
 import './Layout.css';
 
 const Layout = ({ children }) => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="app-container">
-      <aside className="menupanel">
-        <div className="rectangle7"></div>
+      <div className="burger-menu" onClick={toggleSidebar}>
+        <img src="/img/menu2.svg" alt="menu" />
+      </div>
+      <aside className={`menupanel ${isSidebarOpen ? 'open' : ''}`}>
         <div className="logo-container">
           <Link to="/home">
               <img id="totlogo" className="totlogo" src="/img/лого=Черный (1).svg" alt="TOT Logo" />
