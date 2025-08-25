@@ -1,0 +1,22 @@
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.main-content-wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.active-link {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}

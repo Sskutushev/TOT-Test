@@ -1,0 +1,131 @@
+.popup-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.popup-container {
+    width: 650px;
+    max-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.popup-header {
+    padding: 1.25rem 1.5rem 0.75rem;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.popup-header h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.popup-header p {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.popup-content {
+    padding: 0 15px 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.popup-section h3 {
+    font-size: 1rem;
+    margin: 0 0 0.75rem 0;
+}
+
+.popup-item-list,
+.creativity-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: none;
+}
+
+.popup-item {
+    background-color: white;
+    border: 1px solid #E3E3E3;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: none;
+    color: #333;
+}
+
+.popup-item-text h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.popup-item-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.popup-item img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Unavailable Modal Styles */
+.unavailable-modal .popup-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.unavailable-modal h3 {
+    margin-top: 1rem;
+}
+
+.unavailable-modal p {
+    color: #666;
+    max-width: 400px;
+    margin: 1rem auto;
+}
+
+.unavailable-modal .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.return-button {
+    background-color: #fff;
+    border: 1px solid #AA1D00;
+    color: #AA1D00;
+    border-radius: 90px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tariffs-button {
+    background-color: #FF2B00;
+    border: 1px solid #FF2B00;
+    color: #fff;
+    border-radius: 90px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
