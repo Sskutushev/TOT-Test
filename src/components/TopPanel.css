@@ -174,11 +174,94 @@
     background: #FFF5EC;
 }
 
+/* Badge for notifications */
+.badge-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #FF3B30;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+/* Combined Dropdown for Mobile */
+.combined-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 99999;
+    background-color: white;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0px 8px 24px -4px rgba(0,0,0,0.1);
+    width: 320px;
+    border-radius: 12px;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-divider {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #E3E3E3;
+}
+
+.notification-dropdown-section,
+.profile-dropdown-section {
+    padding: 0;
+}
+
+/* Mobile-specific styles */
+.mobile-profile-wrapper {
+    position: relative;
+}
+
+.mobile-avatar-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.mobile-avatar-button .avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.mobile-avatar-button .badge-count {
+    top: 0;
+    right: 0;
+}
+
 @media (max-width: 768px) {
     .field-small-search {
-        min-width: 150px;
+        min-width: auto;
+    }
+    .desktop-only {
+        display: none;
+    }
+    .notification-wrapper, #profile-menu {
+        display: none;
+    }
+    .mobile-profile-wrapper {
+        display: block;
     }
     .header-actions .button-small-withicon span {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-profile-wrapper {
+        display: none;
+    }
+    .burger-menu {
         display: none;
     }
 }
