@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoutIcon from '/img/Union.svg';
+import logoutIcon from '/Union.svg';
 
 const ProfileDropdown = ({ profileMenuItems, setOpenMenu }) => {
     return (

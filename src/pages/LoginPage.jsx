@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LangSelector from '../components/LangSelector';
 import './LoginPage.css';
 
@@ -30,6 +30,7 @@ const slidesData = [
 const LoginPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loginMethod, setLoginMethod] = useState('phone');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -119,7 +120,7 @@ const LoginPage = () => {
               </div>
             )}
           </div>
-          <button className="continue-button">
+          <button className="continue-button" onClick={() => navigate('/home')}>
             <span>Продолжить</span>
             <span>→</span>
           </button>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import settingsIcon from '/img/settings-icon.svg';
 import arrowRight from '/img/arrow-right.svg';
-import logoutIcon from '/img/Union.svg';
+import logoutIcon from '/Union.svg';
 
 const CombinedDropdown = ({ mockNotifications, profileMenuItems, setOpenMenu }) => {
   return (
