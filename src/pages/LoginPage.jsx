@@ -91,7 +91,7 @@ const LoginPage = () => {
             <img src="/Group 633.svg" alt="Social Login" className="social-btn-img" />
             <img src="/Group 634.svg" alt="Social Login" className="social-btn-img" />
             <img src="/Group 635.svg" alt="Social Login" className="social-btn-img" />
-            <img src="/Group 636.svg" alt="Social Login" className="social-btn-img" />
+            <img src={"/Group 636.svg"} alt="Social Login" className="social-btn-img" />
           </div>
           <div className="login-tabs-container">
             <button 

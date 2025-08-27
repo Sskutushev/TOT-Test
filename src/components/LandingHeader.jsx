@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; // Added a comment to force recompile
 import { Link, NavLink } from 'react-router-dom';
 import LangSelector from './LangSelector';
 import './LandingHeader.css';

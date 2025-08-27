@@ -42,7 +42,7 @@ const LandingHero = () => {
         </div>
       </div>
       <div className="hero-video-container">
-        <video src="/1.mp4" autoPlay loop muted playsInline className="hero-video"></video>
+        <video src={"/1.mp4"} autoPlay loop muted playsInline className="hero-video"></video>
       </div>
     </section>
   );

@@ -5,9 +5,9 @@ const dropdownIcon = '/dropdown.svg';
 
 const flags = {
   RUS: '/rus.svg',
-  ENG: '/eng.svg',
-  IND: '/Indian.svg',
-  SPA: '/spain.svg',
+  ENG: import.meta.env.BASE_URL + 'eng.svg',
+  IND: '/img/Indian.svg',
+  SPA: import.meta.env.BASE_URL + 'img/spain.svg',
 };
 
 const languages = [

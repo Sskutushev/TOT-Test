@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ command }) => {
   // For local development (serve), base is '/'.
   // For GitHub Pages (build), base must be '/repository-name/'.
-  const base = '/';
+  const base = command === 'serve' ? '/' : '/TOT-Test/';
   return {
     plugins: [react()],
     base: base,
