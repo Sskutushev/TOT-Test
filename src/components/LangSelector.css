@@ -1,0 +1,84 @@
+.lang-selector {
+  position: relative;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 90px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  white-space: nowrap;
+  gap: 8px;
+}
+
+.flag-wrapper {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-icon {
+    height: 100%;
+    width: auto;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Общие стили для выпадающего меню */
+.lang-dropdown {
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #E3E3E3;
+  border-radius: 15px; /* Закругление контейнера */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px; /* Отступы внутри контейнера */
+  min-width: 100%; /* Ширина минимум как у кнопки */
+  z-index: 10;
+}
+
+/* Позиционирование ВНИЗ (для хедера) */
+.lang-dropdown.down {
+    top: calc(100% + 5px);
+}
+
+/* Позиционирование ВВЕРХ (для страницы логина) */
+.lang-dropdown.up {
+    bottom: calc(100% + 5px);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px; /* Уменьшаем паддинги */
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 14px; /* Уменьшаем шрифт */
+  background: none; /* Убираем фон по умолчанию */
+}
+
+.lang-option:hover {
+  background-color: #f4f4f4;
+}
+
+.flag-icon-small {
+  width: 20px; /* Уменьшаем иконку */
+  height: 20px;
+  margin-right: 8px;
+}

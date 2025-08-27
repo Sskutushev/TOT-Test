@@ -1,0 +1,14 @@
+import React from 'react';
+import LandingHeader from './LandingHeader';
+import './LandingLayout.css';
+
+const LandingLayout = ({ children }) => {
+  return (
+    <div className="landing-layout">
+      <LandingHeader />
+      <main>{children}</main>
+    </div>
+  );
+};
+
+export default LandingLayout;

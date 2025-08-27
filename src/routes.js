@@ -16,9 +16,21 @@ import MarketEducationPage from './pages/MarketEducationPage';
 import MarketInvestPage from './pages/MarketInvestPage';
 import EducationProductCoursePage from './pages/EducationProductCoursePage';
 import EducationProductConsultPage from './pages/EducationProductConsultPage';
+import EducationPage from './pages/EducationPage';
+import SocialPage from './pages/SocialPage';
+import MarketplaceLandingPage from './pages/MarketplaceLandingPage';
+import NewsPage from './pages/NewsPage';
+import PartnershipPage from './pages/PartnershipPage';
+import LoginPage from './pages/LoginPage';
 
 export const routes = [
-    { path: '/', component: LandingPage },
+    { path: '/', component: LandingPage, landingLayout: true },
+    { path: '/education', component: EducationPage, landingLayout: true },
+    { path: '/social', component: SocialPage, landingLayout: true },
+    { path: '/marketplace-landing', component: MarketplaceLandingPage, landingLayout: true },
+    { path: '/news', component: NewsPage, landingLayout: true },
+    { path: '/partnership', component: PartnershipPage, landingLayout: true },
+    { path: '/login', component: LoginPage },
     { path: '/home', component: HomePage, layout: true },
     { path: '/timeline', component: TimelinePage, layout: true },
     { path: '/marketplace', component: MarketplacePage, layout: true },

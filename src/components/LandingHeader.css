@@ -1,0 +1,166 @@
+
+.landing-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1240px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 117px;
+  height: 30px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 150px;
+  white-space: nowrap;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 90px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.login-btn img {
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* --- Стили для мобильного меню --- */
+.mobile-only { display: none; }
+.burger-menu-button { cursor: pointer; }
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Начинает за экраном */
+    width: 80%;
+    max-width: 320px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1002;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-menu-close { cursor: pointer; }
+
+.mobile-menu-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Изменено */
+    flex-grow: 1;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.mobile-menu-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px; /* Добавлено */
+}
+
+/* --- Адаптивность хедера --- */
+@media (max-width: 1200px) {
+    .header-nav {
+        gap: 25px; /* Уменьшаем отступ */
+        margin-left: 80px; /* Уменьшаем отступ */
+    }
+    .header-nav a {
+        font-size: 15px; /* Уменьшаем шрифт */
+    }
+    .header-right {
+        margin-left: 20px; /* Уменьшаем отступ */
+    }
+}
+
+@media (max-width: 1024px) {
+    .desktop-only { display: none; }
+    .mobile-only { display: block; }
+}
