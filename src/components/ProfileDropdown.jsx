@@ -1,7 +1,5 @@
-import React from 'react';
+import React from 'react'; // Added comment to force recompile
 import { Link } from 'react-router-dom';
-import logoutIcon from '/Union.svg';
-
 const ProfileDropdown = ({ profileMenuItems, setOpenMenu }) => {
     return (
         <div className="profile-dropdown">
@@ -13,7 +11,7 @@ const ProfileDropdown = ({ profileMenuItems, setOpenMenu }) => {
                     </Link>
                 ))}
                 <Link to="/" className="profile-menu-item logout-link" onClick={() => setOpenMenu(null)}>
-                    <img src={logoutIcon} alt="" />
+                    <img src={import.meta.env.BASE_URL + 'Union.svg'} alt="" />
                     <span>Выход из аккаунта</span>
                 </Link>
             </div>

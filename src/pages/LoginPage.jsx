@@ -6,22 +6,22 @@ import './LoginPage.css';
 
 const slidesData = [
   {
-    img: '/variant1.svg',
+    img: import.meta.env.BASE_URL + 'variant1.svg',
     title: 'Социальная сеть',
     subtitle: 'Совершенно новый формат взаимодействия между преподавателями и студентами'
   },
   {
-    img: '/variant2.svg',
+    img: import.meta.env.BASE_URL + 'variant3.svg',
     title: 'Обучение',
     subtitle: 'Удобный интерфейс для обучения во всех форматах. Множество функций для планирования своего развития'
   },
   {
-    img: '/variant3.svg',
+    img: import.meta.env.BASE_URL + 'variant1.svg',
     title: 'Маркетплейс',
     subtitle: 'Совершенно новый формат взаимодействия между преподавателями и студентами'
   },
   {
-    img: '/variant4.svg',
+    img: import.meta.env.BASE_URL + 'variant4.svg',
     title: 'Инвестиции',
     subtitle: 'Откройте мир глобальных инвестиций с нашими инструментами.'
   }
@@ -84,14 +84,14 @@ const LoginPage = () => {
             <LangSelector customClassName="login-page-selector" />
         </div>
         <div className="login-form-container">
-          <img src="/TOT Logo.svg" alt="Logo" className="login-form-logo" />
+          <img src={import.meta.env.BASE_URL + "TOT Logo.svg"} alt="Logo" className="login-form-logo" />
           <h1 className="login-form-title">Войти на платформу</h1>
           <p className="social-login-text">Использовать аккаунты для входа</p>
           <div className="social-login-buttons">
             <img src="/Group 633.svg" alt="Social Login" className="social-btn-img" />
             <img src="/Group 634.svg" alt="Social Login" className="social-btn-img" />
-            <img src="/Group 635.svg" alt="Social Login" className="social-btn-img" />
-            <img src={"/Group 636.svg"} alt="Social Login" className="social-btn-img" />
+                                    <img src={import.meta.env.BASE_URL + "Group 635.svg"} alt="Social Login" className="social-btn-img" />
+            <img src={import.meta.env.BASE_URL + "Group 636.svg"} alt="Social Login" className="social-btn-img" />
           </div>
           <div className="login-tabs-container">
             <button 
@@ -137,3 +137,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+;

@@ -1,9 +1,7 @@
-import React from 'react';
+import React from 'react'; // Added a comment to force recompile
 import { Link } from 'react-router-dom';
 import settingsIcon from '/img/settings-icon.svg';
 import arrowRight from '/img/arrow-right.svg';
-import logoutIcon from '/Union.svg';
-
 const CombinedDropdown = ({ mockNotifications, profileMenuItems, setOpenMenu }) => {
   return (
     <div className="combined-dropdown">

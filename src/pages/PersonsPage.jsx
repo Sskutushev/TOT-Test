@@ -16,7 +16,7 @@ const PersonCard = ({ person }) => (
     </div>
     <div className="card-footer">
       <button className={`btn-subscribe ${person.isSubscribed ? 'subscribed' : ''}`}>
-        <img src={person.isSubscribed ? 'img/dropdown.svg' : 'img/goto.svg'} alt="" />
+        <img src={person.isSubscribed ? import.meta.env.BASE_URL + 'img/dropdown.svg' : import.meta.env.BASE_URL + 'img/goto.svg'} alt="" />
         {person.isSubscribed ? 'Вы подписаны' : 'Подписаться'}
       </button>
     </div>

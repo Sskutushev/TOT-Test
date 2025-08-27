@@ -16,7 +16,7 @@ const FavoritesPage = () => {
             <p className="description">{person.description}</p>
         </div>
         <div className="card-footer">
-            <button className="btn-subscribe subscribed"><img src="img/dropdown.svg" alt="" />Вы подписаны</button>
+            <button className="btn-subscribe subscribed"><img src={import.meta.env.BASE_URL + "img/dropdown.svg"} alt="" />Вы подписаны</button>
         </div>
     </article>
   );

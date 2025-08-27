@@ -92,7 +92,7 @@
     - `1.1rem` (заголовки h3 в дропдаунах)
     - `1rem` (заголовки h3 в секциях попапов)
     - `0.9rem` (основной текст, заголовки h4)
-    - `0.8rem` (второстепенный текст)
+    - `0.8rem` (второстепенный текст).
 
 ### Другие элементы
 
@@ -143,3 +143,48 @@
   - Исправлена проблема с отображением выпадающего меню выбора языка на странице авторизации (корректное позиционирование и фон).
 - **Общие:**
   - Проведена финальная проверка и корректировка путей к ассетам (`Union.svg` и другие) в компонентах `CombinedDropdown.jsx` и `ProfileDropdown.jsx` для успешной сборки проекта.
+
+## Recent Development Log (August 27, 2025 - Ongoing)
+
+This section details the ongoing efforts to resolve deployment issues, particularly related to asset paths on GitHub Pages, and other encountered errors.
+
+### Deployment Strategy Evolution:
+- **Initial Goal:** Deploy directly from `main` branch to GitHub Pages root (`/`).
+- **Challenge:** GitHub Pages requires assets to be prefixed with the repository name (`/TOT-Test/`) when deployed to a subpath.
+- **Attempt 1 (Failed):** Set `base: '/'` in `vite.config.js` for both `serve` and `build`. This caused 404 errors for assets on GitHub Pages as they were requested from the domain root (`sskutushev.github.io/asset.svg`) instead of the repository subpath (`sskutushev.github.io/TOT-Test/asset.svg`).
+- **Attempt 2 (Failed):** Reverted `base` to `base: '/TOT-Test/'` for `build` and `/` for `serve` in `vite.config.js`. This fixed the online asset paths but broke local development due to assets being requested from `/TOT-Test/` on `localhost`.
+- **Attempt 3 (Failed):** Introduced `import.meta.env.BASE_URL` for all image references in JSX/JS. This was intended to dynamically resolve paths based on the `base` config. However, this led to `Rollup failed to resolve import` errors during build, as `import` statements cannot contain dynamic expressions like `import.meta.env.BASE_URL`. This also caused `Expected string but found "import"` syntax errors.
+
+### Image Path Resolution (Current Approach):
+- **Problem:** Vite's `base` option only prefixes URLs processed by its asset pipeline (e.g., CSS `url()`, imported assets). It does *not* automatically rewrite URLs for assets directly referenced with an absolute path (starting with `/`) in HTML or JSX.
+- **Solution:** All direct image references in `.jsx` files (e.g., `<img src="/image.svg">`, `const img = "/image.svg"`) must be explicitly prefixed with `import.meta.env.BASE_URL`. This ensures paths are correctly resolved for both local development (where `BASE_URL` is `/`) and GitHub Pages deployment (where `BASE_URL` is `/TOT-Test/`).
+
+### Errors Encountered and Fixes Applied:
+
+1.  **`[plugin:vite:react-babel] ...: Unexpected token (5:23)` (Initial Error):**
+    *   **Cause:** `import logoutIcon from import.meta.env.BASE_URL + 'Union.svg';` - Invalid syntax for `import` statement.
+    *   **Fix:** Changed to `import logoutIcon from '/Union.svg';` (later reverted to `import.meta.env.BASE_URL` for direct usage).
+
+2.  **`Uncaught ReferenceError: t4_img is not defined`:**
+    *   **Cause:** Accidental removal of `t4_img` declaration during previous path fixes in `LandingHero.jsx`.
+    *   **Fix:** Re-added `const t4_img = '/Union.svg';` (later updated to use `import.meta.env.BASE_URL`).
+
+3.  **`Only one default export allowed per module` in `ProfileDropdown.jsx`:**
+    *   **Cause:** Duplicate `export default ProfileDropdown;` statement.
+    *   **Fix:** Removed the duplicate declaration.
+
+4.  **`Rollup failed to resolve import "Union.svg"` (and other images):**
+    *   **Cause:** Attempting to `import` static assets from the `public` folder directly into JavaScript/JSX files. Rollup expects these to be JavaScript modules.
+    *   **Fix:** Removed `import` statements for static assets. Instead, assets are referenced directly in `src` attributes or string literals using `import.meta.env.BASE_URL + 'path/to/image.svg'`. 
+
+5.  **`Expected string but found "import"` (e.g., `LoginPage.jsx` for `variant4.svg`):**
+    *   **Cause:** Syntax error introduced by accidentally duplicating `img:` when trying to use `import.meta.env.BASE_URL` in a `src` attribute.
+    *   **Fix:** Corrected the duplicated `img:` syntax.
+
+6.  **Persistent 404 errors for assets on GitHub Pages (e.g., `rus.svg`, `TOT Logo.svg`, `styles.css`, `index-BW9duOSx.css`, `index-BtkE_liC.js`):**
+    *   **Cause:** Mismatch between the `base` path configured in `vite.config.js` and how assets were referenced in the code. Vite's `base` option only prefixes assets processed by its pipeline; direct absolute paths (starting with `/`) in HTML/JSX are not automatically rewritten.
+    *   **Fix:** Systematically updated all direct image/asset references in `.jsx` files to use `import.meta.env.BASE_URL + 'original_path_to_asset.ext'`. This ensures paths are correctly resolved for both local and deployed environments.
+
+### Current Status:
+- Localhost: All images and functionality should be working correctly.
+- Online (GitHub Pages): The latest build with all these fixes has been pushed. Deployment status needs to be monitored.

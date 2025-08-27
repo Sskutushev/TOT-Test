@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './LangSelector.css';
 
-const dropdownIcon = '/dropdown.svg';
+const dropdownIcon = import.meta.env.BASE_URL + 'dropdown.svg';
 
 const flags = {
-  RUS: '/rus.svg',
+  RUS: import.meta.env.BASE_URL + 'rus.svg',
   ENG: import.meta.env.BASE_URL + 'eng.svg',
-  IND: '/img/Indian.svg',
+  IND: import.meta.env.BASE_URL + 'img/Indian.svg',
   SPA: import.meta.env.BASE_URL + 'img/spain.svg',
 };
 

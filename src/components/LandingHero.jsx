@@ -4,11 +4,11 @@ import './LandingHero.css';
 
 // Используем точные имена файлов, включая .png и .svg, из папки /public.
 const t1_img = '/Union.svg';
-const t2_img = '/Union.svg'; // Дублируем рабочий треугольник
-const t3_img = '/Union.svg'; // Дублируем рабочий треугольник
-const t4_img = '/Union.svg'; // Дублируем рабочий треугольник
-const group940 = '/Group 940.svg';
-const group941 = '/Group 941.svg';
+const t2_img = import.meta.env.BASE_URL + 'Union.svg'; // Дублируем рабочий треугольник
+const t3_img = import.meta.env.BASE_URL + 'Union.svg'; // Дублируем рабочий треугольник
+const t4_img = '/Union.svg';
+const group940 = import.meta.env.BASE_URL + 'Group 940.svg';
+const group941 = import.meta.env.BASE_URL + 'Group 941.svg';
 const group942 = '/Group 942.svg';
 
 const LandingHero = () => {
@@ -42,7 +42,7 @@ const LandingHero = () => {
         </div>
       </div>
       <div className="hero-video-container">
-        <video src={"/1.mp4"} autoPlay loop muted playsInline className="hero-video"></video>
+        <video src={import.meta.env.BASE_URL + "1.mp4"} autoPlay loop muted playsInline className="hero-video"></video>
       </div>
     </section>
   );
