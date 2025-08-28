@@ -54,7 +54,7 @@ const LangSelector = ({ direction = 'down', customClassName }) => {
         <img src={dropdownIcon} alt="" className={`dropdown-arrow ${langMenuOpen ? 'open' : ''}`} />
       </button>
       {langMenuOpen && (
-        <div className={`lang-dropdown`}>
+        <div className={`lang-dropdown ${direction}`}>
           {languages.map((lang) => (
             <div key={lang.code} className="lang-option" onClick={() => handleSelectLang(lang)}>
               <img src={lang.flag} alt={lang.code} className="flag-icon-small" />

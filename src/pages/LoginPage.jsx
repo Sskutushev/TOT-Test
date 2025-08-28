@@ -72,7 +72,7 @@ const LoginPage = () => {
           </div>
           <div className="login-panel-buttons">
             <Link to="/" className="back-button">← Вернуться</Link>
-            <LangSelector customClassName="login-page-selector" />
+            <LangSelector customClassName="login-page-selector" direction="up" />
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ const LoginPage = () => {
       <div className="login-right-panel">
         <div className="mobile-login-header mobile-only">
             <Link to="/" className="back-button">← Вернуться</Link>
-            <LangSelector customClassName="login-page-selector" />
+            <LangSelector customClassName="login-page-selector" direction="up" />
         </div>
         <div className="login-form-container">
           <img src={import.meta.env.BASE_URL + "TOT Logo.svg"} alt="Logo" className="login-form-logo" />
