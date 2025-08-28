@@ -9,12 +9,6 @@ import { mockNotifications } from '../data/notifications';
 import { profileMenuItems } from '../data/profileMenu';
 import './TopPanel.css';
 
-import searchIcon from '/img/search.svg';
-import plusIcon from '/img/plus.svg';
-import avatarIcon from '/img/Ellipse 146.svg';
-import bellIcon from '/img/bell.svg';
-import dropdownIcon from '/img/Vector 2 (Stroke).svg';
-
 const useIsMobile = (width = 768) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= width);
 
@@ -65,19 +59,19 @@ const TopPanel = ({ toggleSidebar }) => {
                         <BurgerIcon />
                     </div>
                     <div className="field-small-search">
-                        <img src={searchIcon} alt="search icon" />
+                        <img src={import.meta.env.BASE_URL + 'img/search.svg'} alt="search icon" />
                         <input type="text" className="search-input" placeholder="Поиск…" />
                     </div>
                     <div className="header-actions">
                         <button className="button-small-withicon" onClick={() => setCreateOpen(true)}>
-                            <img src={plusIcon} alt="create icon" />
+                            <img src={import.meta.env.BASE_URL + 'img/plus.svg'} alt="create icon" />
                             <span className="desktop-only">Создать</span>
                         </button>
 
                         {isMobile ? (
                             <div className="mobile-profile-wrapper" ref={menuRef}>
                                 <button className="mobile-avatar-button" onClick={(e) => toggleMenu(e, 'combined')}>
-                                    <img src={avatarIcon} alt="" className="avatar" />
+                                    <img src={import.meta.env.BASE_URL + 'img/Ellipse 146.svg'} alt="" className="avatar" />
                                     {notificationCount > 0 && <span className="badge-count">{notificationCount}</span>}
                                 </button>
                                 {openMenu === 'combined' && (
@@ -92,7 +86,7 @@ const TopPanel = ({ toggleSidebar }) => {
                             <>
                                 <div className="notification-wrapper" ref={menuRef}>
                                     <button className="button-bell" onClick={(e) => toggleMenu(e, 'notifications')}>
-                                        <img src={bellIcon} alt="Уведомления" />
+                                        <img src={import.meta.env.BASE_URL + 'img/bell.svg'} alt="Уведомления" />
                                         {notificationCount > 0 && <span className="badge-count">{notificationCount}</span>}
                                     </button>
                                     
@@ -103,9 +97,9 @@ const TopPanel = ({ toggleSidebar }) => {
 
                                 <div id="profile-menu" ref={menuRef}>
                                     <div className="profile-menu-container" onClick={(e) => toggleMenu(e, 'profile')}>
-                                        <img src={avatarIcon} alt="" className="avatar" />
+                                        <img src={import.meta.env.BASE_URL + 'img/Ellipse 146.svg'} alt="" className="avatar" />
                                         <span className="desktop-only">Иван Иванов</span>
-                                        <img src={dropdownIcon} alt="" className="icon-dropdown desktop-only" />
+                                        <img src={import.meta.env.BASE_URL + 'img/Vector 2 (Stroke).svg'} alt="" className="icon-dropdown desktop-only" />
                                     </div>
                                     
                                     {openMenu === 'profile' && (

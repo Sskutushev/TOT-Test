@@ -1,8 +1,11 @@
-import React from 'react'; // Added a comment to force recompile
+import React from 'react';
 import { Link } from 'react-router-dom';
-import settingsIcon from '/img/settings-icon.svg';
-import arrowRight from '/img/arrow-right.svg';
+
 const CombinedDropdown = ({ mockNotifications, profileMenuItems, setOpenMenu }) => {
+  const settingsIcon = import.meta.env.BASE_URL + 'img/settings-icon.svg';
+  const arrowRight = import.meta.env.BASE_URL + 'img/arrow-right.svg';
+  const logoutIcon = import.meta.env.BASE_URL + 'img/Union.svg'; // Assuming this is the correct logout icon
+
   return (
     <div className="combined-dropdown">
       {/* Notifications Section */}
@@ -16,7 +19,7 @@ const CombinedDropdown = ({ mockNotifications, profileMenuItems, setOpenMenu }) 
         <div className="notification-list">
           {mockNotifications.map(n => (
             <Link to="/notifications" key={n.id} className={`notification-item ${n.isNew ? 'new' : ''}`} onClick={() => setOpenMenu(null)}>
-              <div className="notification-icon"><img src={n.icon} alt="" /></div>
+              <div className="notification-icon"><img src={import.meta.env.BASE_URL + n.icon} alt="" /></div>
               <div className="notification-text">
                 <h4>{n.title}</h4>
                 <p>{n.text}</p>
@@ -36,7 +39,7 @@ const CombinedDropdown = ({ mockNotifications, profileMenuItems, setOpenMenu }) 
         <div className="profile-menu-list">
           {profileMenuItems.map(item => (
             <Link to={item.link} key={item.text} className="profile-menu-item" onClick={() => setOpenMenu(null)}>
-              <img src={item.icon} alt="" />
+              <img src={import.meta.env.BASE_URL + item.icon} alt="" />
               <span>{item.text}</span>
             </Link>
           ))}

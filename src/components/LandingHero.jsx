@@ -3,13 +3,13 @@ import React from 'react';
 import './LandingHero.css';
 
 // Используем точные имена файлов, включая .png и .svg, из папки /public.
-const t1_img = '/Union.svg';
+const t1_img = import.meta.env.BASE_URL + 'Union.svg';
 const t2_img = import.meta.env.BASE_URL + 'Union.svg'; // Дублируем рабочий треугольник
 const t3_img = import.meta.env.BASE_URL + 'Union.svg'; // Дублируем рабочий треугольник
-const t4_img = '/Union.svg';
+const t4_img = import.meta.env.BASE_URL + 'Union.svg';
 const group940 = import.meta.env.BASE_URL + 'Group 940.svg';
 const group941 = import.meta.env.BASE_URL + 'Group 941.svg';
-const group942 = '/Group 942.svg';
+const group942 = import.meta.env.BASE_URL + 'Group 942.svg';
 
 const LandingHero = () => {
   return (

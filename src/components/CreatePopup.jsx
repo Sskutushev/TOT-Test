@@ -3,7 +3,6 @@ import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { creativityActions, productActions } from '../data/createPopup';
 import './CreatePopup.css';
-import close from '/img/close.svg';
 
 const UnavailableModal = ({ onClose }) => {
     const modalRef = useRef();
@@ -38,6 +37,7 @@ const UnavailableModal = ({ onClose }) => {
 const CreatePopup = ({ onClose }) => {
     const [showTariffModal, setShowTariffModal] = useState(false);
     const popupRef = useRef();
+    const closeIcon = import.meta.env.BASE_URL + 'img/close.svg';
 
     useEffect(() => {
         const handleEsc = (event) => {
@@ -56,7 +56,7 @@ const CreatePopup = ({ onClose }) => {
                             <h2>Создать</h2>
                             <p>Здесь вы можете создать различный контент и продукты</p>
                         </div>
-                        <button onClick={onClose} className="popup-close-btn" title="Закрыть"><img src={close} alt="Закрыть" /></button>
+                        <button onClick={onClose} className="popup-close-btn" title="Закрыть"><img src={closeIcon} alt="Закрыть" /></button>
                     </header>
                     <div className="popup-content">
                         <section className="popup-section">
@@ -64,7 +64,7 @@ const CreatePopup = ({ onClose }) => {
                             <div className="creativity-item-list">
                                 {creativityActions.map(action => (
                                     <button key={action.title} className="popup-item" onClick={() => setShowTariffModal(true)}>
-                                        <img src={action.icon} alt="" />
+                                        <img src={import.meta.env.BASE_URL + action.icon} alt="" />
                                         <div className="popup-item-text">
                                             <h4>{action.title}</h4>
                                             <p>{action.description}</p>
@@ -78,7 +78,7 @@ const CreatePopup = ({ onClose }) => {
                             <div className="popup-item-list">
                                 {productActions.map(action => (
                                     <button key={action.title} className="popup-item" onClick={() => setShowTariffModal(true)}>
-                                        <img src={action.icon} alt="" />
+                                        <img src={import.meta.env.BASE_URL + action.icon} alt="" />
                                         <div className="popup-item-text">
                                             <h4>{action.title}</h4>
                                             <p>{action.description}</p>

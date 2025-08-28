@@ -26,7 +26,7 @@ const InvestCard = ({ item }) => {
             <li>Уровень риска: <strong>{riskLevel}</strong></li>
         </ul>
         <Link to="/market_invest" className="button-small-withicon">
-            Подробнее <img src="/img/arrow-right.svg" alt="" />
+            Подробнее <img src={import.meta.env.BASE_URL + "img/arrow-right.svg"} alt="" />
         </Link>
     </div>
   );

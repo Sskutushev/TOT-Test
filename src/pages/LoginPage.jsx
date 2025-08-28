@@ -88,8 +88,8 @@ const LoginPage = () => {
           <h1 className="login-form-title">Войти на платформу</h1>
           <p className="social-login-text">Использовать аккаунты для входа</p>
           <div className="social-login-buttons">
-            <img src="/Group 633.svg" alt="Social Login" className="social-btn-img" />
-            <img src="/Group 634.svg" alt="Social Login" className="social-btn-img" />
+            <img src={import.meta.env.BASE_URL + "Group 633.svg"} alt="Social Login" className="social-btn-img" />
+            <img src={import.meta.env.BASE_URL + "Group 634.svg"} alt="Social Login" className="social-btn-img" />
                                     <img src={import.meta.env.BASE_URL + "Group 635.svg"} alt="Social Login" className="social-btn-img" />
             <img src={import.meta.env.BASE_URL + "Group 636.svg"} alt="Social Login" className="social-btn-img" />
           </div>
