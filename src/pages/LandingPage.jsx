@@ -2,6 +2,7 @@ import React from 'react';
 import LandingHeader from '../components/LandingHeader';
 import LandingHero from '../components/LandingHero';
 import FeaturesSection from '../components/FeaturesSection';
+import DirectionsSection from '../components/DirectionsSection';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -11,6 +12,7 @@ const LandingPage = () => {
       <main>
         <LandingHero />
         <FeaturesSection />
+        <DirectionsSection />
         {/* Следующие секции будут здесь */}
       </main>
     </div>

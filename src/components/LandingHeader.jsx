@@ -68,6 +68,7 @@ const LandingHeader = () => {
             <nav className="header-nav desktop-only">
               <NavLink to="/education">Обучение</NavLink>
               <NavLink to="/social">Соц сеть</NavLink>
+              <NavLink to="/investments">Инвестиции</NavLink>
               <NavLink to="/marketplace-landing">Маркетплейс</NavLink>
               <NavLink to="/news">Новости</NavLink>
               <NavLink to="/partnership">Партнерская программа</NavLink>
@@ -101,6 +102,7 @@ const LandingHeader = () => {
             <nav className="mobile-nav">
                 <NavLink to="/education" onClick={handleLinkClick}>Обучение</NavLink>
                 <NavLink to="/social" onClick={handleLinkClick}>Соц сеть</NavLink>
+                <NavLink to="/investments" onClick={handleLinkClick}>Инвестиции</NavLink>
                 <NavLink to="/marketplace-landing" onClick={handleLinkClick}>Маркетплейс</NavLink>
                 <NavLink to="/news" onClick={handleLinkClick}>Новости</NavLink>
                 <NavLink to="/partnership" onClick={handleLinkClick}>Партнерская программа</NavLink>

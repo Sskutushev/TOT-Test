@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './LandingHero.css';
 
 // Используем точные имена файлов, включая .png и .svg, из папки /public.
@@ -19,7 +20,7 @@ const LandingHero = () => {
           <h1>Торгуй. Обучай. Твори</h1>
           <h2>- всё в одном месте</h2>
           <p>Открой для себя новый многогранный мир, где твои идеи становятся глобальными проектами</p>
-          <button className="join-btn">Присоединиться</button>
+          <Link to="/login" className="join-btn">Присоединиться</Link>
         </div>
         <div className="hero-separator"></div>
         <div className="hero-right">
