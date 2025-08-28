@@ -68,7 +68,7 @@
 
 .features-list {
   display: flex;
-  gap: 40px; /* Отступ между колонками */
+  gap: 30px; /* Отступ между колонками */
   margin-top: 20px; /* Отступ от подзаголовка */
 }
 
@@ -78,7 +78,7 @@
   gap: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.2; /* Межстрочный интервал для списка */
+  line-height: 1; /* Межстрочный интервал для списка */
   color: #333;
   margin-bottom: 0; /* Отступ между пунктами */
 }
