@@ -112,7 +112,8 @@
 
 .bg-ellipse-directions {
   position: absolute;
-  right: -200px;
+  right: -250px; /* -200px - 50px */
   bottom: -100px;
   z-index: 0;
+  transform: scale(1.05); /* Увеличение на 5% */
 }
