@@ -58,7 +58,7 @@
 
 .features-title {
     position: absolute;
-    top: 120px; /* 15px above the text box */
+    top: 90px; /* 120px - 30px */
     right: 120px; /* 20px + 100px */
     font-family: 'TT Travels Next Trl', sans-serif;
     font-size: 28px;
@@ -114,7 +114,7 @@
 
 .final-text {
     position: absolute;
-    top: 522px; /* 390 + 117 + 15 */
+    top: 542px; /* 522px + 20px */
     left: 0; /* Aligned to the left */
     width: 600px; /* New width */
     text-align: left; /* New alignment */
