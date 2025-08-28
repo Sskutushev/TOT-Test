@@ -73,7 +73,7 @@
 }
 
 .direction-card {
-  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(244,244,244,0.4) 50%, rgba(255,255,255,0.3) 100%);
+  background-color: rgba(244, 244, 244, 0.4);
   border-radius: 40px;
   padding: 30px;
   display: flex;
@@ -108,4 +108,11 @@
 
 .direction-card:hover .card-arrow {
   transform: translateX(5px) translateY(-5px);
+}
+
+.bg-ellipse-directions {
+  position: absolute;
+  right: -200px;
+  bottom: -100px;
+  z-index: 0;
 }
