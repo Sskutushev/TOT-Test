@@ -51,7 +51,7 @@
 
 .feature-frame-right {
     position: absolute;
-    top: 250px; /* На 100px ниже левого + 50px */
+    top: 350px; /* 250px + 100px */
     right: 0;
     z-index: 2;
 }
@@ -75,7 +75,7 @@
     width: 685px;
     height: 60px; /* Как просил пользователь */
     top: 150px; /* Примерное позиционирование */
-    left: 350px; /* Примерное позиционирование + 100px */
+    left: 550px; /* 350px + 200px */
     z-index: 1; /* За фреймом, но над эллипсом */
     display: flex;
     align-items: center;
