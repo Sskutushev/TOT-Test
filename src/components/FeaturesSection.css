@@ -159,7 +159,7 @@
         transform: none;
         width: 100%;
         max-width: 100%;
-        text-align: center; /* Центрируем текст */
+        text-align: center; /* Центрируем заголовки и контейнеры */
         margin-bottom: 20px;
         left: auto; right: auto; top: auto; bottom: auto; /* Сбрасываем все стороны */
     }
@@ -181,11 +181,12 @@
         padding: 20px;
     }
     .text-box-right p, .text-box-left p {
-        text-align: center;
+        text-align: left; /* Выравнивание текста по левому краю */
         max-width: 100%;
     }
     .final-text {
         font-size: 18px;
+        text-align: left; /* Выравнивание текста по левому краю */
     }
 }
 
