@@ -14,15 +14,14 @@ const FeaturesSection = () => {
         <img src={ellipse49} alt="" className="bg-ellipse ellipse-bottom-right" />
 
         <div className="feature-main-content">
-            <img src={frame4972} alt="Feature visual" className="feature-frame-left" />
-            <img src={frame4973} alt="Feature visual" className="feature-frame-right" />
-            
             <h2 className="features-title">TOT — это цифровой кристалл твоих возможностей</h2>
             
+            <img src={frame4972} alt="Feature visual" className="feature-frame-left" />
             <div className="text-box-right">
                 <p>Каждая грань TOT открывает путь к реализации идей: создавай авторские курсы, запускай образовательные программы, продавай товары и услуги, инвестируй и развивай личный бренд</p>
             </div>
 
+            <img src={frame4973} alt="Feature visual" className="feature-frame-right" />
             <div className="text-box-left">
                 <p>Присоединяйся прямо сейчас — регистрируйся и начни раскрывать все грани своих возможностей вместе с TOT!</p>
             </div>
