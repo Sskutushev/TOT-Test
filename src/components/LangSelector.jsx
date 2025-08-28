@@ -18,7 +18,7 @@ const languages = [
 ];
 
 // Компонент теперь принимает prop `direction` ('up' или 'down')
-const LangSelector = ({ direction = 'down' }) => {
+const LangSelector = ({ direction = 'down', customClassName }) => {
   const [langMenuOpen, setLangMenuOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(languages[0]);
   const langMenuRef = useRef(null);
@@ -45,7 +45,7 @@ const LangSelector = ({ direction = 'down' }) => {
   }, []);
 
   return (
-    <div className="lang-selector" ref={langMenuRef}>
+    <div className={`lang-selector ${customClassName || ''}`} ref={langMenuRef}>
       <button className="lang-btn" onClick={toggleLangMenu}>
         <div className="flag-wrapper">
             <img src={selectedLang.flag} alt={selectedLang.code} className="flag-icon" />

@@ -98,21 +98,12 @@
   gap: 20px;
 }
 
-.bottom-buttons-container {
-  background-color: #F4F4F4;
-  border-radius: 90px;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .back-button, .lang-selector-stub {
-  background-color: transparent; /* Изменено */
+  background-color: #F4F4F4;
   color: black;
   border: none;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 90px;
   cursor: pointer;
   font-weight: normal;
   text-decoration: none;

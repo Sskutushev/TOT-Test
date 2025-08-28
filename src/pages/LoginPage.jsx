@@ -71,10 +71,8 @@ const LoginPage = () => {
             </div>
           </div>
           <div className="login-panel-buttons">
-            <div className="bottom-buttons-container">
-              <Link to="/" className="back-button">← Вернуться</Link>
-              <LangSelector customClassName="login-page-selector" />
-            </div>
+            <Link to="/" className="back-button">← Вернуться</Link>
+            <LangSelector customClassName="login-page-selector" />
           </div>
         </div>
       </div>
