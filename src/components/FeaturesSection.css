@@ -72,7 +72,6 @@
     background: linear-gradient(to right, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.27) 15%, rgba(255,255,255,1) 37%);
     border-radius: 20px;
     padding: 20px;
-    padding-left: 170px; /* Match title alignment */
     width: 1015px;
     height: 117px;
     top: 150px;
@@ -80,7 +79,7 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end; /* Pushed to the right */
 }
 
 .text-box-right p {
@@ -89,7 +88,8 @@
     line-height: 19px;
     color: #868686;
     font-weight: normal;
-    max-width: 90%;
+    max-width: 640px; /* New width */
+    text-align: left; /* Text inside is left-aligned */
 }
 
 .text-box-left {
