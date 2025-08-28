@@ -16,12 +16,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease-out;
 }
 
 .education-video-wrapper {
   width: 680px;
   height: 700px;
   flex-shrink: 0;
+  transition: all 0.3s ease-out;
 }
 
 .education-video {
@@ -38,6 +40,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  transition: all 0.3s ease-out;
 }
 
 .education-content h2 {
@@ -46,6 +49,7 @@
   font-weight: bold;
   line-height: 1.2;
   text-align: left;
+  transition: all 0.3s ease-out;
 }
 
 .education-content p {
@@ -55,6 +59,7 @@
   color: #868686;
   margin-top: 60px;
   text-align: left;
+  transition: all 0.3s ease-out;
 }
 
 .education-content h3 {
@@ -64,12 +69,14 @@
   font-weight: bold;
   margin-top: 60px;
   text-align: left;
+  transition: all 0.3s ease-out;
 }
 
 .features-list {
   display: flex;
-  gap: 30px; /* Отступ между колонками */
+  gap: 10px; /* Отступ между колонками */
   margin-top: 20px; /* Отступ от подзаголовка */
+  transition: all 0.3s ease-out;
 }
 
 .features-column p {
@@ -80,7 +87,8 @@
   font-size: 16px;
   line-height: 1; /* Межстрочный интервал для списка */
   color: #333;
-  margin-bottom: 0; /* Отступ между пунктами */
+  margin-bottom: -10px; /* Отступ между пунктами */
+  transition: all 0.3s ease-out;
 }
 
 .features-column p img {
@@ -102,4 +110,111 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  transition: all 0.3s ease-out;
+}
+
+/* --- Адаптивность --- */
+
+@media (max-width: 1280px) {
+    .education-container {
+        max-width: 95%;
+    }
+    .education-video-wrapper {
+        width: 50%;
+        height: 500px;
+    }
+    .education-content {
+        width: 45%;
+        margin-left: 20px;
+    }
+    .education-content h2 {
+        font-size: 36px;
+    }
+    .education-content p {
+        font-size: 15px;
+    }
+    .education-content h3 {
+        font-size: 17px;
+    }
+    .features-column p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .education-section {
+        padding: 40px 20px;
+    }
+    .education-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .education-video-wrapper, .education-content {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .education-video-wrapper {
+        margin-bottom: 40px;
+        height: 400px;
+    }
+    .education-content h2, .education-content p, .education-content h3, .education-details-btn {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .features-list {
+        flex-direction: column; /* Столбцы становятся строками */
+        gap: 20px;
+    }
+    .features-column {
+        margin-bottom: 20px;
+    }
+    .features-column p {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .education-section {
+        padding: 30px 15px;
+    }
+    .education-content h2 {
+        font-size: 30px;
+    }
+    .education-content p {
+        font-size: 14px;
+    }
+    .education-content h3 {
+        font-size: 16px;
+    }
+    .education-video-wrapper {
+        height: 300px;
+    }
+    .education-details-btn {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education-section {
+        padding: 20px 10px;
+    }
+    .education-content h2 {
+        font-size: 24px;
+    }
+    .education-content p {
+        font-size: 12px;
+    }
+    .education-content h3 {
+        font-size: 14px;
+    }
+    .education-video-wrapper {
+        height: 200px;
+    }
+    .features-column p {
+        font-size: 12px;
+    }
 }

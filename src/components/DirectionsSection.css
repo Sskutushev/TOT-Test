@@ -110,10 +110,218 @@
   transform: translateX(5px) translateY(-5px);
 }
 
+/* DirectionsSection.css */
+
+.directions-section {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding: 80px 0; /* Отступы сверху и снизу */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.directions-container {
+  width: 100%;
+  max-width: 1240px;
+  height: 610px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-out;
+}
+
 .bg-ellipse-directions {
   position: absolute;
   right: -250px; /* -200px - 50px */
   bottom: -100px;
   z-index: 0;
   transform: scale(1.05); /* Увеличение на 5% */
+  transition: all 0.3s ease-out;
 }
+
+.directions-left {
+  width: 500px;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.directions-left h2 {
+  font-family: 'TT Travels Next Trl', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.2;
+  transition: all 0.3s ease-out;
+}
+
+.directions-left p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #868686;
+  margin-top: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.directions-join-btn {
+  display: inline-block;
+  margin-top: 60px;
+  background-color: #FF2B00;
+  color: white;
+  border-radius: 90px;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+
+.directions-right {
+  width: 605px;
+  height: 605px;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+}
+
+.directions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.direction-card {
+  background-color: rgba(244, 244, 244, 0.4);
+  border-radius: 40px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Для анимации стрелки */
+  backdrop-filter: blur(2px); /* Добавлено */
+  transition: all 0.3s ease-out;
+}
+
+.card-icon {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-out;
+}
+
+.direction-card h3 {
+  font-family: 'TT Travels Next Trl', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+.card-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.direction-card:hover .card-arrow {
+  transform: translateX(5px) translateY(-5px);
+}
+
+/* --- Адаптивность --- */
+
+@media (max-width: 1280px) {
+    .directions-container {
+        max-width: 95%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .directions-left, .directions-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .directions-left h2, .directions-left p, .directions-join-btn {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .directions-left h2 {
+        font-size: 36px;
+    }
+    .directions-left p {
+        font-size: 15px;
+    }
+    .directions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    .card-icon {
+        width: 120px;
+        height: 120px;
+    }
+    .direction-card h3 {
+        font-size: 18px;
+    }
+    .bg-ellipse-directions {
+        display: none; /* Скрываем на меньших экранах */
+    }
+}
+
+@media (max-width: 768px) {
+    .directions-section {
+        padding: 40px 0;
+    }
+    .directions-left h2 {
+        font-size: 30px;
+    }
+    .directions-left p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .directions-join-btn {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+    .directions-grid {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+    .card-icon {
+        width: 100px;
+        height: 100px;
+    }
+    .direction-card h3 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .directions-section {
+        padding: 30px 0;
+    }
+    .directions-left h2 {
+        font-size: 24px;
+    }
+    .directions-left p {
+        font-size: 12px;
+    }
+    .directions-join-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+    .direction-card {
+        padding: 20px;
+    }
+    .card-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
