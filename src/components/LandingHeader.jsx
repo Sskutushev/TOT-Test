@@ -71,7 +71,7 @@ const LandingHeader = () => {
               <NavLink to="/investments">Инвестиции</NavLink>
               <NavLink to="/marketplace-landing">Маркетплейс</NavLink>
               <NavLink to="/news">Новости</NavLink>
-              <NavLink to="/partnership">Партнерская программа</NavLink>
+              <NavLink to="/partnership">Партнёрская</NavLink>
             </nav>
           </div>
           <div className="header-right desktop-only">
@@ -105,7 +105,7 @@ const LandingHeader = () => {
                 <NavLink to="/investments" onClick={handleLinkClick}>Инвестиции</NavLink>
                 <NavLink to="/marketplace-landing" onClick={handleLinkClick}>Маркетплейс</NavLink>
                 <NavLink to="/news" onClick={handleLinkClick}>Новости</NavLink>
-                <NavLink to="/partnership" onClick={handleLinkClick}>Партнерская программа</NavLink>
+                <NavLink to="/partnership" onClick={handleLinkClick}>Партнёрская</NavLink>
             </nav>
             <div className="mobile-menu-footer">
                 <Link to="/login" className="login-btn" onClick={handleLinkClick}>
