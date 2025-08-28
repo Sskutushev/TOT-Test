@@ -1,0 +1,127 @@
+/* FeaturesSection.css */
+
+.features-section {
+  background-color: #F4F4F4;
+  width: 100%; /* Сделаем ширину 100% для адаптивности */
+  padding: 50px 0; /* Используем паддинги вместо фиксированной высоты */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Обрезаем выходящие элементы */
+}
+
+.features-container {
+  width: 100%;
+  max-width: 1240px;
+  height: 640px; /* Как просил пользователь */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Для расположения левой и правой части */
+}
+
+.bg-ellipse {
+  position: absolute;
+  z-index: 0; /* z-index 0, чтобы быть за контентом, но над фоном секции */
+}
+
+.ellipse-top-left {
+  top: -80px;
+  left: -150px;
+}
+
+.ellipse-bottom-right {
+  bottom: -120px;
+  right: -150px;
+}
+
+/* Общий контейнер для всего текстового контента и фреймов */
+.feature-main-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.feature-frame-left {
+    position: absolute;
+    top: 100px; /* Примерное значение */
+    left: 0;
+    z-index: 2;
+}
+
+.feature-frame-right {
+    position: absolute;
+    top: 200px; /* На 100px ниже левого */
+    right: 0;
+    z-index: 2;
+}
+
+.features-title {
+    position: absolute;
+    top: 50px; /* 30px над левым фреймом */
+    left: 30px; /* Небольшой отступ слева */
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 28px; /* Примерный размер */
+    font-weight: bold;
+    max-width: 500px;
+    z-index: 3;
+}
+
+.text-box-right {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    width: 685px;
+    height: 60px; /* Как просил пользователь */
+    top: 150px; /* Примерное позиционирование */
+    left: 250px; /* Примерное позиционирование */
+    z-index: 1; /* За фреймом, но над эллипсом */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Текст справа */
+}
+
+.text-box-right p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 90%; /* Чтобы текст не прилипал к краю */
+}
+
+.text-box-left {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    width: 685px;
+    height: 60px; /* Как просил пользователь */
+    top: 350px; /* Примерное позиционирование */
+    left: 50px; /* Примерное позиционирование */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Текст слева */
+}
+
+.text-box-left p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 90%;
+}
+
+.final-text {
+    position: absolute;
+    bottom: 50px; /* 50px над нижним краем */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    z-index: 3;
+}
+
