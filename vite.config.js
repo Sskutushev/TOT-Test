@@ -1,5 +1,6 @@
-import { defineConfig } from 'vite'; // Trigger new deployment
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => {
@@ -7,7 +8,10 @@ export default defineConfig(({ command }) => {
   // For GitHub Pages (build), base must be '/repository-name/'.
   const base = command === 'serve' ? '/' : '/TOT-Test/';
   return {
-    plugins: [react()],
+    plugins: [
+      react(),
+      tailwindcss(),
+    ],
     base: base,
     build: {
       outDir: 'docs',
