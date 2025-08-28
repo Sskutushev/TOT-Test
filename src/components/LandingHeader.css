@@ -165,3 +165,9 @@
     .desktop-only { display: none; }
     .mobile-only { display: block; }
 }
+
+.active-nav-link {
+  text-decoration: underline;
+  text-decoration-color: #FF2B00;
+  text-underline-offset: 4px;
+}

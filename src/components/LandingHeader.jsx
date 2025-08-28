@@ -66,12 +66,12 @@ const LandingHeader = () => {
               <img src={logo} alt="TOT Logo" className="logo" />
             </Link>
             <nav className="header-nav desktop-only">
-              <NavLink to="/education">Обучение</NavLink>
-              <NavLink to="/social">Соц сеть</NavLink>
-              <NavLink to="/investments">Инвестиции</NavLink>
-              <NavLink to="/marketplace-landing">Маркетплейс</NavLink>
-              <NavLink to="/news">Новости</NavLink>
-              <NavLink to="/partnership">Партнёрская</NavLink>
+              <NavLink to="/education" className={({ isActive }) => isActive ? "active-nav-link" : ""}>Обучение</NavLink>
+              <NavLink to="/social" className={({ isActive }) => isActive ? "active-nav-link" : ""}>Соц сеть</NavLink>
+              <NavLink to="/investments" className={({ isActive }) => isActive ? "active-nav-link" : ""}>Инвестиции</NavLink>
+              <NavLink to="/marketplace-landing" className={({ isActive }) => isActive ? "active-nav-link" : ""}>Маркетплейс</NavLink>
+              <NavLink to="/news" className={({ isActive }) => isActive ? "active-nav-link" : ""}>Новости</NavLink>
+              <NavLink to="/partnership" className={({ isActive }) => isActive ? "active-nav-link" : ""}>Партнёрская</NavLink>
             </nav>
           </div>
           <div className="header-right desktop-only">
@@ -100,12 +100,12 @@ const LandingHeader = () => {
         </div>
         <div className="mobile-menu-content">
             <nav className="mobile-nav">
-                <NavLink to="/education" onClick={handleLinkClick}>Обучение</NavLink>
-                <NavLink to="/social" onClick={handleLinkClick}>Соц сеть</NavLink>
-                <NavLink to="/investments" onClick={handleLinkClick}>Инвестиции</NavLink>
-                <NavLink to="/marketplace-landing" onClick={handleLinkClick}>Маркетплейс</NavLink>
-                <NavLink to="/news" onClick={handleLinkClick}>Новости</NavLink>
-                <NavLink to="/partnership" onClick={handleLinkClick}>Партнёрская</NavLink>
+                <NavLink to="/education" onClick={handleLinkClick} className={({ isActive }) => isActive ? "active-nav-link" : ""}>Обучение</NavLink>
+                <NavLink to="/social" onClick={handleLinkClick} className={({ isActive }) => isActive ? "active-nav-link" : ""}>Соц сеть</NavLink>
+                <NavLink to="/investments" onClick={handleLinkClick} className={({ isActive }) => isActive ? "active-nav-link" : ""}>Инвестиции</NavLink>
+                <NavLink to="/marketplace-landing" onClick={handleLinkClick} className={({ isActive }) => isActive ? "active-nav-link" : ""}>Маркетплейс</NavLink>
+                <NavLink to="/news" onClick={handleLinkClick} className={({ isActive }) => isActive ? "active-nav-link" : ""}>Новости</NavLink>
+                <NavLink to="/partnership" onClick={handleLinkClick} className={({ isActive }) => isActive ? "active-nav-link" : ""}>Партнёрская</NavLink>
             </nav>
             <div className="mobile-menu-footer">
                 <Link to="/login" className="login-btn" onClick={handleLinkClick}>
