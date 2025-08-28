@@ -78,9 +78,9 @@
   gap: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.4; /* Межстрочный интервал для списка */
+  line-height: 1.2; /* Межстрочный интервал для списка */
   color: #333;
-  margin-bottom: 5px; /* Отступ между пунктами */
+  margin-bottom: 0; /* Отступ между пунктами */
 }
 
 .features-column p img {
