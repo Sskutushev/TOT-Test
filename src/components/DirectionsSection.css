@@ -73,7 +73,7 @@
 }
 
 .direction-card {
-  background-color: #F4F4F4;
+  background-color: rgba(244, 244, 244, 0.8);
   border-radius: 40px;
   padding: 30px;
   display: flex;
@@ -84,7 +84,7 @@
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden; /* Для анимации стрелки */
-  filter: blur(5px); /* Добавлено */
+  backdrop-filter: blur(2px); /* Добавлено */
 }
 
 .card-icon {
