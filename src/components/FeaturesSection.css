@@ -70,35 +70,38 @@
 
 .text-box-right {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to right, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.27) 15%, rgba(255,255,255,1) 37%);
     border-radius: 20px;
     padding: 20px;
+    padding-left: 120px; /* Adjusted for alignment */
     width: 1015px;
     height: 117px;
     top: 150px;
-    right: 0; /* Aligned to the right frame */
+    right: 0;
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start; /* Text to the left */
 }
 
 .text-box-right p {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 19px;
+    color: #868686;
+    font-weight: normal;
     max-width: 90%;
 }
 
 .text-box-left {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.27) 15%, rgba(255,255,255,1) 37%);
     border-radius: 20px;
     padding: 20px;
     width: 1015px;
     height: 117px;
-    top: 390px;
-    left: 0; /* Aligned to the left frame */
+    top: 290px; /* 390px - 100px */
+    left: 0;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -109,7 +112,9 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 19px;
-    max-width: 90%;
+    color: #868686;
+    font-weight: normal;
+    max-width: 640px;
 }
 
 .final-text {
