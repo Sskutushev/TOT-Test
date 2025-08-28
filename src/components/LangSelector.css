@@ -15,6 +15,7 @@
   font-size: 16px;
   white-space: nowrap;
   gap: 8px;
+  height: 40px; /* Added explicit height */
 }
 
 .flag-wrapper {
