@@ -38,7 +38,7 @@
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 12px;
   margin-left: 150px;
   white-space: nowrap;
 }
