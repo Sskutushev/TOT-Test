@@ -58,13 +58,14 @@
 
 .features-title {
     position: absolute;
-    top: 50px; /* 30px над левым фреймом */
-    left: 30px; /* Небольшой отступ слева */
+    top: 120px; /* 15px above the text box */
+    right: 20px; /* Aligned with text in the box */
     font-family: 'TT Travels Next Trl', sans-serif;
-    font-size: 28px; /* Примерный размер */
+    font-size: 28px;
     font-weight: bold;
     max-width: 500px;
     z-index: 3;
+    text-align: right;
 }
 
 .text-box-right {
@@ -72,21 +73,21 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 20px;
-    width: 685px;
-    height: 60px; /* Как просил пользователь */
-    top: 150px; /* Примерное позиционирование */
-    left: 550px; /* 350px + 200px */
-    z-index: 1; /* За фреймом, но над эллипсом */
+    width: 1015px;
+    height: 117px;
+    top: 150px;
+    right: 0; /* Aligned to the right frame */
+    z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Текст справа */
+    justify-content: flex-end;
 }
 
 .text-box-right p {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 19px;
-    max-width: 90%; /* Чтобы текст не прилипал к краю */
+    max-width: 90%;
 }
 
 .text-box-left {
@@ -94,14 +95,14 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 20px;
-    width: 685px;
-    height: 60px; /* Как просил пользователь */
-    top: 390px; /* 350px + 40px */
-    left: 50px; /* Примерное позиционирование */
+    width: 1015px;
+    height: 117px;
+    top: 390px;
+    left: 0; /* Aligned to the left frame */
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Текст слева */
+    justify-content: flex-start;
 }
 
 .text-box-left p {
@@ -113,12 +114,10 @@
 
 .final-text {
     position: absolute;
-    bottom: 50px; /* 50px над нижним краем */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
+    bottom: 100px; /* Adjusted bottom */
+    left: 0; /* Aligned to the left */
+    width: 600px; /* New width */
+    text-align: left; /* New alignment */
     font-family: 'TT Travels Next Trl', sans-serif;
     font-size: 20px;
     line-height: 20px;
