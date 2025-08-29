@@ -4,6 +4,7 @@ import LandingHero from '../components/LandingHero';
 import FeaturesSection from '../components/FeaturesSection';
 import DirectionsSection from '../components/DirectionsSection';
 import EducationSection from '../components/EducationSection';
+import SocialSection from '../components/SocialSection';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -15,6 +16,7 @@ const LandingPage = () => {
         <FeaturesSection />
         <DirectionsSection />
         <EducationSection />
+        <SocialSection />
         {/* Следующие секции будут здесь */}
       </main>
     </div>

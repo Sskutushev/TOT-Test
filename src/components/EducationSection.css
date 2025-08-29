@@ -76,7 +76,7 @@
   display: grid; /* Используем grid для десктопа */
   grid-template-columns: repeat(2, 1fr);
   gap: 0 20px; /* Отступ между колонками, нет отступа между строками */
-  margin-top: 20px;
+  margin-top: -15px; /* ОТСТУП ОТ H3 ДО СПИСКА */
   width: 100%;
 }
 
@@ -88,7 +88,7 @@
   font-size: 16px;
   line-height: 1.5; /* Увеличим для читаемости */
   color: #333;
-  margin-bottom: 15px; /* Отступ между пунктами */
+  margin-bottom: -15px; /* ОТСТУП МЕЖДУ ЭЛЕМЕНТАМИ СПИСКА */
 }
 
 .features-list p img {
@@ -176,12 +176,12 @@
     }
     .features-list {
         grid-template-columns: 1fr; /* Одна колонка */
-        gap: 10px; /* Отступ между элементами */
+        gap: 0; /* Убираем gap для мобильных */
         width: 100%;
         max-width: 500px;
     }
     .features-list p {
-      margin-bottom: 0; /* Убираем старый отступ */
+      margin-bottom: -15px; /* Применяем отрицательный отступ и на мобильных */
       text-align: left;
       justify-content: flex-start;
     }

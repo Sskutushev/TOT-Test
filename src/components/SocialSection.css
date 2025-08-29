@@ -1,0 +1,237 @@
+/* SocialSection.css */
+.social-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.social-container {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Выравниваем колонки по верху */
+}
+
+.social-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.social-text-container {
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-text-container h2 {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.social-text-container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #868686;
+    margin-top: 50px; /* ИЗМЕНЕНО */
+}
+
+.social-details-btn {
+    width: 170px;
+    height: 60px;
+    background-color: #FF2B00;
+    color: white;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 50px; /* ИЗМЕНЕНО */
+}
+
+.social-video-container {
+    width: 580px;
+    height: 580px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.social-video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-right-column {
+    width: 605px;
+    height: 890px; /* Высота задана жестко, может потребоваться адаптация */
+}
+
+.social-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-card {
+    background-color: #F4F4F4;
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+}
+
+.social-card .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.social-card .card-icon {
+    width: 48px; /* Примерный размер иконки */
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.social-card h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.social-card .card-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #868686;
+    margin-top: -15px; /* ИЗМЕНЕНО */
+    margin-left: 68px; /* Отступ слева, равный ширине иконки + отступ */
+}
+
+.development-badge {
+    position: absolute;
+    top: 0;
+    left: 68px; /* Отступ от иконки */
+    background-color: #868686;
+    color: white;
+    border-radius: 90px;
+    padding: 5px 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.development-badge::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('/hourglases.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Стили для 4-й карточки */
+.social-card:nth-child(4) h3 {
+    margin-top: 30px; /* Отступ под плашкой */
+    color: #868686;
+}
+
+/* --- Адаптивность --- */
+
+@media (max-width: 1280px) {
+    .social-container {
+        max-width: 95%;
+        gap: 20px;
+    }
+    .social-left-column, .social-right-column {
+        width: 50%;
+    }
+    .social-text-container, .social-video-container {
+        width: 100%;
+    }
+    .social-right-column {
+        height: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .social-section {
+        padding: 40px 20px;
+    }
+    .social-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .social-left-column, .social-right-column {
+        width: 100%;
+        max-width: 605px; /* Ограничим максимальную ширину для консистентности */
+    }
+    .social-text-container h2 {
+        text-align: center;
+    }
+    .social-text-container p {
+        text-align: left;
+    }
+    .social-details-btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .social-text-container h2 {
+        font-size: 30px;
+    }
+    .social-text-container p {
+        font-size: 14px;
+    }
+    .social-details-btn {
+        font-size: 16px;
+        width: 150px;
+        height: 50px;
+    }
+    .social-video-container {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    .social-card h3 {
+        font-size: 16px;
+    }
+    .social-card .card-text {
+        font-size: 13px;
+        margin-left: 0; /* Убираем отступ на мобильных */
+    }
+    .social-card .card-header {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-section {
+        padding: 30px 15px;
+    }
+    .social-text-container h2 {
+        font-size: 24px;
+    }
+    .social-card {
+        padding: 20px;
+    }
+    .social-card .card-text {
+       margin-top: 5px; /* Сбрасываем отрицательный отступ на маленьких экранах */
+    }
+}
