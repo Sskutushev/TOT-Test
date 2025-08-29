@@ -19,7 +19,7 @@ const GridFeaturesSection = () => {
       <div className="grid-features-container">
         <div className="grid-features-title-block">
           <h2>Погрузись в мир безграничных возможностей</h2>
-          <a href="/login" className="grid-features-btn btn btn-primary">Начать сейчас</a>
+          <a href="/login" className="grid-features-btn btn btn-primary desktop-only-btn">Начать сейчас</a>
           <img src={import.meta.env.BASE_URL + 'Кубок.svg'} alt="" className="cup-overlay" />
         </div>
         {cardData.map(card => (
@@ -38,6 +38,7 @@ const GridFeaturesSection = () => {
             <p>{card.text}</p>
           </div>
         ))}
+        <a href="/login" className="grid-features-btn btn btn-primary mobile-only-btn">Начать сейчас</a>
       </div>
     </section>
   );

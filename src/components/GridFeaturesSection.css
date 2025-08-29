@@ -153,6 +153,10 @@
     margin-top: 15px;
 }
 
+.mobile-only-btn {
+    display: none !important;
+}
+
 /* --- Адаптивность --- */
 @media (max-width: 1300px) { /* Точка для сдвига карточек */
     .feature-card {
@@ -189,6 +193,13 @@
     }
     .video-bg-container .left-video {
         width: 100%; /* Левое видео на весь фон */
+    }
+    .desktop-only-btn {
+        display: none !important;
+    }
+    .mobile-only-btn {
+        display: flex !important;
+        margin: 20px auto 0;
     }
 }
 

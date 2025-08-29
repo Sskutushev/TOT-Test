@@ -73,11 +73,10 @@
 }
 
 .features-list {
-  display: grid; /* Используем grid для десктопа */
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0 20px; /* Отступ между колонками, нет отступа между строками */
-  margin-top: -15px; /* ОТСТУП ОТ H3 ДО СПИСКА */
-  width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 5px; /* row-gap column-gap */
 }
 
 .features-list p {
@@ -85,10 +84,8 @@
   align-items: center;
   gap: 10px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5; /* Увеличим для читаемости */
-  color: #333;
-  margin-bottom: -15px; /* ОТСТУП МЕЖДУ ЭЛЕМЕНТАМИ СПИСКА */
+  font-size: 14px;
+  width: calc(50% - 10px);
 }
 
 .features-list p img {
@@ -145,36 +142,35 @@
     .education-video-wrapper {
         margin-bottom: 40px;
         height: auto;
-        aspect-ratio: 16/9; /* Сохраняем пропорции видео */
-        width: calc(100% - 40px); /* Уменьшаем ширину */
-        margin-left: auto; /* Центрируем */
+        aspect-ratio: 16/9; 
+        width: calc(100% - 40px); 
+        margin-left: auto; 
         margin-right: auto;
     }
     .education-content {
-        align-items: center; /* Центрируем контент внутри блока */
+        align-items: center; 
     }
     .education-content h2 {
-        text-align: center; /* Заголовок остается по центру */
+        text-align: center; 
     }
     .education-content p, .education-content h3 {
-        text-align: left; /* Подзаголовок и заголовок списка - по левому краю */
-        width: 100%; /* Растягиваем на всю ширину родителя */
-        max-width: 500px; /* Ограничиваем максимальную ширину для читаемости */
+        text-align: left; 
+        width: 100%; 
+        max-width: 500px; 
     }
     .education-details-btn {
         margin-left: auto;
         margin-right: auto;
     }
     .features-list {
-        grid-template-columns: 1fr; /* Одна колонка */
-        gap: 0; /* Убираем gap для мобильных */
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
         width: 100%;
         max-width: 500px;
     }
     .features-list p {
-      margin-bottom: -15px; /* Применяем отрицательный отступ и на мобильных */
-      text-align: left;
-      justify-content: flex-start;
+        width: 100%;
     }
 }
 
@@ -192,9 +188,9 @@
         font-size: 16px;
     }
     .education-video-wrapper {
-        width: 100%; /* Увеличиваем ширину */
-        aspect-ratio: 4/3; /* Делаем выше */
-        margin-top: 20px; /* Опускаем ниже */
+        width: 100%; 
+        aspect-ratio: 4/3; 
+        margin-top: 20px; 
     }
 }
 
@@ -206,12 +202,12 @@
         font-size: 24px;
     }
     .education-content p {
-        font-size: 14px; /* Унифицируем размер */
+        font-size: 14px; 
     }
     .education-content h3 {
         font-size: 14px;
     }
     .features-list p {
-        font-size: 14px; /* Унифицируем размер */
+        font-size: 14px; 
     }
 }

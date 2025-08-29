@@ -102,7 +102,13 @@
     .marketplace-promo-left {
         height: auto;
         align-items: center;
+        /* text-align: center; */ /* Убираем глобальное центрирование */
+    }
+    .marketplace-promo-left h2 {
         text-align: center;
+    }
+    .marketplace-promo-left .promo-subtitle {
+        text-align: left;
     }
     .promo-details-btn {
         align-self: center;

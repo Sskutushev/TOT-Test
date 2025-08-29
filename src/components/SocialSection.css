@@ -125,7 +125,7 @@
 
 /* Возвращаем старый отступ для 4-й карточки */
 .social-card:nth-child(4) .card-header {
-    margin-bottom: -15px;
+    margin-bottom: 10px;
 }
 
 .development-badge {
@@ -242,7 +242,7 @@
     }
     .social-card .card-header {
         gap: 15px;
-        margin-bottom: -15px; /* Меняем отступ на мобильных */
+        margin-bottom: 15px; /* Меняем отступ на мобильных */
     }
 }
 
