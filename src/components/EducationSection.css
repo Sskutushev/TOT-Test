@@ -72,11 +72,13 @@
   transition: all 0.3s ease-out;
 }
 
+/* --- ПЕРЕПИСАННЫЕ СТИЛИ СПИСКА --- */
 .features-list {
-    margin-top: 15px;
+    width: 100%;
+    margin-top: 20px; /* Отступ от h3 до списка */
     display: flex;
     flex-wrap: wrap;
-    gap: 5px 5px; /* row-gap column-gap */
+    justify-content: space-between; /* Для создания гэпа между колонками */
 }
 
 .features-list p {
@@ -85,8 +87,11 @@
   gap: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  width: calc(50% - 10px);
+  width: 48%; /* Ширина для двух колонок */
+  margin: 0 0 10px 0; /* Главное: отступ 10px СНИЗУ */
+  padding: 0;
 }
+/* --- КОНЕЦ ПЕРЕПИСАННЫХ СТИЛЕЙ --- */
 
 .features-list p img {
   width: 20px;

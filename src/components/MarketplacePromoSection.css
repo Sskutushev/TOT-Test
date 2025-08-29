@@ -41,16 +41,15 @@
 
 .promo-features-list {
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 20px; /* row-gap column-gap */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 3 колонки, максимально гибкие */
+    gap: 15px 10px; /* row-gap column-gap */
 }
 
 .promo-feature-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: calc(33.33% - 14px); /* Three items per row */
 }
 
 .promo-feature-item:nth-child(3) {
@@ -64,7 +63,8 @@
 
 .promo-feature-item span {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 12px; /* Уменьшаем размер шрифта */
+    word-break: break-word; /* Добавляем перенос слов */
 }
 
 .promo-details-btn {
