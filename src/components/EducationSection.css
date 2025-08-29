@@ -73,25 +73,25 @@
 }
 
 .features-list {
-  display: flex;
-  gap: -10px; /* Отступ между колонками */
-  margin-top: 20px; /* Отступ от подзаголовка */
-  transition: all 0.3s ease-out;
+  display: grid; /* Используем grid для десктопа */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 20px; /* Отступ между колонками, нет отступа между строками */
+  margin-top: 20px;
+  width: 100%;
 }
 
-.features-column p {
+.features-list p {
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1; /* Межстрочный интервал для списка */
+  line-height: 1.5; /* Увеличим для читаемости */
   color: #333;
-  margin-bottom: -15px; /* Отступ между пунктами */
-  transition: all 0.3s ease-out;
+  margin-bottom: 15px; /* Отступ между пунктами */
 }
 
-.features-column p img {
+.features-list p img {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
@@ -121,7 +121,8 @@
     }
     .education-video-wrapper {
         width: 50%;
-        height: 500px;
+        height: auto;
+        aspect-ratio: 16/9;
     }
     .education-content {
         width: 45%;
@@ -136,7 +137,7 @@
     .education-content h3 {
         font-size: 17px;
     }
-    .features-column p {
+    .features-list p {
         font-size: 15px;
     }
 }
@@ -152,26 +153,37 @@
     .education-video-wrapper, .education-content {
         width: 100%;
         margin-left: 0;
-        text-align: center;
     }
     .education-video-wrapper {
         margin-bottom: 40px;
-        height: 400px;
+        height: auto;
+        aspect-ratio: 16/9; /* Сохраняем пропорции видео */
     }
-    .education-content h2, .education-content p, .education-content h3, .education-details-btn {
-        text-align: center;
+    .education-content {
+        align-items: center; /* Центрируем контент внутри блока */
+    }
+    .education-content h2 {
+        text-align: center; /* Заголовок остается по центру */
+    }
+    .education-content p, .education-content h3 {
+        text-align: left; /* Подзаголовок и заголовок списка - по левому краю */
+        width: 100%; /* Растягиваем на всю ширину родителя */
+        max-width: 500px; /* Ограничиваем максимальную ширину для читаемости */
+    }
+    .education-details-btn {
         margin-left: auto;
         margin-right: auto;
     }
     .features-list {
-        flex-direction: column; /* Столбцы становятся строками */
-        gap: 20px;
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 10px; /* Отступ между элементами */
+        width: 100%;
+        max-width: 500px;
     }
-    .features-column {
-        margin-bottom: 20px;
-    }
-    .features-column p {
-        justify-content: center;
+    .features-list p {
+      margin-bottom: 0; /* Убираем старый отступ */
+      text-align: left;
+      justify-content: flex-start;
     }
 }
 
@@ -188,9 +200,6 @@
     .education-content h3 {
         font-size: 16px;
     }
-    .education-video-wrapper {
-        height: 300px;
-    }
     .education-details-btn {
         width: 150px;
         height: 50px;
@@ -206,15 +215,12 @@
         font-size: 24px;
     }
     .education-content p {
-        font-size: 12px;
+        font-size: 14px; /* Унифицируем размер */
     }
     .education-content h3 {
         font-size: 14px;
     }
-    .education-video-wrapper {
-        height: 200px;
-    }
-    .features-column p {
-        font-size: 12px;
+    .features-list p {
+        font-size: 14px; /* Унифицируем размер */
     }
 }

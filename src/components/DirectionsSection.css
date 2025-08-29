@@ -285,6 +285,8 @@
     .directions-left p {
         font-size: 14px;
         line-height: 1.5;
+        text-align: left; /* Выравнивание по левому краю */
+        padding: 0 15px; /* Добавим небольшие отступы по бокам */
     }
     .directions-join-btn {
         font-size: 16px;
@@ -292,6 +294,8 @@
     }
     .directions-grid {
         grid-template-columns: 1fr; /* Одна колонка */
+        max-width: 400px; /* Ограничим ширину карточек на мобильных */
+        margin: 0 auto;
     }
     .card-icon {
         width: 100px;
@@ -310,7 +314,7 @@
         font-size: 24px;
     }
     .directions-left p {
-        font-size: 12px;
+        font-size: 14px; /* Размер как в 768 */
     }
     .directions-join-btn {
         font-size: 14px;
@@ -318,6 +322,9 @@
     }
     .direction-card {
         padding: 20px;
+    }
+    .direction-card h3 {
+        font-size: 1.5rem; /* Восстанавливаем размер заголовка */
     }
     .card-icon {
         width: 80px;
