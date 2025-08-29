@@ -1,0 +1,12 @@
+import React from 'react';
+
+const ArrowIcon = ({ className }) => {
+  return (
+    <svg className={className} width="42" height="43" viewBox="0 0 42 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="21" cy="21.6206" r="21" fill="white" fillOpacity="0.3"/>
+      <path fillRule="evenodd" clipRule="evenodd" d="M24.3431 14.5495L30.7071 20.9134C31.0976 21.304 31.0976 21.9371 30.7071 22.3277L24.3431 28.6916C23.9526 29.0821 23.3195 29.0821 22.9289 28.6916C22.5384 28.3011 22.5384 27.6679 22.9289 27.2774L27.5858 22.6206L11 22.6206C10.4477 22.6206 10 22.1728 10 21.6206C10 21.0683 10.4477 20.6206 11 20.6206L27.5858 20.6206L22.9289 15.9637C22.5384 15.5732 22.5384 14.94 22.9289 14.5495C23.3195 14.159 23.9526 14.159 24.3431 14.5495Z" fill="currentColor"/>
+    </svg>
+  );
+};
+
+export default ArrowIcon;

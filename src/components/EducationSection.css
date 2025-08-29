@@ -98,19 +98,7 @@
 }
 
 .education-details-btn {
-  display: inline-block;
-  width: 170px;
-  height: 60px;
-  background-color: #FF2B00;
-  color: white;
-  border-radius: 90px;
-  text-decoration: none;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 50px;
-  transition: all 0.3s ease-out;
 }
 
 /* --- Адаптивность --- */
@@ -207,11 +195,6 @@
         width: 100%; /* Увеличиваем ширину */
         aspect-ratio: 4/3; /* Делаем выше */
         margin-top: 20px; /* Опускаем ниже */
-    }
-    .education-details-btn {
-        width: 150px;
-        height: 50px;
-        font-size: 16px;
     }
 }
 

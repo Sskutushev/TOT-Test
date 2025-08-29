@@ -20,7 +20,7 @@ const LandingHero = () => {
           <h1>Торгуй. Обучай. Твори</h1>
           <h2>- всё в одном месте</h2>
           <p>Открой для себя новый многогранный мир, где твои идеи становятся глобальными проектами</p>
-          <Link to="/login" className="join-btn">Присоединиться</Link>
+          <Link to="/login" className="join-btn btn btn-primary">Присоединиться</Link>
         </div>
         <div className="hero-separator"></div>
         <div className="hero-right">

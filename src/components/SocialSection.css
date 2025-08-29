@@ -47,17 +47,9 @@
 }
 
 .social-details-btn {
-    width: 170px;
-    height: 60px;
-    background-color: #FF2B00;
-    color: white;
-    border-radius: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    font-size: 18px;
     margin-top: 50px; /* ИЗМЕНЕНО */
+    align-self: flex-start; /* Прижимаем к левому краю */
+    text-decoration: none !important; /* Убираем подчеркивание */
 }
 
 .social-video-container {
@@ -92,6 +84,12 @@
     -webkit-backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .social-card .card-header {
@@ -99,6 +97,7 @@
     align-items: flex-start;
     gap: 20px;
     position: relative;
+    margin-bottom: -30px; /* Устанавливаем -30px */
 }
 
 .social-card .card-icon {
@@ -120,8 +119,13 @@
     font-size: 14px;
     line-height: 16px;
     color: #868686;
-    margin-top: -15px; /* ИЗМЕНЕНО */
+    /* margin-top: 10px; */ /* УБИРАЕМ СТАРЫЙ ОТСТУП */
     margin-left: 68px; /* Отступ слева, равный ширине иконки + отступ */
+}
+
+/* Возвращаем старый отступ для 4-й карточки */
+.social-card:nth-child(4) .card-header {
+    margin-bottom: -15px;
 }
 
 .development-badge {
@@ -234,9 +238,11 @@
     .social-card .card-text {
         font-size: 13px;
         margin-left: 0; /* Убираем отступ на мобильных */
+        max-width: 150px; /* Ограничиваем ширину текста */
     }
     .social-card .card-header {
         gap: 15px;
+        margin-bottom: -15px; /* Меняем отступ на мобильных */
     }
 }
 

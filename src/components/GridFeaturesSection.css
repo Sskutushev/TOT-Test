@@ -1,0 +1,199 @@
+/* GridFeaturesSection.css */
+.grid-features-section {
+    width: 100%;
+    /* height: 800px; */ /* Убираем фикс высоту */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.video-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 0;
+}
+
+.video-bg-container video {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-features-container {
+    width: 100%;
+    max-width: 1240px;
+    /* height: 680px; */ /* Убираем фикс высоту */
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas:
+        "title card1 card2"
+        "card3 card4 card5";
+}
+
+.grid-features-title-block {
+    grid-area: title;
+    width: 455px; /* Ширина больше, чем колонка грида, будет накладываться */
+    height: 270px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-features-title-block h2 {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000000;
+}
+
+.grid-features-btn {
+    width: 200px;
+    height: 60px;
+}
+
+.cup-overlay {
+    position: absolute;
+    right: -120px; /* Сдвиг вправо */
+    bottom: -130px; /* Сдвиг вниз */
+    width: auto; /* Размеры по факту */
+    height: auto;
+    transition: transform 0.3s ease;
+    z-index: 10; /* Поднимаем над карточками */
+}
+
+.cup-overlay:hover {
+    transform: scale(1.2);
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.85); /* Полупрозрачный белый */
+    border-radius: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative; /* Для сдвига */
+    left: 200px; /* СДВИГ ВПРАВО */
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card-header {
+    position: relative;
+    height: 80px;
+}
+
+.feature-card-icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.feature-dev-badge {
+    background-color: #868686;
+    color: white;
+    border-radius: 90px;
+    padding: 5px 10px;
+    font-size: 12px;
+    display: inline-flex; 
+    align-items: center;
+    gap: 5px;
+    margin-top: 50px; 
+    margin-bottom: 10px; 
+}
+
+.feature-dev-badge::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('/hourglases.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.feature-card h3 {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: bold;
+    color: #000000; /* ЧЕРНЫЙ ТЕКСТ */
+    margin-top: 0; /* Убираем общий отступ */
+}
+
+.feature-card:not([style*="card4"]) h3 {
+    margin-top: 50px; 
+}
+
+.feature-card p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #868686; /* ТЕМНО-СЕРЫЙ ТЕКСТ */
+    margin-top: 15px;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 1300px) { /* Точка для сдвига карточек */
+    .feature-card {
+        left: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-features-section {
+        padding: 40px 20px;
+    }
+    .grid-features-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 450px; /* Ограничиваем ширину */
+    }
+    .grid-features-title-block {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        align-items: center;
+    }
+    .feature-card {
+        width: 100%;
+    }
+    .cup-overlay {
+        display: none; /* Скрываем кубок */
+    }
+    .video-bg-container .right-video {
+        display: none; /* Скрываем правое видео */
+    }
+    .video-bg-container .left-video {
+        width: 100%; /* Левое видео на весь фон */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-features-title-block h2 {
+        font-size: 30px;
+    }
+}

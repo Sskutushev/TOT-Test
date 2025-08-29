@@ -53,16 +53,7 @@
 }
 
 .join-btn {
-  background-color: #FF2B00;
-  color: white;
-  border: none;
-  border-radius: 90px;
-  padding: 15px 35px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: 400;
-  cursor: pointer;
+  /* All styles are now handled by .btn and .btn-primary */
 }
 
 .hero-separator {

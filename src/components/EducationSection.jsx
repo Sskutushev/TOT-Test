@@ -22,7 +22,7 @@ const EducationSection = () => {
               <p><img src={import.meta.env.BASE_URL + 'mark.svg'} alt="" />Геймификация и награды (Доступно скоро)</p>
               <p><img src={import.meta.env.BASE_URL + 'mark.svg'} alt="" />Реальные отзывы с живой системой рейтинга</p>
           </div>
-          <Link to="/education" className="education-details-btn">Подробнее</Link>
+          <Link to="/education" className="education-details-btn btn btn-primary">Подробнее</Link>
         </div>
       </div>
     </section>

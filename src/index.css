@@ -1,3 +1,51 @@
+:root {
+  --primary-main: #FF2B00; /* primer main */
+  --primary-light: #FF7255; /* primer light */
+  --primary-dark: #AA1D00; /* primer dark */
+  --gray-2: #E3E3E3; /* gray2 */
+}
+
+/*
+  Base button styles 
+  Use this with a color modifier like .btn-primary
+*/
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  border-radius: 90px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap; /* Запрещаем перенос текста */
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-main);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.btn-primary:active {
+  background-color: var(--primary-dark);
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled,
+.btn-primary[disabled] {
+  background-color: var(--gray-2);
+  cursor: not-allowed;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ArrowIcon from './icons/ArrowIcon'; // Импортируем новую иконку
 import './DirectionsSection.css';
 
 const DirectionsSection = () => {
@@ -35,7 +36,7 @@ const DirectionsSection = () => {
         <div className="directions-left">
           <h2>Начни знакомство<br/>с миром ТОТ</h2>
           <p>Перед тобой ключевые направления — Инвестиции, Социальная сеть, Образование и Маркетплейс, которые в многогранной экосистеме TOT объединяют заработок и обучение</p>
-          <Link to="/login" className="directions-join-btn">Войти</Link>
+          <Link to="/login" className="directions-join-btn btn btn-primary">Войти</Link>
         </div>
 
         <div className="directions-right">
@@ -46,7 +47,7 @@ const DirectionsSection = () => {
                   <img src={item.img} alt={item.title} className="card-icon"/>
                   <h3>{item.title}</h3>
                   <div className="card-arrow">
-                    <img src={import.meta.env.BASE_URL + 'Group 54.svg'} alt="Перейти" />
+                    <ArrowIcon />
                   </div>
                 </div>
               </Link>
