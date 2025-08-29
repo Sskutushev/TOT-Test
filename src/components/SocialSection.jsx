@@ -34,9 +34,11 @@ const SocialSection = () => {
       <div className="social-container">
         <div className="social-left-column">
           <div className="social-text-container">
-            <h2>Социальная сеть -<br />для общения,<br />вдохновения и успеха</h2>
+            <h2 className="desktop-title">Социальная сеть -<br />для общения,<br />вдохновения и успеха</h2>
+            <h2 className="mobile-title">Социальная сеть - для общения, вдохновения и успеха</h2>
             <p>Совершенно новая концепция социальной сети для саморазвития и бизнеса. Создавай, делись контентом, продвигай и продавай свой продукт, следи за лучшими в своей нише, общайся с единомышленниками, найди полезные связи и всё это на одной платформе.</p>
-            <a href="/social" className="social-details-btn">Подробнее</a>
+            {/* Кнопка для десктопа */}
+            <a href="/social" className="social-details-btn desktop-only-btn">Подробнее</a>
           </div>
           <div className="social-video-container">
             <video src={import.meta.env.BASE_URL + 'социальная.mp4'} autoPlay loop muted playsInline></video>
@@ -61,6 +63,8 @@ const SocialSection = () => {
             ))}
           </div>
         </div>
+        {/* Кнопка для мобильных */}
+        <a href="/social" className="social-details-btn mobile-only-btn">Подробнее</a>
       </div>
     </section>
   );

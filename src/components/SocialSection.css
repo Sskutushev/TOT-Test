@@ -34,6 +34,10 @@
     line-height: 1.2;
 }
 
+.social-text-container h2.mobile-title {
+    display: none;
+}
+
 .social-text-container p {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -150,6 +154,11 @@
     color: #868686;
 }
 
+/* Кнопка только для мобильных, по умолчанию скрыта */
+.mobile-only-btn {
+    display: none;
+}
+
 /* --- Адаптивность --- */
 
 @media (max-width: 1280px) {
@@ -184,12 +193,22 @@
     .social-text-container h2 {
         text-align: center;
     }
+    .social-text-container h2.desktop-title {
+        display: none;
+    }
+    .social-text-container h2.mobile-title {
+        display: block;
+    }
     .social-text-container p {
         text-align: left;
     }
-    .social-details-btn {
-        margin-left: auto;
-        margin-right: auto;
+    /* Скрываем десктопную кнопку и показываем мобильную */
+    .desktop-only-btn {
+        display: none;
+    }
+    .mobile-only-btn {
+        display: flex; /* Показываем кнопку */
+        margin: 0 auto; /* Центрируем ее */
     }
 }
 

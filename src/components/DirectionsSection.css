@@ -287,6 +287,7 @@
         line-height: 1.5;
         text-align: left; /* Выравнивание по левому краю */
         padding: 0 15px; /* Добавим небольшие отступы по бокам */
+        margin-top: 30px; /* Уменьшаем отступ от заголовка */
     }
     .directions-join-btn {
         font-size: 16px;
@@ -297,12 +298,37 @@
         max-width: 400px; /* Ограничим ширину карточек на мобильных */
         margin: 0 auto;
     }
+    
+    /* Новые стили для карточек */
+    .direction-card {
+        padding: 15px 20px;
+    }
+    .card-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 15px;
+    }
     .card-icon {
-        width: 100px;
-        height: 100px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0; /* Убираем старый отступ */
     }
     .direction-card h3 {
-        font-size: 16px;
+        font-size: 1rem; /* Адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: left;
+        flex-grow: 1; /* Заголовок занимает доступное пространство */
+        color: #333; /* Убедимся, что цвет не прозрачный */
+    }
+    .card-arrow {
+        position: static; /* Убираем абсолютное позиционирование */
+        transition: transform 0.3s ease;
+    }
+    .direction-card:hover .card-arrow {
+        transform: translateX(5px);
     }
 }
 

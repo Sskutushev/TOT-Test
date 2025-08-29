@@ -45,9 +45,9 @@ const DirectionsSection = () => {
                 <div className="card-content">
                   <img src={item.img} alt={item.title} className="card-icon"/>
                   <h3>{item.title}</h3>
-                </div>
-                <div className="card-arrow">
-                  <img src={import.meta.env.BASE_URL + 'Group 54.svg'} alt="Перейти" />
+                  <div className="card-arrow">
+                    <img src={import.meta.env.BASE_URL + 'Group 54.svg'} alt="Перейти" />
+                  </div>
                 </div>
               </Link>
             ))}
