@@ -208,10 +208,10 @@
     }
     /* Скрываем десктопную кнопку и показываем мобильную */
     .desktop-only-btn {
-        display: none;
+        display: none !important;
     }
     .mobile-only-btn {
-        display: flex; /* Показываем кнопку */
+        display: flex !important; /* Показываем кнопку */
         margin: 0 auto; /* Центрируем ее */
     }
 }
@@ -238,7 +238,7 @@
     .social-card .card-text {
         font-size: 13px;
         margin-left: 0; /* Убираем отступ на мобильных */
-        max-width: 150px; /* Ограничиваем ширину текста */
+        /* max-width: 150px; */ /* Убираем ограничение ширины */
     }
     .social-card .card-header {
         gap: 15px;
