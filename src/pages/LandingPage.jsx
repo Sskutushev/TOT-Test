@@ -7,6 +7,8 @@ import EducationSection from '../components/EducationSection';
 import SocialSection from '../components/SocialSection';
 import MarketplacePromoSection from '../components/MarketplacePromoSection';
 import GridFeaturesSection from '../components/GridFeaturesSection';
+import NewsSection from '../components/NewsSection';
+import RoadmapSection from '../components/RoadmapSection';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -21,6 +23,8 @@ const LandingPage = () => {
         <SocialSection />
         <MarketplacePromoSection />
         <GridFeaturesSection />
+        <NewsSection />
+        <RoadmapSection />
         {/* Следующие секции будут здесь */}
       </main>
     </div>

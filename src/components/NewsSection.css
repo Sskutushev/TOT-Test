@@ -1,0 +1,128 @@
+.news-section {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.news-container {
+    width: 100%;
+    max-width: 1240px;
+    min-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-columns {
+    display: flex;
+    gap: 40px;
+}
+
+.news-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.news-card {
+    width: 317px;
+    background-color: #f3f3f3; /* Assuming a light gray color for the card */
+    border-radius: 20px;
+    border: 1px solid #C2C2C2;
+    overflow: hidden;
+}
+
+.news-card-image {
+    width: 317px;
+    height: 177px;
+    object-fit: cover;
+}
+
+.news-card-content {
+    padding: 20px;
+}
+
+.news-card-title {
+    font-family: 'TT Travels Next', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.news-card-date {
+    display: block;
+    margin-top: 20px;
+    color: #868686;
+    font-size: 14px;
+}
+
+.news-card-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.news-card-button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    border-radius: 90px;
+    background-color: #f3f3f3;
+    border: 1px solid #FF4D00; /* Prime dark orange */
+    color: #FF4D00;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.news-card-button:hover {
+    background-color: #FF7255; /* Light orange */
+    color: white;
+}
+
+.news-card-button:active {
+    background-color: #AA1D00; /* Dark orange */
+    color: white;
+}
+
+.news-sidebar {
+    width: 465px;
+    margin-left: 50px;
+}
+
+.news-sidebar-top {
+    /* No specific styles needed for the top container itself */
+}
+
+.news-sidebar-title {
+    font-family: 'TT Travels Next', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.news-sidebar-text {
+    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #868686;
+}
+
+.news-sidebar-button {
+    margin-top: 60px;
+    width: 225px;
+    height: 60px;
+    border-radius: 90px;
+}
+
+.news-sidebar-bottom {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.news-video {
+    width: 465px;
+    height: 465px;
+    object-fit: cover;
+    border-radius: 20px;
+}
