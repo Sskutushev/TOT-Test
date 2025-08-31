@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(({ command }) => {
   // For local development (serve), base is '/'.
   // For GitHub Pages (build), base must be '/repository-name/'.
-  const base = command === 'serve' ? '/' : './';
+  const base = command === 'serve' ? '/' : '/TOT-Test/';
   return {
     plugins: [
       react(),
