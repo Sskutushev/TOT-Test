@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
           </div>
           <a href="mailto:MailAdress@totcompany.com" className="footer-mail-link">
-            <img src="/mail.svg" alt="Email" />
+            <img src={import.meta.env.BASE_URL + 'mail.svg'} alt="Email" />
             <span>MailAdress@totcompany.com</span>
           </a>
         </div>
@@ -62,7 +62,7 @@ const Footer = () => {
             <div className="footer-social-icons">
               {socialIcons.map(social => (
                 <a key={social.name} href={social.path} target="_blank" rel="noopener noreferrer">
-                  <img src={`/${social.icon}`} alt={social.name} />
+                  <img src={import.meta.env.BASE_URL + social.icon} alt={social.name} />
                 </a>
               ))}
             </div>

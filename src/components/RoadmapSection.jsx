@@ -109,7 +109,7 @@ const RoadmapSection = () => {
         </div>
 
         <div className="roadmap-content">
-          <img src="/Беки.svg" alt="Background" className="roadmap-bg-image" />
+          <img src={import.meta.env.BASE_URL + 'Беки.svg'} alt="Background" className="roadmap-bg-image" />
           <img src={import.meta.env.BASE_URL + 'Vector 156.svg'} alt="Vector" className="roadmap-vector-image" />
 
           <div className="roadmap-cards-container">
@@ -118,7 +118,7 @@ const RoadmapSection = () => {
                 <div className="phase-card-badge">{currentPhaseData.phase}</div>
                 <h3 className="phase-card-title" dangerouslySetInnerHTML={{ __html: currentPhaseData.phaseCard.title }}></h3>
                 <img 
-                  src={`/${currentPhaseData.phaseCard.image}`}
+                  src={currentPhaseData.phaseCard.image}
                   alt=""
                   className={`phase-card-image phase-image-${currentPhaseData.id}`}
                   style={{ 
@@ -131,7 +131,7 @@ const RoadmapSection = () => {
                 <div className="roadmap-card" key={index}>
                     <div className="card-icon-container">
                         <img src={import.meta.env.BASE_URL + 'Group 869.svg'} alt="" className="card-icon-persistent" />
-                        <img src={`/${card.icon}`} alt="" className="card-icon-specific" />
+                        <img src={card.icon} alt="" className="card-icon-specific" />
                     </div>
                     <h4 className="card-title">{card.title}</h4>
                     <p className="card-text">{card.text}</p>
@@ -143,7 +143,7 @@ const RoadmapSection = () => {
                 <div className={`roadmap-card ${card.size === 'large' ? 'large-card' : ''}`} key={index}>
                     <div className="card-icon-container">
                         <img src={import.meta.env.BASE_URL + 'Group 869.svg'} alt="" className="card-icon-persistent" />
-                        <img src={`/${card.icon}`} alt="" className="card-icon-specific" />
+                        <img src={card.icon} alt="" className="card-icon-specific" />
                     </div>
                     <h4 className="card-title">{card.title}</h4>
                     <p className="card-text">{card.text}</p>
