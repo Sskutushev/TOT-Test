@@ -74,7 +74,7 @@ const Footer = () => {
               <a href="#">Скачать &rarr;</a>
             </div>
             <img src="/Group 49.svg" alt="Phone 1" className="app-banner-img1" />
-            <img src="/Group 48.svg" alt="Phone 2" className="app-banner-img2" />
+            <img src={import.meta.env.BASE_URL + 'Group 48.svg'} alt="Phone 2" className="app-banner-img2" />
           </div>
         </div>
       </div>

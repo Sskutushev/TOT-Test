@@ -48,7 +48,7 @@ const FaqItem = ({ item, isOpen, onClick }) => {
   return (
     <div className={`faq-item ${isOpen ? 'open' : ''}`} onClick={onClick}>
       <div className="faq-question-container">
-        <img src="/Ellipse 110.svg" alt="•" className="faq-icon" />
+        <img src={import.meta.env.BASE_URL + 'Ellipse 110.svg'} alt="•" className="faq-icon" />
         <h3 className="faq-question">{item.question}</h3>
       </div>
       {isOpen && <p className="faq-answer">{item.answer}</p>}
