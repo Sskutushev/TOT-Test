@@ -5,7 +5,7 @@ import NewsModal from './NewsModal';
 const newsData = [
   {
     id: 1,
-    image: '/Frame 5285.svg',
+        image: import.meta.env.BASE_URL + 'Frame_news3.svg',
     title: 'Интерактивный конструктор курсов',
     fullTitle: 'Представляем интерактивный конструктор курсов нового поколения',
     shortText: 'Улучшенный инструмент для создания курсов с поддержкой мультимедийных уроков и интерактивных заданий.',
@@ -39,7 +39,7 @@ const newsData = [
   },
   {
     id: 3,
-        image: import.meta.env.BASE_URL + 'Frame_news2.svg',
+    image: import.meta.env.BASE_URL + 'Frame_news3.svg',
     title: 'Групповые вебинары с множеством спикеров',
     fullTitle: 'Запускайте масштабные онлайн-мероприятия: групповые вебинары с множеством спикеров',
     shortText: 'Новая функция для проведения вебинаров с возможностью приглашения нескольких спикеров и управления участниками.',
@@ -144,3 +144,4 @@ const NewsSection = () => {
 };
 
 export default NewsSection;
+ion;
