@@ -22,7 +22,7 @@ const newsData = [
   },
   {
     id: 2,
-    image: import.meta.env.BASE_URL + 'Frame_news2.svg',
+    image: import.meta.env.BASE_URL + 'Frame_news3.svg',
     title: 'Персональные консультации с...',
     fullTitle: 'Персональные консультации с экспертами стали еще доступнее',
     shortText: 'Расширенные возможности для индивидуальных консультаций с удобным расписанием и управлением встречами.',
@@ -55,7 +55,7 @@ const newsData = [
   },
   {
     id: 4,
-    image: import.meta.env.BASE_URL + 'Frame 5289.svg',
+    image: import.meta.env.BASE_URL + 'Frame_news4.svg',
     title: 'Расширение торговых стратегий и инструментов',
     fullTitle: 'Новые горизонты для инвесторов: расширение торговых стратегий и инструментов',
     shortText: 'Добавлены новые торговые стратегии и инвестиционные инструменты для более разнообразных и прибыльных вложений.',
