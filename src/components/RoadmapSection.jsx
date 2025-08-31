@@ -87,6 +87,7 @@ const RoadmapSection = () => {
   };
 
   const currentPhaseData = roadmapData.find(p => p.id === activePhase);
+  console.log('Phase Card Image:', currentPhaseData.phaseCard.image);
   const topCards = currentPhaseData.cards.slice(0, 2);
   const bottomCards = currentPhaseData.id === 3 ? currentPhaseData.cards.slice(2) : currentPhaseData.cards.slice(2).reverse();
 

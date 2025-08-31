@@ -32,7 +32,7 @@ const Footer = () => {
         {/* Column 1: Logo, Legal, Mail */}
         <div className="footer-column-1">
           <div className="footer-logo-container">
-            <img src="/TOT Logo.svg" alt="TOT Logo" className="footer-logo" onClick={scrollToTop} />
+                        <img src={import.meta.env.BASE_URL + 'TOT Logo футер.svg'} alt="TOT Logo" className="footer-logo" onClick={scrollToTop} />
             <div className="footer-legal-info">
               <p>ООО "Технологии.Обучение.Трейдинг."</p>
               <p>ИНН 1234567890, ОГРН 1234567890123</p>
