@@ -22,7 +22,7 @@ const newsData = [
   },
   {
     id: 2,
-    image: '/Frame 5286.svg',
+    image: import.meta.env.BASE_URL + 'Frame_news2.svg',
     title: 'Персональные консультации с...',
     fullTitle: 'Персональные консультации с экспертами стали еще доступнее',
     shortText: 'Расширенные возможности для индивидуальных консультаций с удобным расписанием и управлением встречами.',
@@ -39,7 +39,7 @@ const newsData = [
   },
   {
     id: 3,
-    image: import.meta.env.BASE_URL + 'Frame news3.svg',
+        image: import.meta.env.BASE_URL + 'Frame_news2.svg',
     title: 'Групповые вебинары с множеством спикеров',
     fullTitle: 'Запускайте масштабные онлайн-мероприятия: групповые вебинары с множеством спикеров',
     shortText: 'Новая функция для проведения вебинаров с возможностью приглашения нескольких спикеров и управления участниками.',
@@ -73,6 +73,7 @@ const newsData = [
 ];
 
 const NewsSection = () => {
+  console.log('NewsSection BASE_URL:', import.meta.env.BASE_URL);
   const [selectedNews, setSelectedNews] = useState(null);
 
   const generateRandomDate = () => {
@@ -109,6 +110,7 @@ const NewsSection = () => {
                 {column.map((news) => (
                   <div className="news-card" key={news.id}>
                     <img src={news.image} alt={news.title} className="news-card-image" />
+                    {console.log('News Card Image:', news.image)}
                     <div className="news-card-content">
                       <h3 className="news-card-title">{news.title}</h3>
                       <span className="news-card-date">{generateRandomDate()}</span>
@@ -131,7 +133,7 @@ const NewsSection = () => {
               <button className="btn btn-primary news-sidebar-button">Больше новостей</button>
             </div>
             <div className="news-sidebar-bottom">
-              <video className="news-video" src="/Новости.mp4" autoPlay loop muted playsInline />
+              <video className="news-video" src={import.meta.env.BASE_URL + 'Новости.mp4'} autoPlay loop muted playsInline />
             </div>
           </div>
         </div>

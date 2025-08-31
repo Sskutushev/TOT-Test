@@ -57,6 +57,7 @@ const FaqItem = ({ item, isOpen, onClick }) => {
 };
 
 const FaqSection = () => {
+  console.log('FaqSection BASE_URL:', import.meta.env.BASE_URL);
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleItemClick = (index) => {

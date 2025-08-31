@@ -133,6 +133,7 @@ const RoadmapSection = () => {
                     <div className="card-icon-container">
                         <img src={import.meta.env.BASE_URL + 'Group 869.svg'} alt="" className="card-icon-persistent" />
                         <img src={card.icon} alt="" className="card-icon-specific" />
+                        {console.log('Roadmap Card Icon:', card.icon)}
                     </div>
                     <h4 className="card-title">{card.title}</h4>
                     <p className="card-text">{card.text}</p>
@@ -145,6 +146,7 @@ const RoadmapSection = () => {
                     <div className="card-icon-container">
                         <img src={import.meta.env.BASE_URL + 'Group 869.svg'} alt="" className="card-icon-persistent" />
                         <img src={card.icon} alt="" className="card-icon-specific" />
+                        {console.log('Roadmap Card Icon:', card.icon)}
                     </div>
                     <h4 className="card-title">{card.title}</h4>
                     <p className="card-text">{card.text}</p>
