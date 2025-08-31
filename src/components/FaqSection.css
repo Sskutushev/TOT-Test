@@ -1,0 +1,98 @@
+.faq-section {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 1240px;
+    min-width: 920px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.faq-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.faq-column {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.faq-item {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.faq-question-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.faq-icon {
+    width: 18px; /* Adjust size as needed */
+    height: 18px;
+    margin-top: 5px;
+}
+
+.faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.faq-answer {
+    margin: 0;
+    padding-left: 33px; /* Align with question text (icon width + gap) */
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, margin-top 0.3s ease-in-out;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 500px; /* Set a large enough value */
+}
+
+.faq-button-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width: 960px) {
+    .faq-container {
+        min-width: unset;
+        padding: 0 20px;
+    }
+
+    .faq-columns {
+        flex-direction: column;
+        gap: 0; /* Remove gap between columns, use card gap */
+    }
+
+    .faq-column {
+        width: 100%;
+    }
+
+    .faq-title {
+        font-size: 32px;
+    }
+}

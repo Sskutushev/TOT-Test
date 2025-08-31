@@ -9,6 +9,7 @@ import MarketplacePromoSection from '../components/MarketplacePromoSection';
 import GridFeaturesSection from '../components/GridFeaturesSection';
 import NewsSection from '../components/NewsSection';
 import RoadmapSection from '../components/RoadmapSection';
+import FaqSection from '../components/FaqSection';
 import './LandingPage.css';
 
 const LandingPage = () => {
@@ -25,6 +26,7 @@ const LandingPage = () => {
         <GridFeaturesSection />
         <NewsSection />
         <RoadmapSection />
+        <FaqSection />
         {/* Следующие секции будут здесь */}
       </main>
     </div>

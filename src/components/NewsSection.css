@@ -24,15 +24,18 @@
 }
 
 .news-card {
-    width: 317px;
-    background-color: #f3f3f3; /* Assuming a light gray color for the card */
+    width: 337px;
+    height: 475px; /* Set fixed height */
+    background-color: #f3f3f3;
     border-radius: 20px;
     border: 1px solid #C2C2C2;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .news-card-image {
-    width: 317px;
+    width: 337px;
     height: 177px;
     object-fit: cover;
 }
