@@ -26,7 +26,7 @@ import InvestmentsPage from './pages/InvestmentsPage';
 
 export const routes = [
     { path: '/', component: LandingPage, landingLayout: true },
-    { path: '/education', component: EducationPage, layout: true },
+    { path: '/education', component: EducationPage, landingLayout: true },
     { path: '/social', component: SocialPage, landingLayout: true },
     { path: '/investments', component: InvestmentsPage, landingLayout: true },
     { path: '/marketplace-landing', component: MarketplaceLandingPage, landingLayout: true },
