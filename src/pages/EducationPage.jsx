@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './EducationPage.css';
 import PlatformSection from '../components/education/PlatformSection';
+import InteractiveInfoSection from '../components/education/InteractiveInfoSection';
+import HowToStartSection from '../components/education/HowToStartSection';
+import SupportSection from '../components/education/SupportSection';
 
 const EducationPage = () => {
   return (
@@ -28,6 +31,9 @@ const EducationPage = () => {
       <div className="platform-section-wrapper">
         <PlatformSection />
       </div>
+      <InteractiveInfoSection />
+      <HowToStartSection />
+      <SupportSection />
     </>
   );
 };

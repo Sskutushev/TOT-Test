@@ -1,0 +1,131 @@
+/* InteractiveInfoSection.css */
+.interactive-section {
+    width: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    padding-top: 150px; /* Top margin for background image */
+    display: flex;
+    justify-content: center;
+    margin-top: -150px; /* Move section up */
+}
+
+.interactive-section__bg-image {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.interactive-section__container {
+    width: 100%;
+    max-width: 1240px;
+    height: 890px;
+    position: relative;
+    z-index: 1;
+    margin-top: -75px; /* Applied here: 75px (original) - 150px (user request) = -75px */
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.interactive-section__column {
+    width: 45%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.interactive-section__column--right {
+    margin-left: 30px; /* Push right column */
+}
+
+.interactive-section__center-line-container {
+    width: 2px; /* Width of the line */
+    height: 100%;
+    position: relative;
+}
+
+.interactive-section__center-line {
+    width: 100%;
+    height: 860px; /* Shortened by 40px */
+    background-color: #E3E3E3;
+    position: absolute;
+    left: 0;
+    top: -50px; /* Move line up */
+}
+
+.interactive-section__cube {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -15px; /* Move up by 15px */
+    left: calc(50% - 42px); /* Move 42px to the left from center */
+    transform: translateX(-50%);
+    will-change: transform; /* Performance optimization */
+}
+
+.interactive-section__badge {
+    background-color: #F4F4F4;
+    color: #868686;
+    border-radius: 90px;
+    padding: 10px 20px;
+    font-size: 16px;
+    align-self: flex-start;
+    margin-bottom: 30px;
+}
+
+.interactive-section__title {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 60px;
+}
+
+.interactive-section__title .highlight {
+    color: var(--primary-main);
+}
+
+.interactive-section__subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #868686;
+    margin-bottom: 85px;
+}
+
+.interactive-section__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.interactive-section__list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.interactive-section__list img {
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+}
+
+.interactive-section__list h4 {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.interactive-section__list p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
