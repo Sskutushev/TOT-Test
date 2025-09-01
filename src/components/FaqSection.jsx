@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Added Link import
 import './FaqSection.css';
 
 const faqData = [
@@ -94,7 +95,7 @@ const FaqSection = () => {
           </div>
         </div>
         <div className="faq-button-container">
-            <button className="btn btn-primary">Начать сейчас</button>
+            <Link to="/login" className="btn btn-primary">Начать сейчас</Link>
         </div>
       </div>
     </section>
