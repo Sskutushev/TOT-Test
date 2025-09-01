@@ -9,7 +9,7 @@ const EducationPage = () => {
         <div className="education-hero-left">
           <h1>Платформа для учеников и преподавателей</h1>
           <p>Что ты можешь получить на TOT как ученик или преподаватель? Многообразие образовательных продуктов на любой вкус</p>
-          <Link to="/register" className="education-hero-button">Начать сейчас</Link>
+          <Link to="/login" className="education-hero-button">Начать сейчас</Link>
         </div>
         <div className="education-hero-right">
           <video
