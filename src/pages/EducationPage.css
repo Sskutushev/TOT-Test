@@ -6,6 +6,7 @@
     align-items: center;
     padding: 20px;
     min-height: 560px; /* Ensure minimum height */
+    background-color: #FFFFFF;
 }
 
 .education-hero-container {
