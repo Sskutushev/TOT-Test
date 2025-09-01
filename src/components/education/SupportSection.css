@@ -1,0 +1,97 @@
+/* SupportSection.css */
+.support-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #F4F4F4; /* New background color */
+    position: relative; /* For stacking context */
+    overflow: hidden; /* To contain ellipses */
+}
+
+.support-section__container {
+    width: 100%;
+    max-width: 1240px;
+    height: 1050px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px 20px; /* 30px row-gap, 20px column-gap */
+    align-items: start; /* Align items to the start of the grid area */
+    position: relative; /* To appear above ellipses */
+    z-index: 1;
+}
+
+.support-section__bg-ellipse {
+    position: absolute;
+    z-index: 0;
+}
+
+.support-section__bg-ellipse--tl {
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 500px;
+}
+
+.support-section__bg-ellipse--br {
+    bottom: 0;
+    right: 0;
+    width: 350px; /* Assuming same size */
+    height: 500px;
+}
+
+.support-section__item {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.support-section__item--top-left {
+    margin-top: 75px;
+    width: 635px;
+    height: 240px;
+}
+
+.support-section__item--top-right {
+    width: 540px;
+    height: 505px;
+}
+
+.support-section__item--bottom-left {
+    width: 515px;
+    height: 515px;
+}
+
+.support-section__item--bottom-right {
+    position: relative; /* For button positioning */
+    flex-grow: 1; /* Allow it to fill space */
+}
+
+.support-section__title {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #000000;
+    margin: 0 0 60px 0;
+}
+
+.support-section__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2; /* 19px is roughly 1.2 */
+    color: #868686;
+    margin: 0;
+}
+
+.support-section__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Assuming rounded corners for videos */
+}
+
+.support-section__button {
+    margin-top: 60px;
+    align-self: flex-start; /* Align to the left */
+}
