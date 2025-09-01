@@ -1,0 +1,98 @@
+/* HowToStartSection.css */
+.how-to-start-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #FFFFFF; 
+}
+
+.how-to-start-container {
+    width: 100%;
+    max-width: 1240px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+.how-to-start-title {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    width: 100%; /* Ensure it takes full width for text-align */
+    text-align: left;
+}
+
+.how-to-start-controls {
+    margin-top: 60px;
+    margin-bottom: 20px; /* Space between tabs and image */
+    position: relative; /* Ensure it's on top of the image container */
+    z-index: 2;
+}
+
+.how-to-start-tab-switcher {
+    width: 370px; /* Same as previous section */
+    height: 80px;
+    background-color: #E3E3E3;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.how-to-start-tab-btn {
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    border-radius: 90px;
+    cursor: pointer;
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 0 25px;
+}
+
+.how-to-start-tab-btn.active {
+    background-color: var(--primary-main);
+    color: white;
+}
+
+.how-to-start-image-container {
+    width: 100%;
+    height: 785px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-out;
+}
+
+.how-to-start-image-container--offset {
+    transform: translate(-50px, -75px);
+}
+
+.how-to-start-image {
+    position: absolute;
+    object-fit: contain; /* No cropping */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Specific size for the teacher image overlay */
+.how-to-start-image--teacher {
+    width: 1360px;
+    height: 740px;
+    max-width: none; /* Override max-width to allow overflow */
+}
+
+/* Also apply new size to the base image when teacher tab is active */
+.how-to-start-image--base.teacher-active {
+    width: 1360px;
+    height: 740px;
+    max-width: none;
+}
