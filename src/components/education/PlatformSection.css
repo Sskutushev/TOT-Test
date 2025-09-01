@@ -1,0 +1,316 @@
+/* PlatformSection.css */
+.platform-section {
+    width: 100%;
+    min-height: 1285px;
+    background-color: #F4F4F4; /* Set section background */
+    position: relative; /* Crucial for z-index stacking context */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.platform-section__bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ellipses above background */
+}
+
+.platform-section__bg-ellipse {
+    position: absolute;
+    width: 350px;
+    height: 580px; /* Corrected height */
+}
+
+.platform-section__bg-ellipse--top-left {
+    top: 0;
+    left: 0;
+}
+
+.platform-section__bg-ellipse--bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.platform-section__container {
+    width: 100%;
+    max-width: 1240px;
+    min-height: 1070px;
+    position: relative;
+    z-index: 2; /* Content above ellipses */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align tab switcher to the left */
+    background-color: transparent;
+}
+
+/* Tab Switcher */
+.platform-section__tab-switcher {
+    width: 370px;
+    height: 80px;
+    background-color: #E3E3E3;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.platform-section__tab-btn {
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    border-radius: 90px;
+    cursor: pointer;
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.platform-section__tab-btn--students {
+    width: 145px;
+}
+
+.platform-section__tab-btn--teachers {
+    width: 170px;
+}
+
+.platform-section__tab-btn.active {
+    background-color: var(--primary-main);
+    color: white;
+}
+
+/* Main Content Wrapper */
+.platform-section__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.platform-section__row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: stretch; /* Make items in a row have same height */
+    background-color: transparent;
+}
+
+.platform-section__header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.platform-section__card-group {
+    display: flex;
+    gap: 20px;
+    flex-grow: 1; /* Allow group to take available space */
+}
+
+.platform-section__title {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+}
+
+.platform-section__header-img {
+    transition: transform 0.3s ease;
+}
+
+.platform-section__header-img:hover {
+    transform: scale(1.05);
+}
+
+.platform-section__side-image {
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-in-image {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Single Card */
+.platform-section__card {
+    background-color: #FFFFFF; /* White background for cards */
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E3E3E3; /* Subtle border */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow cards to grow and shrink evenly */
+}
+
+.platform-section__card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.platform-section__card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.platform-section__card-title {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+
+.platform-section__card-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #666;
+    margin: 0;
+}
+
+.platform-section__dev-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #868686;
+    color: white;
+    border-radius: 90px;
+    padding: 5px 10px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.platform-section__dev-badge::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('/hourglases.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+/* Bottom Block */
+.platform-section__bottom-block {
+    width: 100%;
+    max-width: 1240px;
+    min-height: 385px;
+    margin-top: 40px;
+    background-color: transparent;
+}
+
+.platform-section__bottom-title {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 60px 0;
+}
+
+.platform-section__bottom-cards-container {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    align-items: flex-start;
+    gap: 25px;
+    background-color: transparent;
+    margin-left: 75px; /* Shift right */
+}
+
+.platform-section__bottom-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent; /* Make transparent */
+}
+
+.platform-section__bottom-card img {
+    width: 150px;
+    height: 150px;
+    align-self: flex-start;
+    margin-bottom: 15px;
+}
+
+.platform-section__bottom-card h3 {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+
+.platform-section__bottom-card p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+.platform-section__divider {
+    width: 1px;
+    background-color: #E3E3E3;
+    align-self: stretch;
+    margin: 0 12.5px;
+}
+
+/* Bottom List (for Teachers) */
+.platform-section__bottom-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.platform-section__list-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.platform-section__list-item img {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+.platform-section__list-item-text h4 {
+    font-family: 'TT Travels Next Trl', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.platform-section__list-item-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}

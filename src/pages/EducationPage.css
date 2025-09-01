@@ -6,8 +6,12 @@
     align-items: center;
     padding: 20px;
     min-height: 560px; /* Ensure minimum height */
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */ /* Removed to inherit from layout */
     margin-top: 50px;
+}
+
+.platform-section-wrapper {
+    background-color: #F4F4F4;
 }
 
 .education-hero-container {

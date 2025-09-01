@@ -3,5 +3,6 @@
 }
 
 .landing-layout main {
+  background-color: #FFFFFF; /* Revert to white as a safe default */
   /* Styles for the main content area of the landing pages */
 }
