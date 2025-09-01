@@ -14,7 +14,7 @@ const HomePage = () => {
             <p>Ознакомься с основными возможностями платформы и выбери то, что нужно именно тебе!</p>
           </div>
           <div className="banner-illustration">
-            <img src="img/Group 995 (1).svg" alt="" />
+            <img src={import.meta.env.BASE_URL + 'img/Group google.svg'} alt="" />
           </div>
         </section>
         <section className="help-card">
