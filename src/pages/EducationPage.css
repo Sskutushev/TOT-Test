@@ -1,0 +1,125 @@
+/* EducationPage.css */
+
+.education-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 560px; /* Ensure minimum height */
+}
+
+.education-hero-container {
+    display: flex;
+    width: 1240px;
+    height: 560px;
+    background-color: #f0f0f0; /* Placeholder for visual check */
+    border-radius: 20px; /* Example styling */
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.education-hero-left {
+    width: 550px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content vertically */
+    padding: 40px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    position: relative; /* For button positioning */
+}
+
+.education-hero-left h1 {
+    font-family: 'TT Travels Next Trl', sans-serif; /* Assuming this font is available */
+    font-weight: 700; /* bd for bold */
+    font-size: 40px;
+    line-height: 1.2;
+    color: #333; /* Adjust as needed */
+    margin-bottom: 50px; /* Spacing below heading */
+}
+
+.education-hero-left p {
+    font-family: 'TT Travels Next Trl', sans-serif; /* Assuming this font is available */
+    font-weight: 500; /* md for medium */
+    font-size: 20px;
+    color: #868686; /* Gray color */
+    line-height: 1.5;
+    margin-bottom: 50px; /* Spacing below text */
+}
+
+.education-hero-button {
+    background-color: #FF7A00; /* Bright orange */
+    color: white;
+    border: none;
+    border-radius: 90px;
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none; /* For Link component */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position relative to parent */
+    bottom: 40px; /* Adjust as needed for bottom-left */
+    left: 40px; /* Adjust as needed for bottom-left */
+}
+
+.education-hero-right {
+    width: 680px;
+    height: 560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0; /* Placeholder */
+}
+
+.education-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+    .education-hero-container {
+        width: 95%;
+        height: auto;
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+
+    .education-hero-left, .education-hero-right {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .education-hero-left h1 {
+        font-size: 32px;
+    }
+
+    .education-hero-left p {
+        font-size: 18px;
+    }
+
+    .education-hero-button {
+        position: static; /* Remove absolute positioning */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .education-hero-left h1 {
+        font-size: 28px;
+    }
+
+    .education-hero-left p {
+        font-size: 16px;
+    }
+
+    .education-hero-button {
+        width: 180px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
