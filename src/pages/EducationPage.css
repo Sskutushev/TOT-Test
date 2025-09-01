@@ -12,7 +12,7 @@
     display: flex;
     width: 1240px;
     height: 560px;
-    background-color: #f0f0f0; /* Placeholder for visual check */
+    background-color: #FFFFFF;
     border-radius: 20px; /* Example styling */
     overflow: hidden; /* Ensure content stays within bounds */
 }
@@ -22,7 +22,7 @@
     height: 560px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute content vertically */
+    justify-content: flex-start; /* Align content to the start */
     padding: 40px; /* Adjust padding as needed */
     box-sizing: border-box;
     position: relative; /* For button positioning */
