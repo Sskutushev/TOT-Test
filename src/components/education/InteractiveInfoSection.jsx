@@ -85,7 +85,7 @@ const InteractiveInfoSection = () => {
         <div className="interactive-section__center-line-container">
             <div className="interactive-section__center-line" ref={lineRef}>
                 <div className="interactive-section__cube" ref={cubeRef}>
-                    <img src={import.meta.env.BASE_URL + 'Куб.svg'} alt="cube" />
+                    <img src={import.meta.env.BASE_URL + 'cube.svg'} alt="cube" />
                 </div>
             </div>
         </div>

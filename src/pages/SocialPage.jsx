@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import './SocialPage.css';
 
 const SocialPage = () => {
-  const videoSrc = import.meta.env.BASE_URL + 'Соцсеть.mp4';
+  // Videos
+  const heroVideoSrc = import.meta.env.BASE_URL + 'social-video.mp4';
+  const functionalityVideoSrc = import.meta.env.BASE_URL + 'social-network-video.mp4';
+  const supportVideoSrc = import.meta.env.BASE_URL + 'support-video.mp4';
+
+  // SVGs
   const ellipseSrc = import.meta.env.BASE_URL + 'Ellipse 56.svg';
   const followersEmptySrc = import.meta.env.BASE_URL + 'followers_empty.svg';
   const megaphoneSrc = import.meta.env.BASE_URL + 'megaphone.svg';
@@ -17,13 +22,15 @@ const SocialPage = () => {
   const chatSrc = import.meta.env.BASE_URL + 'chat.svg';
   const likeSrc = import.meta.env.BASE_URL + 'like.svg';
   const selectiveSrc = import.meta.env.BASE_URL + 'selective.svg';
-  const постояннаяVideoSrc = import.meta.env.BASE_URL + 'Постоянная.mp4';
   const frame5270Src = import.meta.env.BASE_URL + 'Frame 5270.svg';
   const graduateSrc = import.meta.env.BASE_URL + 'graduate.svg';
   const ownerSrc = import.meta.env.BASE_URL + 'owner.svg';
   const ruporSrc = import.meta.env.BASE_URL + 'rupor.svg';
   const selfDevelopmentSrc = import.meta.env.BASE_URL + 'self_development.svg';
 
+  const findPlaceBgStyle = {
+    backgroundImage: `url(${frame5270Src})`
+  };
 
   return (
     <div className="social-page">
@@ -36,7 +43,7 @@ const SocialPage = () => {
             <Link to="/login" className="btn btn-primary">Присоединиться</Link>
           </div>
           <div className="social-hero-right">
-            <video src={videoSrc} autoPlay loop muted playsInline />
+            <video src={heroVideoSrc} autoPlay loop muted playsInline />
           </div>
         </div>
       </section>
@@ -146,7 +153,7 @@ const SocialPage = () => {
           </div>
           <div className="core-func-bottom">
             <div className="core-func-bottom-left-video">
-              <video src={videoSrc} autoPlay loop muted playsInline />
+              <video src={functionalityVideoSrc} autoPlay loop muted playsInline />
             </div>
             <div className="core-func-bottom-right-text">
               <h2>Просто и удобно</h2>
@@ -158,7 +165,7 @@ const SocialPage = () => {
       </section>
 
       {/* Find Your Place Section */}
-      <section className="find-place-section">
+      <section className="find-place-section" style={findPlaceBgStyle}>
         <div className="find-place-container">
           <h2 className="find-place-title">Здесь каждый найдет себе место</h2>
           <div className="large-card">
@@ -196,7 +203,7 @@ const SocialPage = () => {
             <p>Мы внимательны к нашим пользователям и прислушиваемся к их потребностям. Вы всегда сможете сообщить нам, если не хватает какой-либо важной для вас функции. Мы не стоим на месте, развиваем и обновляем платформу, опираясь на запросы наших пользователей. Возможно, именно ваша рекомендация станет основой для нового обновления нашей социальной сети.</p>
           </div>
           <div className="social-support-right">
-            <video src={постояннаяVideoSrc} autoPlay loop muted playsInline />
+            <video src={supportVideoSrc} autoPlay loop muted playsInline />
           </div>
         </div>
       </section>

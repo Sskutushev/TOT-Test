@@ -19,7 +19,7 @@ const EducationPage = () => {
           <div className="education-hero-right">
             <video
               className="education-hero-video"
-              src={import.meta.env.BASE_URL + 'Обучение-блок1.mp4'}
+              src={import.meta.env.BASE_URL + 'education-hero.mp4'}
               autoPlay
               loop
               muted
