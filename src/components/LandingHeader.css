@@ -48,6 +48,11 @@
   color: #333;
   font-size: 16px;
   font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.header-nav a:active {
+  color: var(--primary-dark);
 }
 
 .login-btn {
@@ -169,7 +174,5 @@
 
 .header-nav .active-nav-link,
 .mobile-nav .active-nav-link {
-  text-decoration: underline;
-  text-decoration-color: currentColor;
-  text-underline-offset: 4px;
+  color: var(--primary-light);
 }

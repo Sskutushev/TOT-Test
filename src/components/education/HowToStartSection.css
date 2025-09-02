@@ -96,3 +96,44 @@
     height: 740px;
     max-width: none;
 }
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+    .how-to-start-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .how-to-start-container {
+        height: auto;
+        align-items: center;
+    }
+    .how-to-start-title {
+        text-align: center;
+    }
+    .how-to-start-image-container {
+        height: auto;
+    }
+    .how-to-start-image-container--offset {
+        transform: none;
+    }
+    .how-to-start-image, .how-to-start-image--teacher, .how-to-start-image--base.teacher-active {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-to-start-title {
+        font-size: 28px;
+    }
+    .how-to-start-tab-switcher {
+        width: 100%;
+    }
+    .how-to-start-tab-btn {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+}

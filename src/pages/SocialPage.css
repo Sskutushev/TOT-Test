@@ -1,0 +1,521 @@
+/* SocialPage.css */
+
+.social-page {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Hero Section */
+.social-hero-section {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.social-hero-container {
+  width: 1240px;
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 75px;
+}
+
+.social-hero-left {
+  max-width: 50%;
+}
+
+.social-hero-left h1 {
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0;
+}
+
+.social-hero-left .social-hero-subtitle {
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #666;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.social-hero-left .btn {
+    width: 220px;
+    height: 60px;
+}
+
+.social-hero-right video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Features Section */
+.social-features-section {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-features-section .bg-ellipse {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 7;
+}
+
+.social-features-section .top-left {
+  top: -50px;
+  left: -75px;
+}
+
+.social-features-section .bottom-right {
+  bottom: -100px;
+  right: -80px;
+}
+
+.social-features-container {
+  width: 1240px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Make cards equal height */
+  position: relative;
+  right: 150px;
+}
+
+.feature-card {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px; /* Add padding */
+  box-sizing: border-box; /* Include padding in width */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 8;
+}
+
+.feature-card .feature-icon {
+  width: 110px;
+  height: 110px;
+}
+
+.feature-card h3 {
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.14;
+  color: #666;
+  margin: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 100%;
+  background-color: #E3E3E3;
+}
+
+/* Core Functionality Section */
+.core-functionality-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.core-functionality-container {
+  width: 1240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.core-func-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.core-func-left-text {
+  width: 450px;
+  margin-top: 100px;
+}
+
+.core-func-left-text h2 {
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 0 60px 0;
+}
+
+.core-func-left-text p {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+}
+
+.core-func-right-cards {
+  position: relative;
+  width: 610px;
+  height: 615px; /* Increased height */
+  background: transparent;
+}
+
+.func-card img {
+    width: 32px;
+    height: 32px;
+}
+
+.func-card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+.func-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.core-func-right-cards .bg-ellipse-cards {
+    position: absolute;
+    width: 700px;
+    height: 900px;
+    top: calc(25% + 60px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+}
+
+.card-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 295px; /* Set explicit width */
+  background: transparent;
+  position: absolute; /* Add absolute positioning */
+}
+
+.card-column:nth-child(2) {
+    top: 55px; /* 25px отступ родителя + 50px смещение вниз */
+    left: 0;
+}
+
+.card-column:nth-child(3) {
+    top: 25px; /* Прижимаем к верху с учетом отступа родителя */
+    right: 0;
+}
+
+.func-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(244, 244, 244, 0.4);
+  border-radius: 20px;
+  padding: 15px;
+  gap: 10px;
+  position: relative;
+  z-index: 7;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.func-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.core-func-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.core-func-bottom-left-video video {
+  width: 695px;
+  height: 565px;
+  border-radius: 20px;
+}
+
+.core-func-bottom-right-text {
+  max-width: 450px;
+}
+
+.core-func-bottom-right-text h2 {
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 0 60px 0;
+}
+
+.core-func-bottom-right-text p {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+/* Support Section */
+.social-support-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.social-support-container {
+  width: 1240px;
+  height: 490px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-support-left {
+  max-width: 50%;
+}
+
+.social-support-left h2 {
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 0 50px 0;
+}
+
+.social-support-left p {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+}
+
+.social-support-right video {
+  width: 530px;
+  height: 490px;
+  border-radius: 20px;
+}
+
+/* Find Your Place Section */
+.find-place-section {
+  position: relative;
+  padding: 50px 0;
+  background-image: url('/Frame 5270.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.find-place-container {
+  width: 1240px;
+  height: 630px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.find-place-title {
+  align-self: flex-start;
+  margin-bottom: 50px;
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: black; /* Assuming white text for dark background */
+}
+
+.large-card {
+  width: 1240px;
+  height: 150px;
+  border-radius: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.large-card img {
+  margin-right: 20px;
+}
+
+.large-card-text h3 {
+  margin: 0 0 20px 0;
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.large-card-text p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.small-cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.small-card {
+  width: 395px;
+  height: 335px;
+  border-radius: 30px;
+  background-color: white;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.small-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.small-card h4 {
+  margin: 0 0 20px 0;
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.small-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* --- Responsive Styles --- */
+
+@media (max-width: 1200px) {
+  .social-hero-container, 
+  .social-features-container, 
+  .core-functionality-container, 
+  .social-support-container,
+  .find-place-container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .social-hero-container {
+    left: 0;
+  }
+
+  .social-features-container {
+    right: 0;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .feature-card {
+    width: 220px;
+  }
+
+  .core-func-left-text {
+    width: 350px;
+  }
+
+  .core-func-right-cards {
+    width: 550px;
+  }
+
+  .card-column {
+    width: 260px;
+  }
+
+  .find-place-container, .large-card {
+    width: 100%;
+  }
+
+  .small-card {
+    width: 32%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .social-hero-section, .social-features-section, .core-functionality-section, .social-support-section, .find-place-section {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .social-hero-container, .core-func-top, .core-func-bottom, .social-support-container, .find-place-container, .small-cards-container {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+  }
+
+  .social-hero-left {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .social-features-container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .feature-card {
+    width: calc(50% - 10px);
+    text-align: center;
+    align-items: center;
+  }
+
+  .divider { display: none; }
+
+  .core-func-right-cards {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .card-column {
+    position: static;
+    width: 100%;
+  }
+
+  .core-func-bottom-left-video video, .social-support-right video {
+    width: 100%;
+  }
+
+  .find-place-container {
+    height: auto;
+  }
+
+  .large-card {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .large-card img { margin: 0 0 20px 0; }
+
+  .small-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-hero-left h1, .core-func-left-text h2, .core-func-bottom-right-text h2, .social-support-left h2, .find-place-title {
+    font-size: 32px;
+  }
+
+  .feature-card {
+    width: 100%;
+  }
+}
