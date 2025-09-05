@@ -6,17 +6,17 @@ const MarketplaceLandingPage = () => {
 
   const leftFeatures = [
     {
-      icon: '/card1.svg',
+      icon: '/img/card1.svg',
       title: 'Уникальные продукты',
       text: 'Широкий и специализированный ассортимент, включающий онлайн-курсы, вебинары, гайды, консультации, возможность инвестировать в фонды и автоследование, а также многое другое.'
     },
     {
-      icon: '/card2.svg',
+      icon: '/img/card2.svg',
       title: 'Аналитика для бизнеса',
       text: 'Удобные аналитические инструменты для проектов и авторов продуктов - помогут наладить продажи.'
     },
     {
-      icon: '/card3.svg',
+      icon: '/img/card3.svg',
       title: 'Курс на качество',
       text: 'Все продукты на нашем маркетплейсе проходят модерацию, чтобы гарантировать их соответствие высоким стандартам качества.'
     }
@@ -24,17 +24,17 @@ const MarketplaceLandingPage = () => {
 
   const rightFeatures = [
     {
-      icon: '/first_card.svg',
+      icon: '/img/first_card.svg',
       title: 'Удобный поиск и фильтрация',
       text: 'Легко находи продукты интересные именно тебе при помощи мощной и функциональной системы фильтрации и сортировки.'
     },
     {
-      icon: '/second_card.svg',
+      icon: '/img/second_card.svg',
       title: 'Понятный интерфейс',
       text: 'Взаимодействие с платформой происходит легко и интуитивно, будь то создание продукта или же обучение.'
     },
     {
-      icon: '/third_card.svg',
+      icon: '/img/third_card.svg',
       title: 'Непрерывное развитие',
       text: 'Мы следим за трендами и учитываем мнение пользователей для улучшения ассортимента, добавляя новые категории и типы продуктов.'
     }
@@ -43,9 +43,6 @@ const MarketplaceLandingPage = () => {
 
   return (
     <div className="marketplace-landing-page">
-      <div style={{ backgroundColor: 'red', color: 'white', fontSize: '50px', textAlign: 'center', padding: '20px', position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '9999' }}>
-        TESTING DISPLAY
-      </div>
       <main>
         {/* Hero Section */}
         <section className="mpl-hero-section">
@@ -56,15 +53,15 @@ const MarketplaceLandingPage = () => {
               <Link to="/login" className="btn btn-primary">Присоединиться</Link>
             </div>
             <div className="mpl-hero-right">
-              <video src="/Market2.mp4" autoPlay loop muted playsInline></video>
+              <video src="/img/Market2.mp4" autoPlay loop muted playsInline></video>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="mpl-features-section">
-          <img src="/Ellipse 56.svg" alt="" className="mpl-features-bg-left" />
-          <img src="/Ellipse 56.svg" alt="" className="mpl-features-bg-right" />
+          <img src="/img/Ellipse 56.svg" alt="" className="mpl-features-bg-left" />
+          <img src="/img/Ellipse 56.svg" alt="" className="mpl-features-bg-right" />
           <div className="mpl-features-container">
             <div className="mpl-features-column">
               {leftFeatures.map((feature, index) => (
@@ -98,22 +95,22 @@ const MarketplaceLandingPage = () => {
                     <h2>Создавай продукты, получай доступ к широкой аудитории и зарабатывай</h2>
                     <ul>
                         <li>
-                            <img src="/mark.svg" alt="check mark"/>
+                            <img src="/img/mark.svg" alt="check mark"/>
                             <span>Никаких затрат на рекламу, твои продукты сразу видят тысячи пользователей</span>
                         </li>
                         <li>
-                            <img src="/mark.svg" alt="check mark"/>
+                            <img src="/img/mark.svg" alt="check mark"/>
                             <span>Создай продукт один раз и зарабатывай на его продаже снова и снова</span>
                         </li>
                         <li>
-                            <img src="/mark.svg" alt="check mark"/>
+                            <img src="/img/mark.svg" alt="check mark"/>
                             <span>Развитие личного бренда. С каждым новым продуктом ты укрепляешь свой авторитет и экспертность</span>
                         </li>
                     </ul>
                     <Link to="/login" className="btn btn-primary">Начать сейчас</Link>
                 </div>
                 <div className="mpl-create-right">
-                    <video src="/new1.mp4" autoPlay loop muted playsInline></video>
+                    <video src="/img/new1.mp4" autoPlay loop muted playsInline></video>
                 </div>
             </div>
         </section>
