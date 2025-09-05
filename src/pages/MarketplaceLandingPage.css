@@ -1,0 +1,211 @@
+/* General Page Styles */
+.marketplace-landing-page {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 75px;
+}
+
+.marketplace-landing-page main {
+    
+}
+
+/* Hero Section */
+.mpl-hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.mpl-hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1240px;
+    height: 650px;
+    gap: 55px;
+}
+
+.mpl-hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 585px;
+}
+
+.mpl-hero-left h1 {
+    font-family: 'TT Travels Next', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.mpl-hero-left p {
+    font-family: 'TT Travels Next', sans-serif;
+    font-size: 20px;
+    color: #666;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mpl-hero-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+}
+
+/* Features Section */
+.mpl-features-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.mpl-features-bg-left,
+.mpl-features-bg-right {
+    position: absolute;
+    z-index: 0;
+}
+
+.mpl-features-bg-left {
+    top: 0;
+    left: 0;
+}
+
+.mpl-features-bg-right {
+    bottom: 0;
+    right: 15px;
+}
+
+.mpl-features-container {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+    height: 440px;
+    z-index: 1;
+}
+
+.mpl-features-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mpl-feature-card {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 135px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.mpl-feature-card-left {
+    justify-content: flex-start;
+}
+
+.mpl-feature-card-right {
+    justify-content: space-between;
+}
+
+.mpl-feature-icon {
+    width: 95px;
+    height: 95px;
+    flex-shrink: 0;
+}
+
+.mpl-feature-card-left .mpl-feature-icon {
+    margin-right: 15px;
+}
+
+.mpl-feature-text h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 10px 0;
+}
+
+.mpl-feature-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666;
+    margin: 0;
+}
+
+/* Create Product Section */
+.mpl-create-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.mpl-create-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1240px;
+    height: 600px;
+}
+
+.mpl-create-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.mpl-create-left h2 {
+    font-family: 'TT Travels Next', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.mpl-create-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0;
+}
+
+.mpl-create-left li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.mpl-create-left li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.mpl-create-right video {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* Placeholder Sections */
+.mpl-placeholder-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.mpl-placeholder-section h2 {
+    font-family: 'TT Travels Next', sans-serif;
+    font-size: 28px;
+}
