@@ -53,20 +53,20 @@ const MarketplaceLandingPage = () => {
               <Link to="/login" className="btn btn-primary">Присоединиться</Link>
             </div>
             <div className="mpl-hero-right">
-              <video src={import.meta.env.BASE_URL + "Market2.mp4"} autoPlay loop muted playsInline></video>
+              <video src="/Market2.mp4" autoPlay loop muted playsInline></video>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="mpl-features-section">
-          <img src={import.meta.env.BASE_URL + "Ellipse 56.svg"} alt="" className="mpl-features-bg-left" />
-          <img src={import.meta.env.BASE_URL + "Ellipse 56.svg"} alt="" className="mpl-features-bg-right" />
+          <img src="/Ellipse 56.svg" alt="" className="mpl-features-bg-left" />
+          <img src="/Ellipse 56.svg" alt="" className="mpl-features-bg-right" />
           <div className="mpl-features-container">
             <div className="mpl-features-column">
               {leftFeatures.map((feature, index) => (
                 <div key={index} className="mpl-feature-card mpl-feature-card-left">
-                  <img src={import.meta.env.BASE_URL + feature.icon} alt="" className="mpl-feature-icon" />
+                  <img src={feature.icon} alt="" className="mpl-feature-icon" />
                   <div className="mpl-feature-text">
                     <h3>{feature.title}</h3>
                     <p>{feature.text}</p>
@@ -81,7 +81,7 @@ const MarketplaceLandingPage = () => {
                     <h3>{feature.title}</h3>
                     <p>{feature.text}</p>
                   </div>
-                  <img src={import.meta.env.BASE_URL + feature.icon} alt="" className="mpl-feature-icon" />
+                  <img src={feature.icon} alt="" className="mpl-feature-icon" />
                 </div>
               ))}
             </div>
@@ -95,22 +95,22 @@ const MarketplaceLandingPage = () => {
                     <h2>Создавай продукты, получай доступ к широкой аудитории и зарабатывай</h2>
                     <ul>
                         <li>
-                            <img src={import.meta.env.BASE_URL + "mark.svg"} alt="check mark"/>
+                            <img src="/mark.svg" alt="check mark"/>
                             <span>Никаких затрат на рекламу, твои продукты сразу видят тысячи пользователей</span>
                         </li>
                         <li>
-                            <img src={import.meta.env.BASE_URL + "mark.svg"} alt="check mark"/>
+                            <img src="/mark.svg" alt="check mark"/>
                             <span>Создай продукт один раз и зарабатывай на его продаже снова и снова</span>
                         </li>
                         <li>
-                            <img src={import.meta.env.BASE_URL + "mark.svg"} alt="check mark"/>
+                            <img src="/mark.svg" alt="check mark"/>
                             <span>Развитие личного бренда. С каждым новым продуктом ты укрепляешь свой авторитет и экспертность</span>
                         </li>
                     </ul>
                     <Link to="/login" className="btn btn-primary">Начать сейчас</Link>
                 </div>
                 <div className="mpl-create-right">
-                    <video src={import.meta.env.BASE_URL + "Новая1.mp4"} autoPlay loop muted playsInline></video>
+                    <video src="/Новая1.mp4" autoPlay loop muted playsInline></video>
                 </div>
             </div>
         </section>
