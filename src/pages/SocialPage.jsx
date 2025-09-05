@@ -9,7 +9,7 @@ const SocialPage = () => {
   const supportVideoSrc = import.meta.env.BASE_URL + 'support-video.mp4';
 
   // SVGs
-  const ellipseSrc = import.meta.env.BASE_URL + 'Ellipse 56.svg';
+  const ellipseSrc = import.meta.env.BASE_URL + 'img/Ellipse 56.svg';
   const followersEmptySrc = import.meta.env.BASE_URL + 'followers_empty.svg';
   const megaphoneSrc = import.meta.env.BASE_URL + 'megaphone.svg';
   const personalBrandSrc = import.meta.env.BASE_URL + 'Personal brand.svg';
