@@ -3,7 +3,6 @@ import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout';
 import LandingLayout from './components/LandingLayout';
 import { routes } from './routes';
-import MarketplaceLandingPage from './pages/MarketplaceLandingPage';
 
 function App() {
   // Dynamic title logic (should be safe)
@@ -18,7 +17,27 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MarketplaceLandingPage />} />
+        {routes.map((route, index) => {
+          const element = React.createElement(route.component);
+          let finalElement;
+
+          if (route.layout) {
+            finalElement = <Layout>{element}</Layout>;
+          } else if (route.landingLayout) {
+            finalElement = <LandingLayout>{element}</LandingLayout>;
+          } else {
+            finalElement = element;
+          }
+
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={finalElement}
+            />
+          );
+        })}
+        <Route path="/*" element={<Navigate to="/home" />} />
       </Routes>
     </Router>
   );

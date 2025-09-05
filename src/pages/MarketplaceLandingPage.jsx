@@ -43,6 +43,9 @@ const MarketplaceLandingPage = () => {
 
   return (
     <div className="marketplace-landing-page">
+      <div style={{ backgroundColor: 'red', color: 'white', fontSize: '50px', textAlign: 'center', padding: '20px', position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '9999' }}>
+        TESTING DISPLAY
+      </div>
       <main>
         {/* Hero Section */}
         <section className="mpl-hero-section">
