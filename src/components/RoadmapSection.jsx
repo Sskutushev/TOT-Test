@@ -7,15 +7,15 @@ const roadmapData = [
     phase: 'Фаза 1',
     phaseCard: {
       title: 'Запуск и основные функции',
-      image: 'Rock.svg',
+      image: import.meta.env.BASE_URL + 'Rock.svg',
       size: { width: 'auto', height: 'auto' } // Special case
     },
     cards: [
-      { title: 'Социальная сеть', text: 'Обеспечить безопасность и конфиденциальность пользовательских данных', icon: 'socialnet.svg' },
-      { title: 'Инструменты для преподавателей', text: 'Предоставить качественные образовательные ресурсы и инструменты для преподавателей', icon: 'порт.svg' },
-      { title: 'Модуль обучения', text: 'Обеспечить пользователям удобный интерфейс для прохождения обучения', icon: 'шап.svg' },
-      { title: 'Запуск маркетплейса', text: 'Обеспечить пользователям доступ к основным продуктам и услугам платформы', icon: 'теле.svg' },
-      { title: 'Календарь', text: 'Обеспечить учеников и преподавателей удобным календарем-планировщиком', icon: 'кален.svg' },
+      { title: 'Социальная сеть', text: 'Обеспечить безопасность и конфиденциальность пользовательских данных', icon: import.meta.env.BASE_URL + 'socialnet.svg' },
+      { title: 'Инструменты для преподавателей', text: 'Предоставить качественные образовательные ресурсы и инструменты для преподавателей', icon: import.meta.env.BASE_URL + 'порт.svg' },
+      { title: 'Модуль обучения', text: 'Обеспечить пользователям удобный интерфейс для прохождения обучения', icon: import.meta.env.BASE_URL + 'шап.svg' },
+      { title: 'Запуск маркетплейса', text: 'Обеспечить пользователям доступ к основным продуктам и услугам платформы', icon: import.meta.env.BASE_URL + 'теле.svg' },
+      { title: 'Календарь', text: 'Обеспечить учеников и преподавателей удобным календарем-планировщиком', icon: import.meta.env.BASE_URL + 'кален.svg' },
     ]
   },
   {
@@ -23,15 +23,15 @@ const roadmapData = [
     phase: 'Фаза 2',
     phaseCard: {
       title: 'Инвестиционный модуль и расширение',
-      image: 'инв.svg',
+      image: import.meta.env.BASE_URL + 'инв.svg',
       size: { width: 190, height: 190 }
     },
     cards: [
-      { title: 'Запуск инвестиционного модуля', text: 'Фонды, Автоследование, Биржевые покупки', icon: 'меш.svg' },
-      { title: 'Расширение функционала маркетплейса', text: 'Повысить разнообразие и привлекательность продуктов для пользователей', icon: 'shop.svg' },
-      { title: 'Уникальная партнерская система', text: 'Предоставить пользователям многоступенчатую реферальную систему', icon: 'handshake.svg' },
-      { title: 'Расширенные аналитические инструменты', text: 'Обеспечить пользователей мощными инструментами для мониторинга и улучшения их деятельности', icon: 'Analytics_set.svg' },
-      { title: 'Усиление безопасности', text: 'Повысить уровень защиты данных и транзакций на платформе', icon: 'щит.svg' },
+      { title: 'Запуск инвестиционного модуля', text: 'Фонды, Автоследование, Биржевые покупки', icon: import.meta.env.BASE_URL + 'меш.svg' },
+      { title: 'Расширение функционала маркетплейса', text: 'Повысить разнообразие и привлекательность продуктов для пользователей', icon: import.meta.env.BASE_URL + 'shop.svg' },
+      { title: 'Уникальная партнерская система', text: 'Предоставить пользователям многоступенчатую реферальную систему', icon: import.meta.env.BASE_URL + 'handshake.svg' },
+      { title: 'Расширенные аналитические инструменты', text: 'Обеспечить пользователей мощными инструментами для мониторинга и улучшения их деятельности', icon: import.meta.env.BASE_URL + 'Analytics_set.svg' },
+      { title: 'Усиление безопасности', text: 'Повысить уровень защиты данных и транзакций на платформе', icon: import.meta.env.BASE_URL + 'щит.svg' },
     ]
   },
   {
@@ -39,14 +39,14 @@ const roadmapData = [
     phase: 'Фаза 3',
     phaseCard: {
       title: 'Масштаби<br />рование и<br />геймификация',
-      image: 'Frame 6064.svg',
+      image: import.meta.env.BASE_URL + 'Frame 6064.svg',
       size: { width: 200, height: 200 }
     },
     cards: [
-      { title: 'Глобальное расширение', text: 'Привлечь пользователей из разных стран и регионов', icon: 'Society.svg' },
-      { title: 'Геймификация', text: 'Сделать использование платформы более увлекательным и мотивирующим', icon: 'gamefication.svg' },
-      { title: 'Система сертификации', text: 'Повысить доверие студентов и работодателей к образовательным программам', size: 'large', icon: 'sert.svg' },
-      { title: 'Поддержка документации', text: 'Упростить процесс сертификации и повысить удовлетворённость пользователей', size: 'large', icon: 'Doc_Sup.svg' },
+      { title: 'Глобальное расширение', text: 'Привлечь пользователей из разных стран и регионов', icon: import.meta.env.BASE_URL + 'Society.svg' },
+      { title: 'Геймификация', text: 'Сделать использование платформы более увлекательным и мотивирующим', icon: import.meta.env.BASE_URL + 'gamefication.svg' },
+      { title: 'Система сертификации', text: 'Повысить доверие студентов и работодателей к образовательным программам', size: 'large', icon: import.meta.env.BASE_URL + 'sert.svg' },
+      { title: 'Поддержка документации', text: 'Упростить процесс сертификации и повысить удовлетворённость пользователей', size: 'large', icon: import.meta.env.BASE_URL + 'Doc_Sup.svg' },
     ]
   },
   {
@@ -54,14 +54,14 @@ const roadmapData = [
     phase: 'Фаза 4',
     phaseCard: {
       title: 'Инновации и будущее развитие',
-      image: 'Иннов.svg',
+      image: import.meta.env.BASE_URL + 'Иннов.svg',
       size: { width: 190, height: 190 }
     },
     cards: [
-      { title: 'Искусственный интеллект и автоматизация', text: 'Повысить эффективность и качество взаимодействия с пользователями', icon: 'AI.svg' },
-      { title: 'Развитие функционала социальной сети', text: 'Обеспечить пользователям все самые современные и трендовые возможности соцсети', icon: 'stock.svg' },
-      { title: 'Рекламный кабинет', text: 'Удобный интерфейс для продвижения себя и своих продуктов', icon: 'megaphone.svg' },
-            { title: 'Постоянное улучшение и обновления', text: 'Поддерживать актуальность и конкурентоспособность платформы TOT', icon: import.meta.env.BASE_URL + 'Upgrade.svg' },,
+      { title: 'Искусственный интеллект и автоматизация', text: 'Повысить эффективность и качество взаимодействия с пользователями', icon: import.meta.env.BASE_URL + 'AI.svg' },
+      { title: 'Развитие функционала социальной сети', text: 'Обеспечить пользователям все самые современные и трендовые возможности соцсети', icon: import.meta.env.BASE_URL + 'stock.svg' },
+      { title: 'Рекламный кабинет', text: 'Удобный интерфейс для продвижения себя и своих продуктов', icon: import.meta.env.BASE_URL + 'megaphone.svg' },
+      { title: 'Постоянное улучшение и обновления', text: 'Поддерживать актуальность и конкурентоспособность платформы TOT', icon: import.meta.env.BASE_URL + 'Upgrade.svg' },
       { title: 'Сообщество и взаимодействие', text: 'Содействовать созданию активного и вовлечённого сообщества', icon: import.meta.env.BASE_URL + 'people connect.svg' },
     ]
   },
@@ -133,7 +133,6 @@ const RoadmapSection = () => {
                     <div className="card-icon-container">
                         <img src={import.meta.env.BASE_URL + 'Group 869.svg'} alt="" className="card-icon-persistent" />
                         <img src={card.icon} alt="" className="card-icon-specific" />
-                        {console.log('Roadmap Card Icon:', card.icon)}
                     </div>
                     <h4 className="card-title">{card.title}</h4>
                     <p className="card-text">{card.text}</p>
@@ -141,17 +140,42 @@ const RoadmapSection = () => {
               ))}
             </div>
             <div className={`roadmap-cards-row bottom-row phase-${currentPhaseData.id}`}>
-              {bottomCards.map((card, index) => (
-                <div className={`roadmap-card ${card.size === 'large' ? 'large-card' : ''}`} key={index}>
-                    <div className="card-icon-container">
+              {bottomCards.map((card, index) => {
+                if (card.size === 'large') {
+                  return (
+                    <div 
+                      key={index}
+                      className="roadmap-card large-card"
+                      style={{ 
+                        width: '600px', 
+                        height: '270px', 
+                        display: 'flex', 
+                        flexDirection: 'column',
+                        alignItems: 'flex-start',
+                        backgroundColor: 'rgba(244, 244, 244, 0.4)' // Explicitly set background
+                      }}
+                    >
+                      <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '20px' }}>
                         <img src={import.meta.env.BASE_URL + 'Group 869.svg'} alt="" className="card-icon-persistent" />
                         <img src={card.icon} alt="" className="card-icon-specific" />
-                        {console.log('Roadmap Card Icon:', card.icon)}
+                      </div>
+                      <h4 className="card-title" style={{ marginTop: '0', marginBottom: '10px' }}>{card.title}</h4>
+                      <p className="card-text" style={{ marginTop: '0' }}>{card.text}</p>
                     </div>
-                    <h4 className="card-title">{card.title}</h4>
-                    <p className="card-text">{card.text}</p>
-                </div>
-              ))}
+                  );
+                } else {
+                  return (
+                    <div className="roadmap-card" key={index}>
+                      <div className="card-icon-container">
+                          <img src={import.meta.env.BASE_URL + 'Group 869.svg'} alt="" className="card-icon-persistent" />
+                          <img src={card.icon} alt="" className="card-icon-specific" />
+                      </div>
+                      <h4 className="card-title">{card.title}</h4>
+                      <p className="card-text">{card.text}</p>
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
 
