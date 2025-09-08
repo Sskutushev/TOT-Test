@@ -24,11 +24,13 @@ import PartnershipPage from './pages/PartnershipPage';
 import LoginPage from './pages/LoginPage';
 import InvestmentsPage from './pages/InvestmentsPage';
 
+import InvestmentsLandingPage from './pages/InvestmentsLandingPage';
+
 export const routes = [
     { path: '/', component: LandingPage, landingLayout: true },
     { path: '/education', component: EducationPage, landingLayout: true },
     { path: '/social', component: SocialPage, landingLayout: true },
-    { path: '/investments', component: InvestmentsPage, landingLayout: true },
+    { path: '/investments', component: InvestmentsLandingPage, landingLayout: true },
     { path: '/marketplace-landing', component: MarketplaceLandingPage, landingLayout: true },
     { path: '/news', component: NewsPage, landingLayout: true },
     { path: '/partnership', component: PartnershipPage, landingLayout: true },

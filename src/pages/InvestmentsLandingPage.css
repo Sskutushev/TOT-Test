@@ -1,0 +1,506 @@
+/* General Page Styles */
+.invest-landing-page {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.invest-container-1240, .invest-container-1240-740, .invest-container-1335 {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px; /* Add padding for smaller screens */
+    box-sizing: border-box;
+}
+
+.invest-container-1240 { max-width: 1240px; }
+.invest-container-1240-740 { max-width: 1240px; min-height: 740px; }
+.invest-container-1335 { max-width: 1335px; }
+
+/* Section 1: Hero */
+.invest-hero-section {
+    padding: 80px 20px;
+}
+
+.invest-hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.invest-hero-left {
+    text-align: left;
+    max-width: 580px;
+}
+
+.invest-hero-left h1 {
+    font-family: 'TT Travels', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.invest-dev-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: #868686;
+    color: white;
+    border-radius: 90px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.invest-dev-badge::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('/hourglases.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hero-subtitle {
+    font-family: 'TT Travels', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.invest-hero-left .btn-primary {
+    margin-top: 50px;
+}
+
+.invest-hero-right img {
+    width: 630px;
+    height: 460px;
+    object-fit: cover;
+}
+
+/* Section 2: Possibilities */
+.invest-possibilities-section {
+    position: relative;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.bg-ellipse-bl, .bg-ellipse-tr {
+    position: absolute;
+    z-index: -1;
+}
+
+.bg-ellipse-bl { bottom: 0; left: 0; }
+.bg-ellipse-tr { top: 0; right: 0; }
+
+.invest-container-1240-740 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.possibilities-top {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.possibilities-icon { width: 100px; height: 100px; } /* Adjust size as needed */
+
+.possibilities-top-text h2 {
+    font-family: 'TT Travels Next', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.possibilities-top-text p {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #555;
+    margin-top: 35px;
+}
+
+.possibilities-bottom {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.investment-category {
+    margin-top: 40px;
+}
+
+.investment-category:first-child { margin-top: 0; }
+
+.investment-category h3 {
+    font-family: 'TT Travels Next', sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.invest-cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.invest-card {
+    width: 230px;
+    height: 190px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: rgba(244, 244, 244, 0.4);
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.invest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.invest-card-icon {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 20px;
+}
+
+.invest-card h4 { font-weight: bold; }
+
+/* Section 3: One Account */
+.invest-one-account-section {
+    padding: 80px 20px;
+}
+
+.invest-container-1335 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: calc((100% - 1335px) / 2 + (1335px - 1240px) / 2); /* Align left edge with 1240px container */
+}
+
+.one-account-left {
+    max-width: 680px;
+}
+
+.one-account-left h2 {
+    font-family: 'TT Travels Next', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.one-account-left > p {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #555;
+    margin-top: 50px;
+}
+
+.one-account-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.one-account-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.one-account-list h4 { font-weight: bold; margin-bottom: 5px; }
+.one-account-list p { font-size: 14px; color: #555; margin: 0; }
+
+.one-account-right img {
+    width: 620px;
+    height: 900px;
+    object-fit: cover;
+}
+
+/* Placeholder Sections */
+.invest-placeholder-section {
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.invest-placeholder-section h2 { font-family: 'TT Travels Next', sans-serif; font-size: 32px; font-weight: bold; }
+
+.dual-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.dual-title-container h3 { font-size: 28px; font-weight: bold; max-width: 400px; }
+
+.dual-title-divider {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    bottom: -20px;
+    width: 2px;
+    background-color: #ddd;
+    transform: translateX(-50%);
+}
+
+.dual-title-container img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Section 5: Profitable Investments */
+.invest-profitable-section {
+    padding: 80px 20px;
+    background-color: #F8FAFC; /* Light gray background */
+}
+
+.profitable-container {
+    max-width: 1240px;
+    min-height: 930px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profitable-container h2 {
+    font-family: 'TT Travels Next Trial', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #0F172A;
+}
+
+.profitable-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #475569;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.profitable-tabs {
+    margin-top: 50px;
+    display: flex;
+    gap: 5px;
+    justify-content: center; /* Center the tabs */
+}
+
+.tab-btn {
+    width: 180px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #E3E3E3;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #FF7255;
+    color: white;
+    border-color: #FF7255;
+}
+
+.tab-btn:disabled {
+    background-color: #F4F4F4;
+    color: #A9A9A9;
+    cursor: not-allowed;
+}
+
+.profitable-content {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.investment-product-card {
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-left, .card-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-image { height: 60px; width: 60px; }
+
+.product-details h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+}
+
+.product-pills {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pill {
+    height: 30px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.pill-gray {
+    background-color: #F4F4F4;
+    color: #0F172A;
+    width: 75px;
+    gap: 5px;
+}
+
+.star-pill {
+    background-color: #F4F4F4;
+    color: #0F172A;
+    gap: 10px;
+}
+
+.star-rating-container {
+    display: flex;
+}
+
+.rating-number {
+    font-weight: 700;
+}
+
+.profit-chart { width: 160px; /* Adjust as needed */ }
+
+.profit-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profit-value {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.1;
+}
+
+.profit-label {
+    font-size: 14px;
+    color: #475569;
+}
+
+.profitable-footer {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.disclaimer {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.disclaimer img { width: 32px; height: 32px; }
+
+.disclaimer-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.1;
+    color: #FF7255;
+    margin: 0;
+}
+
+.disclaimer-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #FF7255;
+    margin-top: 5px;
+}
+
+.profitable-footer .btn-primary {
+    width: 200px;
+    padding: 0;
+}
+
+/* Section 4: Security */
+.invest-security-section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.security-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.security-left {
+  width: 550px;
+  height: 550px;
+}
+
+.security-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.security-right {
+  max-width: 670px;
+}
+
+.security-right h2 {
+  font-family: 'TT Travels Next Trial', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #0F172A;
+  margin-bottom: 50px;
+}
+
+.security-right p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: #475569;
+  margin-bottom: 50px;
+}
+
+.security-right .btn-primary {
+    width: 200px; /* Задаем фиксированную ширину */
+    padding: 0; /* Убираем внутренние отступы, чтобы ширина была ровно 200px */
+    /* Остальные стили (цвет, скругление, эффекты) наследуются от глобальных классов .btn и .btn-primary */
+}
